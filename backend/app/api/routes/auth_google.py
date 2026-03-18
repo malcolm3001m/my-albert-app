@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import os
 
@@ -23,18 +24,68 @@ GOOGLE_OAUTH_SCOPES = [
 GOOGLE_REDIRECT_URI = "https://my-albert-app.onrender.com/auth/google/callback"
 
 
-def _build_google_flow(*, state: str | None = None) -> Flow:
+def load_google_credentials() -> dict:
+    raw_json = os.environ.get("GOOGLE_CLIENT_SECRET_JSON")
+    if raw_json:
+        logger.info("Loading Google OAuth client credentials from GOOGLE_CLIENT_SECRET_JSON")
+        try:
+            credentials = json.loads(raw_json)
+        except json.JSONDecodeError as exc:
+            logger.exception("GOOGLE_CLIENT_SECRET_JSON is not valid JSON")
+            raise HTTPException(
+                status_code=500,
+                detail="GOOGLE_CLIENT_SECRET_JSON is present but not valid JSON.",
+            ) from exc
+
+        if not isinstance(credentials, dict):
+            raise HTTPException(
+                status_code=500,
+                detail="GOOGLE_CLIENT_SECRET_JSON must decode to a JSON object.",
+            )
+        return credentials
+
     settings = get_settings()
     client_secret_path = settings.google_client_secret_path
+    if client_secret_path is not None and client_secret_path.exists():
+        logger.info("Loading Google OAuth client credentials from file %s", client_secret_path)
+        try:
+            with client_secret_path.open("r", encoding="utf-8") as file:
+                credentials = json.load(file)
+        except json.JSONDecodeError as exc:
+            logger.exception("GOOGLE_CLIENT_SECRET_FILE contains invalid JSON")
+            raise HTTPException(
+                status_code=500,
+                detail="GOOGLE_CLIENT_SECRET_FILE exists but contains invalid JSON.",
+            ) from exc
+        except OSError as exc:
+            logger.exception("GOOGLE_CLIENT_SECRET_FILE could not be read")
+            raise HTTPException(
+                status_code=500,
+                detail="GOOGLE_CLIENT_SECRET_FILE exists but could not be read.",
+            ) from exc
 
-    if client_secret_path is None or not client_secret_path.exists():
-        raise HTTPException(
-            status_code=500,
-            detail="GOOGLE_CLIENT_SECRET_FILE is missing or does not exist.",
-        )
+        if not isinstance(credentials, dict):
+            raise HTTPException(
+                status_code=500,
+                detail="GOOGLE_CLIENT_SECRET_FILE must contain a JSON object.",
+            )
+        return credentials
 
-    flow = Flow.from_client_secrets_file(
-        str(client_secret_path),
+    logger.error("Google OAuth client credentials are not configured")
+    raise HTTPException(
+        status_code=500,
+        detail=(
+            "Google OAuth credentials are not configured. Set GOOGLE_CLIENT_SECRET_JSON "
+            "or GOOGLE_CLIENT_SECRET_FILE."
+        ),
+    )
+
+
+def _build_google_flow(*, state: str | None = None) -> Flow:
+    client_config = load_google_credentials()
+
+    flow = Flow.from_client_config(
+        client_config,
         scopes=GOOGLE_OAUTH_SCOPES,
         state=state,
     )
