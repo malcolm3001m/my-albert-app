@@ -11,7 +11,7 @@ from googleapiclient.discovery import build
 from app.core.config import get_settings
 
 
-router = APIRouter(tags=["google-auth"])
+router = APIRouter(prefix="/auth/google", tags=["auth"])
 logger = logging.getLogger("auth_google")
 
 GOOGLE_OAUTH_STATE_COOKIE = "google_oauth_state"
@@ -45,7 +45,7 @@ def _build_google_flow(*, state: str | None = None) -> Flow:
     return flow
 
 
-@router.get("/auth/google/login")
+@router.get("/login")
 async def google_login() -> RedirectResponse:
     flow = _build_google_flow()
     authorization_url, state = flow.authorization_url(
@@ -69,7 +69,7 @@ async def google_login() -> RedirectResponse:
     return response
 
 
-@router.get("/auth/google/callback")
+@router.get("/callback")
 async def google_callback(request: Request) -> JSONResponse:
     if request.query_params.get("error"):
         logger.error("Google OAuth error=%s", request.query_params.get("error"))

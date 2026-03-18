@@ -6,9 +6,9 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from app.api.routes.auth_google import router as google_auth_router
 from app.api.routes import (
     attendance,
-    auth_google,
     calendar,
     cohorts,
     courses,
@@ -83,7 +83,12 @@ async def root() -> dict[str, str]:
     }
 
 
-app.include_router(auth_google.router)
+@app.get("/debug-routes")
+def debug_routes():
+    return [route.path for route in app.routes]
+
+
+app.include_router(google_auth_router)
 
 
 for router in (
