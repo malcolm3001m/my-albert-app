@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/241",
+    "url": "https://api-inside.albertschool.com/course-modules/241",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 241,
+    "course_module_code": "HUM0342",
+    "course_module_name": "GDPR fundamentals",
+    "duration_hours": 12,
+    "ects": 1.0,
+    "course_id": null,
+    "teacher_id": 815,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 119,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-10-27T15:00:15.912293",
+    "course": null,
+    "teacher": {
+      "teacher_id": 815,
+      "user_id": "a836e0bf-db8c-40c7-926b-a77a157dcb00",
+      "first_name": "Victoire",
+      "last_name": "Grosjean-Moretti",
+      "email": "vgrosjean@squairlaw.com",
+      "school_email": "vgrosjean@albertschool.com"
+    },
+    "syllabus": {
+      "id": 7,
+      "status": "published",
+      "current_version_id": 407
+    }
+  }
+}

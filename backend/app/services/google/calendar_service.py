@@ -1,0 +1,178 @@
+from __future__ import annotations
+
+import asyncio
+import logging
+from datetime import datetime, timedelta, timezone
+from typing import Optional, Sequence
+
+from app.core.config import Settings
+from app.models.calendar import CalendarEvent, CalendarEventsResponse
+from app.utils.errors import MissingConfigurationError
+
+
+class GoogleCalendarService:
+    SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
+
+    def __init__(self, settings: Settings) -> None:
+        self.settings = settings
+        self.logger = logging.getLogger(self.__class__.__name__)
+
+    async def get_upcoming_events(
+        self,
+        *,
+        calendar_ids: Optional[Sequence[str]] = None,
+        days: Optional[int] = None,
+        max_results: Optional[int] = None,
+    ) -> CalendarEventsResponse:
+        return await self.get_events(
+            calendar_ids=calendar_ids,
+            days=days,
+            max_results=max_results,
+        )
+
+    async def get_events(
+        self,
+        *,
+        calendar_ids: Optional[Sequence[str]] = None,
+        days: Optional[int] = None,
+        max_results: Optional[int] = None,
+    ) -> CalendarEventsResponse:
+        if not self.settings.google_calendar_enabled:
+            return CalendarEventsResponse(
+                available=False,
+                reason="Google Calendar is disabled. Set GOOGLE_CALENDAR_ENABLED=true to enable it.",
+                warnings=[],
+                count=0,
+                items=[],
+            )
+
+        effective_days = days or self.settings.google_calendar_lookahead_days
+        effective_limit = max_results or self.settings.google_max_results
+        now = datetime.now(timezone.utc)
+        time_min = now.isoformat()
+        time_max = (now + timedelta(days=effective_days)).isoformat()
+
+        resolved_calendar_ids = self._resolve_calendar_ids(calendar_ids)
+        events: list[CalendarEvent] = []
+        warnings: list[str] = []
+
+        for calendar_id in resolved_calendar_ids:
+            try:
+                raw_items = await asyncio.to_thread(
+                    self._fetch_events_sync,
+                    calendar_id,
+                    time_min,
+                    time_max,
+                    effective_limit,
+                )
+                events.extend(self._normalize_event(calendar_id, item) for item in raw_items)
+            except Exception as exc:
+                self.logger.warning("Google Calendar fetch failed for %s: %s", calendar_id, exc)
+                warnings.append(f"Calendar {calendar_id} could not be loaded.")
+
+        deduped: dict[tuple[str, str | None, str | None], CalendarEvent] = {}
+        for event in events:
+            key = (event.id, event.start, event.end)
+            deduped[key] = event
+
+        items = list(deduped.values())
+        items.sort(key=lambda item: (item.start or "", item.title or ""))
+
+        available = bool(items) or not warnings
+        reason = None if available else "Google Calendar data is currently unavailable."
+
+        return CalendarEventsResponse(
+            available=available,
+            reason=reason,
+            warnings=warnings,
+            count=len(items),
+            items=items[:effective_limit],
+        )
+
+    def _resolve_calendar_ids(self, extra_calendar_ids: Optional[Sequence[str]]) -> list[str]:
+        merged = list(self.settings.google_calendar_ids)
+        if extra_calendar_ids:
+            merged.extend(extra_calendar_ids)
+        if not merged:
+            merged = ["primary"]
+
+        seen: list[str] = []
+        for calendar_id in merged:
+            if calendar_id and calendar_id not in seen:
+                seen.append(calendar_id)
+        return seen
+
+    def _fetch_events_sync(
+        self,
+        calendar_id: str,
+        time_min: str,
+        time_max: str,
+        max_results: int,
+    ) -> list[dict]:
+        service = self._build_service()
+        result = (
+            service.events()
+            .list(
+                calendarId=calendar_id,
+                timeMin=time_min,
+                timeMax=time_max,
+                singleEvents=True,
+                orderBy="startTime",
+                maxResults=max_results,
+            )
+            .execute()
+        )
+        return list(result.get("items", []))
+
+    def _build_service(self):
+        from google.auth.transport.requests import Request
+        from google.oauth2.credentials import Credentials
+        from google_auth_oauthlib.flow import InstalledAppFlow
+        from googleapiclient.discovery import build
+
+        token_path = self.settings.google_token_path
+        creds = None
+
+        if token_path.exists():
+            creds = Credentials.from_authorized_user_file(str(token_path), self.SCOPES)
+
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+            token_path.parent.mkdir(parents=True, exist_ok=True)
+            token_path.write_text(creds.to_json(), encoding="utf-8")
+        elif not creds or not creds.valid:
+            client_secret_path = self.settings.google_client_secret_path
+            if client_secret_path is None or not client_secret_path.exists():
+                raise MissingConfigurationError(
+                    "Google Calendar credentials are missing. Set GOOGLE_CLIENT_SECRET_FILE."
+                )
+
+            flow = InstalledAppFlow.from_client_secrets_file(
+                str(client_secret_path),
+                self.SCOPES,
+            )
+            creds = flow.run_local_server(port=self.settings.google_local_auth_port)
+            token_path.parent.mkdir(parents=True, exist_ok=True)
+            token_path.write_text(creds.to_json(), encoding="utf-8")
+
+        return build("calendar", "v3", credentials=creds, cache_discovery=False)
+
+    def _normalize_event(self, calendar_id: str, item: dict) -> CalendarEvent:
+        start_info = item.get("start") or {}
+        end_info = item.get("end") or {}
+        start = start_info.get("dateTime") or start_info.get("date")
+        end = end_info.get("dateTime") or end_info.get("date")
+        all_day = "date" in start_info and "dateTime" not in start_info
+
+        return CalendarEvent(
+            id=item["id"],
+            calendar_id=calendar_id,
+            title=item.get("summary"),
+            description=item.get("description"),
+            location=item.get("location"),
+            start=start,
+            end=end,
+            all_day=all_day,
+            status=item.get("status"),
+            html_link=item.get("htmlLink"),
+        )

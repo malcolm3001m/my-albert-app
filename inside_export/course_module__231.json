@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/231",
+    "url": "https://api-inside.albertschool.com/course-modules/231",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 231,
+    "course_module_code": "DAT0321",
+    "course_module_name": "Introduction to machine learning",
+    "duration_hours": 18,
+    "ects": 1.0,
+    "course_id": null,
+    "teacher_id": 1,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 76,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-09-12T16:46:23.085401",
+    "course": null,
+    "teacher": {
+      "teacher_id": 1,
+      "user_id": "514eaa31-b1dd-4ca1-b9fd-b6b32a0b9655",
+      "first_name": "Benjamin",
+      "last_name": "Apra",
+      "email": "bapra@albertschool.com",
+      "school_email": "bapra@albertschool.com"
+    },
+    "syllabus": {
+      "id": 2,
+      "status": "published",
+      "current_version_id": 366
+    }
+  }
+}

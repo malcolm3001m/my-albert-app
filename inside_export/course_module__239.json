@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/239",
+    "url": "https://api-inside.albertschool.com/course-modules/239",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 239,
+    "course_module_code": "BUS0336",
+    "course_module_name": "Introduction to Supply Chain (OPTION)",
+    "duration_hours": 24,
+    "ects": 2.0,
+    "course_id": null,
+    "teacher_id": 91,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 116,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-09-18T12:00:13.391271",
+    "course": null,
+    "teacher": {
+      "teacher_id": 91,
+      "user_id": "213c94bf-7b1d-4a28-975a-e0c0ef6537f3",
+      "first_name": "Laetitia",
+      "last_name": "Lozac'h",
+      "email": "laetitia_lozach@hotmail.com",
+      "school_email": "llozac@albertschool.com"
+    },
+    "syllabus": {
+      "id": 38,
+      "status": "published",
+      "current_version_id": 338
+    }
+  }
+}

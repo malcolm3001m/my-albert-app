@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/251",
+    "url": "https://api-inside.albertschool.com/course-modules/251",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 251,
+    "course_module_code": "BUS0431",
+    "course_module_name": "Mobile & social media marketing",
+    "duration_hours": 24,
+    "ects": 2.0,
+    "course_id": null,
+    "teacher_id": 987,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 131,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-11-28T14:28:54.263143",
+    "course": null,
+    "teacher": {
+      "teacher_id": 987,
+      "user_id": "9212a65f-329f-4f98-a417-847ae35aa8e5",
+      "first_name": "Adrian",
+      "last_name": "Cornu",
+      "email": "cornu.adrian@gmail.com",
+      "school_email": "acornu@albertschool.com"
+    },
+    "syllabus": {
+      "id": 61,
+      "status": "published",
+      "current_version_id": 339
+    }
+  }
+}

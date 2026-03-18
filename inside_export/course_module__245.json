@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/245",
+    "url": "https://api-inside.albertschool.com/course-modules/245",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 245,
+    "course_module_code": "MAT0412",
+    "course_module_name": "Probability IV",
+    "duration_hours": 36,
+    "ects": 2.0,
+    "course_id": null,
+    "teacher_id": 1055,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 125,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2026-01-20T10:46:44.834575",
+    "course": null,
+    "teacher": {
+      "teacher_id": 1055,
+      "user_id": "96da8e7a-8674-43a1-9ea2-6748b9b8262c",
+      "first_name": "Romain ",
+      "last_name": "Gout",
+      "email": "romain.gout@edhec.com",
+      "school_email": "rgout@albertschool.com"
+    },
+    "syllabus": {
+      "id": 26,
+      "status": "published",
+      "current_version_id": 431
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/233",
+    "url": "https://api-inside.albertschool.com/course-modules/233",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 233,
+    "course_module_code": "DAT0323",
+    "course_module_name": "Machine Learning I - Linear Models applied to econometrics",
+    "duration_hours": 24,
+    "ects": 2.0,
+    "course_id": null,
+    "teacher_id": 784,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 220,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-07-04T14:17:12.271465",
+    "course": null,
+    "teacher": {
+      "teacher_id": 784,
+      "user_id": "6f4a7d9a-e9b2-4673-bcc4-fd827d17adb3",
+      "first_name": "Leonardo",
+      "last_name": "Ciabattini",
+      "email": "leociabattini@gmail.com",
+      "school_email": "lciabattini@albertschool.com"
+    },
+    "syllabus": {
+      "id": 16,
+      "status": "published",
+      "current_version_id": 368
+    }
+  }
+}

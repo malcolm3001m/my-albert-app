@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "path": "/course-modules/320",
+    "url": "https://api-inside.albertschool.com/course-modules/320",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 320,
+    "course_module_code": "2024_MAT121A",
+    "course_module_name": "Algebra 1 : Vector & Matrices",
+    "duration_hours": 16,
+    "ects": 1.5,
+    "course_id": null,
+    "teacher_id": null,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 201,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-06-30T17:12:23.231330",
+    "course": null,
+    "teacher": null,
+    "syllabus": null
+  }
+}

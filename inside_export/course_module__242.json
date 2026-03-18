@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/242",
+    "url": "https://api-inside.albertschool.com/course-modules/242",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 242,
+    "course_module_code": "HUM0343",
+    "course_module_name": "Soft skills",
+    "duration_hours": 12,
+    "ects": 1.0,
+    "course_id": null,
+    "teacher_id": 103,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 113,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-09-08T12:50:22.705824",
+    "course": null,
+    "teacher": {
+      "teacher_id": 103,
+      "user_id": "bb6e1deb-2d40-4708-b9be-abf789dfb34f",
+      "first_name": "Doryane",
+      "last_name": "Hardy Bellegy",
+      "email": "doryanehardy@gmail.com",
+      "school_email": "dhardy@albertschool.com"
+    },
+    "syllabus": {
+      "id": 81,
+      "status": "published",
+      "current_version_id": 408
+    }
+  }
+}

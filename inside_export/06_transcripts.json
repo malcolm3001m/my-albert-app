@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "path": "/transcript/by-user-id/6a5796d8-b123-424c-a53b-7605b8922fbe",
+    "url": "https://api-inside.albertschool.com/transcript/by-user-id/6a5796d8-b123-424c-a53b-7605b8922fbe",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": [
+    {
+      "transcript_id": "f6106ae0-881b-4cee-8011-208b2c7f5aeb",
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "student_name": "Malcolm Morgan",
+      "student_email": "mmorgan@albertschool.com",
+      "academic_year": "2025-2026",
+      "semester": "S1",
+      "total_ects_earned": 24.0,
+      "total_ects_possible": 30.0,
+      "gpa": 3.28,
+      "overall_attendance_rate": 94.4,
+      "validation_status": "FAIL",
+      "status": "PUBLISHED",
+      "generated_at": "2026-02-02T17:47:04.979089",
+      "format_version": "1.0",
+      "to_catch_up": [
+        {
+          "course": "MAT0311",
+          "course_name": "Linear algebra III",
+          "course_module": "MAT0311",
+          "course_module_name": "Linear algebra III",
+          "teaching_unit_id": "MAT31",
+          "teaching_unit_name": "Mathematics",
+          "grade": 39.6,
+          "attendance_rate": 94.7,
+          "to_catch_up": true,
+          "reason": "grade below 50"
+        },
+        {
+          "course": "MAT0312",
+          "course_name": "Probability III",
+          "course_module": "MAT0312",
+          "course_module_name": "Probability III",
+          "teaching_unit_id": "MAT31",
+          "teaching_unit_name": "Mathematics",
+          "grade": 47.2,
+          "attendance_rate": 95.5,
+          "to_catch_up": true,
+          "reason": "grade below 50"
+        }
+      ],
+      "jury_decision": null,
+      "current_document": {
+        "document_id": "1c3460d1-6b7e-455d-9b3d-6c8a2cc9c21b",
+        "transcript_id": "f6106ae0-881b-4cee-8011-208b2c7f5aeb",
+        "file_url": "https://hzhliibemsevwpkdxkxc.supabase.co/storage/v1/object/sign/academic-documents/2026/academic_documents/transcript/f6106ae0-881b-4cee-8011-208b2c7f5aeb/1770054425_transcript_2025_2026_S1_50fbd73f_51ae_4799_a770_dfbf3cd4af0f.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWM4ZGIwNC0yMzNhLTQ0MjQtYjI4OS1mZGE0ZmEzZGQ1NGIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhY2FkZW1pYy1kb2N1bWVudHMvMjAyNi9hY2FkZW1pY19kb2N1bWVudHMvdHJhbnNjcmlwdC9mNjEwNmFlMC04ODFiLTRjZWUtODAxMS0yMDhiMmM3ZjVhZWIvMTc3MDA1NDQyNV90cmFuc2NyaXB0XzIwMjVfMjAyNl9TMV81MGZiZDczZl81MWFlXzQ3OTlfYTc3MF9kZmJmM2NkNGFmMGYucGRmIiwiaWF0IjoxNzczNzg3NDQ2LCJleHAiOjE3NzQzOTIyNDZ9.hiaxEatf466n3UJQ7T3XctT3unp_NfO_mva0RDIrPUI",
+        "storage_path": "academic-documents/2026/academic_documents/transcript/f6106ae0-881b-4cee-8011-208b2c7f5aeb/1770054425_transcript_2025_2026_S1_50fbd73f_51ae_4799_a770_dfbf3cd4af0f.pdf",
+        "document_name": "transcript_2025-2026_S1_50fbd73f-51ae-4799-a770-dfbf3cd4af0f.pdf",
+        "file_size": 54441,
+        "version": 5,
+        "is_current": true,
+        "document_id_security": "AS-TR-2025-S1-55D1F92E",
+        "generation_date": "2026-02-02T17:47:06.213004",
+        "generated_by_user_id": null,
+        "template_version": "weasyprint-v1.0",
+        "created_at": "2026-02-02T17:47:06.332771",
+        "updated_at": "2026-02-02T17:47:06.332771"
+      },
+      "created_at": "2026-01-26T20:02:21.866421",
+      "updated_at": "2026-02-02T17:59:35.970231"
+    },
+    {
+      "transcript_id": "6f7c871e-900a-40ee-81ba-76267722f988",
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "student_name": "Malcolm Morgan",
+      "student_email": "mmorgan@albertschool.com",
+      "academic_year": "2024-2025",
+      "semester": "S2",
+      "total_ects_earned": 30.0,
+      "total_ects_possible": 30.0,
+      "gpa": null,
+      "overall_attendance_rate": null,
+      "validation_status": null,
+      "status": "PUBLISHED",
+      "generated_at": null,
+      "format_version": "1.0",
+      "to_catch_up": [],
+      "jury_decision": null,
+      "current_document": {
+        "document_id": "2b7f0cb7-52d5-4c7f-8b34-0bc3474f0cb7",
+        "transcript_id": "6f7c871e-900a-40ee-81ba-76267722f988",
+        "file_url": "https://hzhliibemsevwpkdxkxc.supabase.co/storage/v1/object/sign/academic-documents/2025/academic_documents/transcript/6f7c871e-900a-40ee-81ba-76267722f988/1767186566_transcript_2024-2025_S2_50fbd73f-51ae-4799-a770-dfbf3cd4af0f.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWM4ZGIwNC0yMzNhLTQ0MjQtYjI4OS1mZGE0ZmEzZGQ1NGIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhY2FkZW1pYy1kb2N1bWVudHMvMjAyNS9hY2FkZW1pY19kb2N1bWVudHMvdHJhbnNjcmlwdC82ZjdjODcxZS05MDBhLTQwZWUtODFiYS03NjI2NzcyMmY5ODgvMTc2NzE4NjU2Nl90cmFuc2NyaXB0XzIwMjQtMjAyNV9TMl81MGZiZDczZi01MWFlLTQ3OTktYTc3MC1kZmJmM2NkNGFmMGYucGRmIiwiaWF0IjoxNzczNzg3NDQ2LCJleHAiOjE3NzQzOTIyNDZ9.161jbdv3pKJUgW8D9kLXliutGEcGMVXZc9UXW-DlTdQ",
+        "storage_path": "academic-documents/2025/academic_documents/transcript/6f7c871e-900a-40ee-81ba-76267722f988/1767186566_transcript_2024-2025_S2_50fbd73f-51ae-4799-a770-dfbf3cd4af0f.pdf",
+        "document_name": "transcript_2024-2025_S2_50fbd73f-51ae-4799-a770-dfbf3cd4af0f.pdf",
+        "file_size": 40230,
+        "version": 1,
+        "is_current": true,
+        "document_id_security": "AS-TR-2024-S2-18F9C006",
+        "generation_date": "2025-12-31T13:09:26.637038",
+        "generated_by_user_id": null,
+        "template_version": "weasyprint-v1.0",
+        "created_at": "2025-12-31T13:09:27.619055",
+        "updated_at": "2025-12-31T13:09:27.619055"
+      },
+      "created_at": "2025-06-17T20:27:55.322368",
+      "updated_at": "2025-12-03T18:04:14.406339"
+    }
+  ]
+}

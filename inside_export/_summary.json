@@ -1,0 +1,1401 @@
+{
+  "exported_at": "2026-03-17T22:44:03.405002Z",
+  "base_url": "https://api-inside.albertschool.com",
+  "files": [
+    "01_user_profile.json",
+    "02_student_intake.json",
+    "03_student_cohorts.json",
+    "04_student_course_module_instances.json",
+    "05_attendance.json",
+    "06_transcripts.json",
+    "07_exams.json",
+    "08_grades_try.json",
+    "course_instance__460.json",
+    "course_instance__461.json",
+    "course_instance__462.json",
+    "course_instance__463.json",
+    "course_instance__464.json",
+    "course_instance__465.json",
+    "course_instance__466.json",
+    "course_instance__467.json",
+    "course_instance__468.json",
+    "course_instance__469.json",
+    "course_instance__470.json",
+    "course_instance__471.json",
+    "course_instance__472.json",
+    "course_instance__507.json",
+    "course_instance__508.json",
+    "course_instance__509.json",
+    "course_instance__510.json",
+    "course_instance__511.json",
+    "course_instance__512.json",
+    "course_instance__513.json",
+    "course_instance__514.json",
+    "course_instance__524.json",
+    "course_instance__567.json",
+    "course_instance__683.json",
+    "course_instance__685.json",
+    "course_instance__687.json",
+    "course_instance__689.json",
+    "course_instance__691.json",
+    "course_instance__693.json",
+    "course_instance__694.json",
+    "course_instance__696.json",
+    "course_instance__698.json",
+    "course_instance__700.json",
+    "course_instance__704.json",
+    "course_instance__709.json",
+    "course_instance__715.json",
+    "course_instance__880.json",
+    "course_instance__881.json",
+    "course_instance__882.json",
+    "course_instance__887.json",
+    "course_instance__902.json",
+    "course_instance__1379.json",
+    "course_instance__1380.json",
+    "course_instance__1381.json",
+    "course_instance__1382.json",
+    "course_instance__1383.json",
+    "course_instance__1384.json",
+    "course_instance__1385.json",
+    "course_instance__1386.json",
+    "course_instance__1387.json",
+    "course_instance__1388.json",
+    "course_instance__1389.json",
+    "course_instance__1390.json",
+    "course_instance__1391.json",
+    "course_instance__1392.json",
+    "course_instance__1393.json",
+    "course_instance__1394.json",
+    "course_instance__1395.json",
+    "course_instance__1396.json",
+    "course_instance__1397.json",
+    "course_instance__1398.json",
+    "course_instance__1399.json",
+    "course_instance__1400.json",
+    "course_instance__1401.json",
+    "course_instance__1402.json",
+    "course_instance__1403.json",
+    "course_instance__1404.json",
+    "course_instance__1405.json",
+    "course_instance__1406.json",
+    "course_instance__1407.json",
+    "course_instance__1408.json",
+    "course_instance__1409.json",
+    "course_instance__2132.json",
+    "course_instance__2133.json",
+    "course_instance__2136.json",
+    "course_instance__2137.json",
+    "09_course_instance_details_index.json",
+    "course_module__221.json",
+    "course_module__228.json",
+    "course_module__229.json",
+    "course_module__231.json",
+    "course_module__232.json",
+    "course_module__233.json",
+    "course_module__234.json",
+    "course_module__235.json",
+    "course_module__236.json",
+    "course_module__237.json",
+    "course_module__238.json",
+    "course_module__239.json",
+    "course_module__240.json",
+    "course_module__241.json",
+    "course_module__242.json",
+    "course_module__243.json",
+    "course_module__244.json",
+    "course_module__245.json",
+    "course_module__247.json",
+    "course_module__248.json",
+    "course_module__249.json",
+    "course_module__250.json",
+    "course_module__251.json",
+    "course_module__252.json",
+    "course_module__253.json",
+    "course_module__254.json",
+    "course_module__287.json",
+    "course_module__319.json",
+    "course_module__320.json",
+    "course_module__335.json",
+    "course_module__336.json",
+    "course_module__337.json",
+    "course_module__338.json",
+    "course_module__339.json",
+    "course_module__340.json",
+    "course_module__341.json",
+    "course_module__342.json",
+    "course_module__343.json",
+    "course_module__344.json",
+    "course_module__345.json",
+    "course_module__346.json",
+    "course_module__347.json",
+    "course_module__348.json",
+    "course_module__349.json",
+    "course_module__350.json",
+    "course_module__351.json",
+    "course_module__352.json",
+    "course_module__353.json",
+    "course_module__354.json",
+    "course_module__355.json",
+    "course_module__356.json",
+    "course_module__357.json",
+    "course_module__358.json",
+    "course_module__359.json",
+    "course_module__360.json",
+    "course_module__365.json",
+    "course_module__366.json",
+    "course_module__367.json",
+    "course_module__368.json",
+    "course_module__369.json",
+    "course_module__394.json",
+    "course_module__471.json",
+    "course_module__472.json",
+    "course_module__473.json",
+    "course_module__474.json",
+    "course_module__475.json",
+    "course_module__476.json",
+    "course_module__477.json",
+    "course_module__999990.json",
+    "course_module__999999.json",
+    "10_course_module_details_index.json",
+    "11_overview.json"
+  ],
+  "status": {
+    "/user/user-profile": {
+      "path": "/user/user-profile",
+      "url": "https://api-inside.albertschool.com/user/user-profile",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/student/intake": {
+      "path": "/student/intake",
+      "url": "https://api-inside.albertschool.com/student/intake",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/cohorts": {
+      "path": "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/cohorts",
+      "url": "https://api-inside.albertschool.com/student/6a5796d8-b123-424c-a53b-7605b8922fbe/cohorts",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/course-module-instances": {
+      "path": "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/course-module-instances",
+      "url": "https://api-inside.albertschool.com/student/6a5796d8-b123-424c-a53b-7605b8922fbe/course-module-instances",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/attendance/user/6a5796d8-b123-424c-a53b-7605b8922fbe": {
+      "path": "/attendance/user/6a5796d8-b123-424c-a53b-7605b8922fbe",
+      "url": "https://api-inside.albertschool.com/attendance/user/6a5796d8-b123-424c-a53b-7605b8922fbe",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/transcript/by-user-id/6a5796d8-b123-424c-a53b-7605b8922fbe": {
+      "path": "/transcript/by-user-id/6a5796d8-b123-424c-a53b-7605b8922fbe",
+      "url": "https://api-inside.albertschool.com/transcript/by-user-id/6a5796d8-b123-424c-a53b-7605b8922fbe",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/exam/v2/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f/exams": {
+      "path": "/course/exam/v2/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f/exams",
+      "url": "https://api-inside.albertschool.com/course/exam/v2/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f/exams",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/student-exam-grade/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f": {
+      "path": "/student-exam-grade/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "url": "https://api-inside.albertschool.com/student-exam-grade/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/460": {
+      "path": "/course/course-module-instance/by-id/460",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/460",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/461": {
+      "path": "/course/course-module-instance/by-id/461",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/461",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/462": {
+      "path": "/course/course-module-instance/by-id/462",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/462",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/463": {
+      "path": "/course/course-module-instance/by-id/463",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/463",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/464": {
+      "path": "/course/course-module-instance/by-id/464",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/464",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/465": {
+      "path": "/course/course-module-instance/by-id/465",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/465",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/466": {
+      "path": "/course/course-module-instance/by-id/466",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/466",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/467": {
+      "path": "/course/course-module-instance/by-id/467",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/467",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/468": {
+      "path": "/course/course-module-instance/by-id/468",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/468",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/469": {
+      "path": "/course/course-module-instance/by-id/469",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/469",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/470": {
+      "path": "/course/course-module-instance/by-id/470",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/470",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/471": {
+      "path": "/course/course-module-instance/by-id/471",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/471",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/472": {
+      "path": "/course/course-module-instance/by-id/472",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/472",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/507": {
+      "path": "/course/course-module-instance/by-id/507",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/507",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/508": {
+      "path": "/course/course-module-instance/by-id/508",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/508",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/509": {
+      "path": "/course/course-module-instance/by-id/509",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/509",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/510": {
+      "path": "/course/course-module-instance/by-id/510",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/510",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/511": {
+      "path": "/course/course-module-instance/by-id/511",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/511",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/512": {
+      "path": "/course/course-module-instance/by-id/512",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/512",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/513": {
+      "path": "/course/course-module-instance/by-id/513",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/513",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/514": {
+      "path": "/course/course-module-instance/by-id/514",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/514",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/524": {
+      "path": "/course/course-module-instance/by-id/524",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/524",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/567": {
+      "path": "/course/course-module-instance/by-id/567",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/567",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/683": {
+      "path": "/course/course-module-instance/by-id/683",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/683",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/685": {
+      "path": "/course/course-module-instance/by-id/685",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/685",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/687": {
+      "path": "/course/course-module-instance/by-id/687",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/687",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/689": {
+      "path": "/course/course-module-instance/by-id/689",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/689",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/691": {
+      "path": "/course/course-module-instance/by-id/691",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/691",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/693": {
+      "path": "/course/course-module-instance/by-id/693",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/693",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/694": {
+      "path": "/course/course-module-instance/by-id/694",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/694",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/696": {
+      "path": "/course/course-module-instance/by-id/696",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/696",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/698": {
+      "path": "/course/course-module-instance/by-id/698",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/698",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/700": {
+      "path": "/course/course-module-instance/by-id/700",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/700",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/704": {
+      "path": "/course/course-module-instance/by-id/704",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/704",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/709": {
+      "path": "/course/course-module-instance/by-id/709",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/709",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/715": {
+      "path": "/course/course-module-instance/by-id/715",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/715",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/880": {
+      "path": "/course/course-module-instance/by-id/880",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/880",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/881": {
+      "path": "/course/course-module-instance/by-id/881",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/881",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/882": {
+      "path": "/course/course-module-instance/by-id/882",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/882",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/887": {
+      "path": "/course/course-module-instance/by-id/887",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/887",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/902": {
+      "path": "/course/course-module-instance/by-id/902",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/902",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1379": {
+      "path": "/course/course-module-instance/by-id/1379",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1379",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1380": {
+      "path": "/course/course-module-instance/by-id/1380",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1380",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1381": {
+      "path": "/course/course-module-instance/by-id/1381",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1381",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1382": {
+      "path": "/course/course-module-instance/by-id/1382",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1382",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1383": {
+      "path": "/course/course-module-instance/by-id/1383",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1383",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1384": {
+      "path": "/course/course-module-instance/by-id/1384",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1384",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1385": {
+      "path": "/course/course-module-instance/by-id/1385",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1385",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1386": {
+      "path": "/course/course-module-instance/by-id/1386",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1386",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1387": {
+      "path": "/course/course-module-instance/by-id/1387",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1387",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1388": {
+      "path": "/course/course-module-instance/by-id/1388",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1388",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1389": {
+      "path": "/course/course-module-instance/by-id/1389",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1389",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1390": {
+      "path": "/course/course-module-instance/by-id/1390",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1390",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1391": {
+      "path": "/course/course-module-instance/by-id/1391",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1391",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1392": {
+      "path": "/course/course-module-instance/by-id/1392",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1392",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1393": {
+      "path": "/course/course-module-instance/by-id/1393",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1393",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1394": {
+      "path": "/course/course-module-instance/by-id/1394",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1394",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1395": {
+      "path": "/course/course-module-instance/by-id/1395",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1395",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1396": {
+      "path": "/course/course-module-instance/by-id/1396",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1396",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1397": {
+      "path": "/course/course-module-instance/by-id/1397",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1397",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1398": {
+      "path": "/course/course-module-instance/by-id/1398",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1398",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1399": {
+      "path": "/course/course-module-instance/by-id/1399",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1399",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1400": {
+      "path": "/course/course-module-instance/by-id/1400",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1400",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1401": {
+      "path": "/course/course-module-instance/by-id/1401",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1401",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1402": {
+      "path": "/course/course-module-instance/by-id/1402",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1402",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1403": {
+      "path": "/course/course-module-instance/by-id/1403",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1403",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1404": {
+      "path": "/course/course-module-instance/by-id/1404",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1404",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1405": {
+      "path": "/course/course-module-instance/by-id/1405",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1405",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1406": {
+      "path": "/course/course-module-instance/by-id/1406",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1406",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1407": {
+      "path": "/course/course-module-instance/by-id/1407",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1407",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1408": {
+      "path": "/course/course-module-instance/by-id/1408",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1408",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/1409": {
+      "path": "/course/course-module-instance/by-id/1409",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/1409",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/2132": {
+      "path": "/course/course-module-instance/by-id/2132",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/2132",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/2133": {
+      "path": "/course/course-module-instance/by-id/2133",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/2133",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/2136": {
+      "path": "/course/course-module-instance/by-id/2136",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/2136",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course/course-module-instance/by-id/2137": {
+      "path": "/course/course-module-instance/by-id/2137",
+      "url": "https://api-inside.albertschool.com/course/course-module-instance/by-id/2137",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/221": {
+      "path": "/course-modules/221",
+      "url": "https://api-inside.albertschool.com/course-modules/221",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/228": {
+      "path": "/course-modules/228",
+      "url": "https://api-inside.albertschool.com/course-modules/228",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/229": {
+      "path": "/course-modules/229",
+      "url": "https://api-inside.albertschool.com/course-modules/229",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/231": {
+      "path": "/course-modules/231",
+      "url": "https://api-inside.albertschool.com/course-modules/231",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/232": {
+      "path": "/course-modules/232",
+      "url": "https://api-inside.albertschool.com/course-modules/232",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/233": {
+      "path": "/course-modules/233",
+      "url": "https://api-inside.albertschool.com/course-modules/233",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/234": {
+      "path": "/course-modules/234",
+      "url": "https://api-inside.albertschool.com/course-modules/234",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/235": {
+      "path": "/course-modules/235",
+      "url": "https://api-inside.albertschool.com/course-modules/235",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/236": {
+      "path": "/course-modules/236",
+      "url": "https://api-inside.albertschool.com/course-modules/236",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/237": {
+      "path": "/course-modules/237",
+      "url": "https://api-inside.albertschool.com/course-modules/237",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/238": {
+      "path": "/course-modules/238",
+      "url": "https://api-inside.albertschool.com/course-modules/238",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/239": {
+      "path": "/course-modules/239",
+      "url": "https://api-inside.albertschool.com/course-modules/239",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/240": {
+      "path": "/course-modules/240",
+      "url": "https://api-inside.albertschool.com/course-modules/240",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/241": {
+      "path": "/course-modules/241",
+      "url": "https://api-inside.albertschool.com/course-modules/241",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/242": {
+      "path": "/course-modules/242",
+      "url": "https://api-inside.albertschool.com/course-modules/242",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/243": {
+      "path": "/course-modules/243",
+      "url": "https://api-inside.albertschool.com/course-modules/243",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/244": {
+      "path": "/course-modules/244",
+      "url": "https://api-inside.albertschool.com/course-modules/244",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/245": {
+      "path": "/course-modules/245",
+      "url": "https://api-inside.albertschool.com/course-modules/245",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/247": {
+      "path": "/course-modules/247",
+      "url": "https://api-inside.albertschool.com/course-modules/247",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/248": {
+      "path": "/course-modules/248",
+      "url": "https://api-inside.albertschool.com/course-modules/248",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/249": {
+      "path": "/course-modules/249",
+      "url": "https://api-inside.albertschool.com/course-modules/249",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/250": {
+      "path": "/course-modules/250",
+      "url": "https://api-inside.albertschool.com/course-modules/250",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/251": {
+      "path": "/course-modules/251",
+      "url": "https://api-inside.albertschool.com/course-modules/251",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/252": {
+      "path": "/course-modules/252",
+      "url": "https://api-inside.albertschool.com/course-modules/252",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/253": {
+      "path": "/course-modules/253",
+      "url": "https://api-inside.albertschool.com/course-modules/253",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/254": {
+      "path": "/course-modules/254",
+      "url": "https://api-inside.albertschool.com/course-modules/254",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/287": {
+      "path": "/course-modules/287",
+      "url": "https://api-inside.albertschool.com/course-modules/287",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/319": {
+      "path": "/course-modules/319",
+      "url": "https://api-inside.albertschool.com/course-modules/319",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/320": {
+      "path": "/course-modules/320",
+      "url": "https://api-inside.albertschool.com/course-modules/320",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/335": {
+      "path": "/course-modules/335",
+      "url": "https://api-inside.albertschool.com/course-modules/335",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/336": {
+      "path": "/course-modules/336",
+      "url": "https://api-inside.albertschool.com/course-modules/336",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/337": {
+      "path": "/course-modules/337",
+      "url": "https://api-inside.albertschool.com/course-modules/337",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/338": {
+      "path": "/course-modules/338",
+      "url": "https://api-inside.albertschool.com/course-modules/338",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/339": {
+      "path": "/course-modules/339",
+      "url": "https://api-inside.albertschool.com/course-modules/339",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/340": {
+      "path": "/course-modules/340",
+      "url": "https://api-inside.albertschool.com/course-modules/340",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/341": {
+      "path": "/course-modules/341",
+      "url": "https://api-inside.albertschool.com/course-modules/341",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/342": {
+      "path": "/course-modules/342",
+      "url": "https://api-inside.albertschool.com/course-modules/342",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/343": {
+      "path": "/course-modules/343",
+      "url": "https://api-inside.albertschool.com/course-modules/343",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/344": {
+      "path": "/course-modules/344",
+      "url": "https://api-inside.albertschool.com/course-modules/344",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/345": {
+      "path": "/course-modules/345",
+      "url": "https://api-inside.albertschool.com/course-modules/345",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/346": {
+      "path": "/course-modules/346",
+      "url": "https://api-inside.albertschool.com/course-modules/346",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/347": {
+      "path": "/course-modules/347",
+      "url": "https://api-inside.albertschool.com/course-modules/347",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/348": {
+      "path": "/course-modules/348",
+      "url": "https://api-inside.albertschool.com/course-modules/348",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/349": {
+      "path": "/course-modules/349",
+      "url": "https://api-inside.albertschool.com/course-modules/349",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/350": {
+      "path": "/course-modules/350",
+      "url": "https://api-inside.albertschool.com/course-modules/350",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/351": {
+      "path": "/course-modules/351",
+      "url": "https://api-inside.albertschool.com/course-modules/351",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/352": {
+      "path": "/course-modules/352",
+      "url": "https://api-inside.albertschool.com/course-modules/352",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/353": {
+      "path": "/course-modules/353",
+      "url": "https://api-inside.albertschool.com/course-modules/353",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/354": {
+      "path": "/course-modules/354",
+      "url": "https://api-inside.albertschool.com/course-modules/354",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/355": {
+      "path": "/course-modules/355",
+      "url": "https://api-inside.albertschool.com/course-modules/355",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/356": {
+      "path": "/course-modules/356",
+      "url": "https://api-inside.albertschool.com/course-modules/356",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/357": {
+      "path": "/course-modules/357",
+      "url": "https://api-inside.albertschool.com/course-modules/357",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/358": {
+      "path": "/course-modules/358",
+      "url": "https://api-inside.albertschool.com/course-modules/358",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/359": {
+      "path": "/course-modules/359",
+      "url": "https://api-inside.albertschool.com/course-modules/359",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/360": {
+      "path": "/course-modules/360",
+      "url": "https://api-inside.albertschool.com/course-modules/360",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/365": {
+      "path": "/course-modules/365",
+      "url": "https://api-inside.albertschool.com/course-modules/365",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/366": {
+      "path": "/course-modules/366",
+      "url": "https://api-inside.albertschool.com/course-modules/366",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/367": {
+      "path": "/course-modules/367",
+      "url": "https://api-inside.albertschool.com/course-modules/367",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/368": {
+      "path": "/course-modules/368",
+      "url": "https://api-inside.albertschool.com/course-modules/368",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/369": {
+      "path": "/course-modules/369",
+      "url": "https://api-inside.albertschool.com/course-modules/369",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/394": {
+      "path": "/course-modules/394",
+      "url": "https://api-inside.albertschool.com/course-modules/394",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/471": {
+      "path": "/course-modules/471",
+      "url": "https://api-inside.albertschool.com/course-modules/471",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/472": {
+      "path": "/course-modules/472",
+      "url": "https://api-inside.albertschool.com/course-modules/472",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/473": {
+      "path": "/course-modules/473",
+      "url": "https://api-inside.albertschool.com/course-modules/473",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/474": {
+      "path": "/course-modules/474",
+      "url": "https://api-inside.albertschool.com/course-modules/474",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/475": {
+      "path": "/course-modules/475",
+      "url": "https://api-inside.albertschool.com/course-modules/475",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/476": {
+      "path": "/course-modules/476",
+      "url": "https://api-inside.albertschool.com/course-modules/476",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/477": {
+      "path": "/course-modules/477",
+      "url": "https://api-inside.albertschool.com/course-modules/477",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/999990": {
+      "path": "/course-modules/999990",
+      "url": "https://api-inside.albertschool.com/course-modules/999990",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    },
+    "/course-modules/999999": {
+      "path": "/course-modules/999999",
+      "url": "https://api-inside.albertschool.com/course-modules/999999",
+      "method": "GET",
+      "status_code": 200,
+      "ok": true,
+      "content_type": "application/json"
+    }
+  },
+  "notes": [
+    "Discovered 76 course module instance IDs.",
+    "Discovered 70 course module IDs."
+  ]
+}

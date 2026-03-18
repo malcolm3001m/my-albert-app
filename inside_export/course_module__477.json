@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/477",
+    "url": "https://api-inside.albertschool.com/course-modules/477",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 477,
+    "course_module_code": "HUM0444",
+    "course_module_name": "Languages",
+    "duration_hours": 12,
+    "ects": 1.0,
+    "course_id": null,
+    "teacher_id": 628,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": false,
+    "current_published_version_id": 78,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-09-24T15:37:19.246529",
+    "course": null,
+    "teacher": {
+      "teacher_id": 628,
+      "user_id": "e27ec31a-8342-4903-996a-6288255b0b2e",
+      "first_name": "Marie",
+      "last_name": "Le Goff",
+      "email": "mlegoff@albertschool.com",
+      "school_email": "mlegoff@albertschool.com"
+    },
+    "syllabus": {
+      "id": 68,
+      "status": "published",
+      "current_version_id": 413
+    }
+  }
+}

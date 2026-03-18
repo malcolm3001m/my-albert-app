@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/476",
+    "url": "https://api-inside.albertschool.com/course-modules/476",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 476,
+    "course_module_code": "HUM0443",
+    "course_module_name": "Sales",
+    "duration_hours": 12,
+    "ects": 1.0,
+    "course_id": null,
+    "teacher_id": 101,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 84,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2026-03-03T14:05:18.115017",
+    "course": null,
+    "teacher": {
+      "teacher_id": 101,
+      "user_id": "906ef4a1-808f-4953-894f-9b9eeafd8080",
+      "first_name": "Julien",
+      "last_name": "Cadio",
+      "email": "julien.c@b-bot.com",
+      "school_email": "jcadio@albertschool.com"
+    },
+    "syllabus": {
+      "id": 40,
+      "status": "published",
+      "current_version_id": 412
+    }
+  }
+}

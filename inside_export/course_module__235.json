@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/235",
+    "url": "https://api-inside.albertschool.com/course-modules/235",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 235,
+    "course_module_code": "BUS0332",
+    "course_module_name": "Intro to consulting",
+    "duration_hours": 24,
+    "ects": 2.0,
+    "course_id": null,
+    "teacher_id": 150,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 106,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-09-08T12:47:33.343454",
+    "course": null,
+    "teacher": {
+      "teacher_id": 150,
+      "user_id": "a3f6100d-d2bb-4b4f-82e5-aa188bf009e1",
+      "first_name": "Nadia",
+      "last_name": "Garfunkel",
+      "email": "nadiagarfunkel@gmail.com",
+      "school_email": "ngarfunkel@albertschool.com"
+    },
+    "syllabus": {
+      "id": 65,
+      "status": "published",
+      "current_version_id": 334
+    }
+  }
+}

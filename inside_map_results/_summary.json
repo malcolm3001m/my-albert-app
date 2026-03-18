@@ -1,0 +1,197 @@
+[
+  {
+    "endpoint": "/user",
+    "status_code": 405,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "detail"
+    ]
+  },
+  {
+    "endpoint": "/user/user-profile",
+    "status_code": 200,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "user_id",
+      "first_name",
+      "last_name",
+      "school_email",
+      "personal_email",
+      "linkedin_url",
+      "role",
+      "phone_number",
+      "birthday",
+      "address",
+      "created_at",
+      "updated_at",
+      "picture_url",
+      "avatar_url",
+      "english_level",
+      "city",
+      "zip_code",
+      "country",
+      "active",
+      "auth_id",
+      "last_rating_given_at",
+      "last_feedback_given_at",
+      "student_id",
+      "hubspot_id",
+      "registration_date",
+      "nationality",
+      "nationality_other",
+      "student_language",
+      "student_language_other",
+      "academic_program_id"
+    ]
+  },
+  {
+    "endpoint": "/student/intake",
+    "status_code": 200,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "academic_year",
+      "form_version",
+      "status",
+      "phone_number",
+      "personal_email",
+      "address",
+      "address_city",
+      "address_zip_code",
+      "address_country",
+      "birthday",
+      "city_of_birth",
+      "country_of_birth",
+      "insee_place_of_birth",
+      "gender_at_birth",
+      "nationality",
+      "ine_number",
+      "uai",
+      "disabled_worker_status",
+      "first_entry_apprenticeship",
+      "highest_diploma",
+      "contract_type",
+      "social_security_number",
+      "civil_liability_certificate_url",
+      "emergency_contact_first_name",
+      "emergency_contact_last_name",
+      "emergency_contact_phone",
+      "emergency_contact_email",
+      "cvec_number",
+      "cvec_document_url",
+      "crous_status"
+    ]
+  },
+  {
+    "endpoint": "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/cohorts",
+    "status_code": 200,
+    "content_type": "application/json",
+    "top_level_type": "list",
+    "length": 4,
+    "sample_keys": [
+      "id",
+      "cohort_id",
+      "year",
+      "semester",
+      "campus_id",
+      "academic_program_instance_id",
+      "created_at",
+      "updated_at",
+      "google_calendar_id",
+      "name",
+      "campus",
+      "academic_program_instance"
+    ]
+  },
+  {
+    "endpoint": "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/course-module-instances",
+    "status_code": 200,
+    "content_type": "application/json",
+    "top_level_type": "list",
+    "length": 76,
+    "sample_keys": [
+      "id",
+      "id_internal",
+      "course_module_instance_name",
+      "course_module_instance_code",
+      "course_module_id",
+      "course_instance_id",
+      "teacher_id",
+      "teacher_name",
+      "teacher_notification_email",
+      "teacher_user_id",
+      "teacher_staffing_status",
+      "ects",
+      "duration_hours",
+      "syllabi_url",
+      "officer_id",
+      "officer_name",
+      "officer_notification_email",
+      "blackboard_course_primary_id",
+      "course_instance_name",
+      "teaching_unit_instance_name",
+      "teaching_unit_instance_code",
+      "academic_year",
+      "semester",
+      "course_instance",
+      "cohort",
+      "cohorts"
+    ]
+  },
+  {
+    "endpoint": "/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+    "status_code": 405,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "detail"
+    ]
+  },
+  {
+    "endpoint": "/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f/cohorts",
+    "status_code": 403,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "detail"
+    ]
+  },
+  {
+    "endpoint": "/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f/course-module-instances",
+    "status_code": 403,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "detail"
+    ]
+  },
+  {
+    "endpoint": "/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f/exam-enrollments",
+    "status_code": 404,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "detail"
+    ]
+  },
+  {
+    "endpoint": "/student/6a5796d8-b123-424c-a53b-7605b8922fbe",
+    "status_code": 405,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "detail"
+    ]
+  },
+  {
+    "endpoint": "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/exam-enrollments",
+    "status_code": 404,
+    "content_type": "application/json",
+    "top_level_type": "dict",
+    "keys": [
+      "detail"
+    ]
+  }
+]

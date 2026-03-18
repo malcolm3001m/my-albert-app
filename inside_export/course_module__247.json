@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/247",
+    "url": "https://api-inside.albertschool.com/course-modules/247",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 247,
+    "course_module_code": "DAT0421",
+    "course_module_name": "Machine Learning II - Supervised models",
+    "duration_hours": 30,
+    "ects": 2.0,
+    "course_id": null,
+    "teacher_id": 85,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 163,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-07-04T14:14:34.024535",
+    "course": null,
+    "teacher": {
+      "teacher_id": 85,
+      "user_id": "e3f0dda5-045f-4c89-9ef4-b5fd470ee563",
+      "first_name": "Alexis",
+      "last_name": "Bogroff",
+      "email": "alexis.bogroff@gmail.com",
+      "school_email": "abogroff@albertschool.com"
+    },
+    "syllabus": {
+      "id": 46,
+      "status": "published",
+      "current_version_id": 591
+    }
+  }
+}

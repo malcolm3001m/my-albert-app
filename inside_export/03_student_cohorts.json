@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "path": "/student/6a5796d8-b123-424c-a53b-7605b8922fbe/cohorts",
+    "url": "https://api-inside.albertschool.com/student/6a5796d8-b123-424c-a53b-7605b8922fbe/cohorts",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": [
+    {
+      "id": 471,
+      "cohort_id": "471",
+      "year": 2526,
+      "semester": "S2",
+      "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+      "academic_program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+      "created_at": "2025-06-02T16:30:00.952261",
+      "updated_at": "2026-02-20T16:17:56.365960",
+      "google_calendar_id": "c_34e18d3f6ad628205199ca1394cb453551e7ef67fa3f3f1354395602e7c6772e@group.calendar.google.com",
+      "name": "PAR-B2-2526-S2-MS",
+      "campus": {
+        "id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "name": "Paris",
+        "city": "Paris",
+        "country": "France",
+        "code": "PAR"
+      },
+      "academic_program_instance": {
+        "program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+        "academic_program_instance_name": "Bachelor de Business et Data",
+        "description": "Bachelor de Business et Data",
+        "start_date": "2024-09-01",
+        "track": "Management and strategy",
+        "format": "STUDENT",
+        "main_language": "FRENCH",
+        "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+        "academic_program": {
+          "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+          "name": "Bachelor of Business and Data",
+          "level": "BAC3",
+          "number_of_years": 3,
+          "start_year": 2024,
+          "school": "Albert School x Mines Paris PSL",
+          "track": null,
+          "format": "STUDENT"
+        }
+      }
+    },
+    {
+      "id": 470,
+      "cohort_id": "470",
+      "year": 2526,
+      "semester": "S1",
+      "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+      "academic_program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+      "created_at": "2025-06-02T16:28:29.438372",
+      "updated_at": "2025-08-26T10:47:30.973424",
+      "google_calendar_id": "c_65c30af0e622b5823a8d164b0948e5a03a8c3ed434f27fdf7dacd74524b3bb03@group.calendar.google.com",
+      "name": "PAR-B2-2526-S1-MS",
+      "campus": {
+        "id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "name": "Paris",
+        "city": "Paris",
+        "country": "France",
+        "code": "PAR"
+      },
+      "academic_program_instance": {
+        "program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+        "academic_program_instance_name": "Bachelor de Business et Data",
+        "description": "Bachelor de Business et Data",
+        "start_date": "2024-09-01",
+        "track": "Management and strategy",
+        "format": "STUDENT",
+        "main_language": "FRENCH",
+        "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+        "academic_program": {
+          "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+          "name": "Bachelor of Business and Data",
+          "level": "BAC3",
+          "number_of_years": 3,
+          "start_year": 2024,
+          "school": "Albert School x Mines Paris PSL",
+          "track": null,
+          "format": "STUDENT"
+        }
+      }
+    },
+    {
+      "id": 35,
+      "cohort_id": "35",
+      "year": 2425,
+      "semester": "S2",
+      "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+      "academic_program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+      "created_at": "2024-07-24T15:31:13.538670",
+      "updated_at": "2025-05-11T20:40:53.971559",
+      "google_calendar_id": "c_45e01995010cb0517aac95659c6696e70fbef5c203a02db633db0ac75f97f7a7@group.calendar.google.com",
+      "name": "PAR-2425-B1-MS1",
+      "campus": {
+        "id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "name": "Paris",
+        "city": "Paris",
+        "country": "France",
+        "code": "PAR"
+      },
+      "academic_program_instance": {
+        "program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+        "academic_program_instance_name": "Bachelor de Business et Data",
+        "description": "Bachelor de Business et Data",
+        "start_date": "2024-09-01",
+        "track": "Management and strategy",
+        "format": "STUDENT",
+        "main_language": "FRENCH",
+        "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+        "academic_program": {
+          "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+          "name": "Bachelor of Business and Data",
+          "level": "BAC3",
+          "number_of_years": 3,
+          "start_year": 2024,
+          "school": "Albert School x Mines Paris PSL",
+          "track": null,
+          "format": "STUDENT"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "cohort_id": "5",
+      "year": 2425,
+      "semester": "S1",
+      "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+      "academic_program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+      "created_at": "2024-07-15T16:40:25.827682",
+      "updated_at": "2025-05-11T20:40:53.971559",
+      "google_calendar_id": null,
+      "name": "PAR-2425-B1-MS1",
+      "campus": {
+        "id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "campus_id": "71a32610-5de9-42f9-8382-85d687d80e7d",
+        "name": "Paris",
+        "city": "Paris",
+        "country": "France",
+        "code": "PAR"
+      },
+      "academic_program_instance": {
+        "program_instance_id": "7e11de1b-cc7f-482c-bed7-b2a3ab3eb2cb",
+        "academic_program_instance_name": "Bachelor de Business et Data",
+        "description": "Bachelor de Business et Data",
+        "start_date": "2024-09-01",
+        "track": "Management and strategy",
+        "format": "STUDENT",
+        "main_language": "FRENCH",
+        "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+        "academic_program": {
+          "academic_program_id": "834edd8d-7720-48e8-a4a6-01354770ec00",
+          "name": "Bachelor of Business and Data",
+          "level": "BAC3",
+          "number_of_years": 3,
+          "start_year": 2024,
+          "school": "Albert School x Mines Paris PSL",
+          "track": null,
+          "format": "STUDENT"
+        }
+      }
+    }
+  ]
+}

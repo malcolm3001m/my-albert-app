@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "path": "/course-modules/229",
+    "url": "https://api-inside.albertschool.com/course-modules/229",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 229,
+    "course_module_code": "MAT0312",
+    "course_module_name": "Probability III",
+    "duration_hours": 42,
+    "ects": 4.0,
+    "course_id": null,
+    "teacher_id": 814,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": true,
+    "current_published_version_id": 402,
+    "auto_created_version_id": null,
+    "created_at": "2025-05-11T19:58:52.623247",
+    "updated_at": "2025-09-08T12:45:45.196574",
+    "course": null,
+    "teacher": {
+      "teacher_id": 814,
+      "user_id": "fffc87b7-df8d-41a8-9303-f7274cf27473",
+      "first_name": "Nicolas",
+      "last_name": "Schaeffer",
+      "email": "nicolas.schaeffer@ac-paris.fr",
+      "school_email": "nschaeffer@albertschool.com"
+    },
+    "syllabus": {
+      "id": 49,
+      "status": "published",
+      "current_version_id": 319
+    }
+  }
+}

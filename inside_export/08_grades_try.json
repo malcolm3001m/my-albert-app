@@ -1,0 +1,4910 @@
+{
+  "_meta": {
+    "path": "/student-exam-grade/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+    "url": "https://api-inside.albertschool.com/student-exam-grade/student/50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": [
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "e826ae54-3ed6-46f7-bdf1-d04d519ef635",
+      "exam_paper_id": "c4d11dab-492f-4ee7-9a4d-e11a37c1899e",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 61.29,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "59e04494-5b4b-454d-8425-c8141b1cfc9f",
+      "created_at": "2026-02-09T03:35:30.623950",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "e826ae54-3ed6-46f7-bdf1-d04d519ef635",
+        "name": "Machine Learning 2 - MCQ",
+        "exam_date": "2026-02-09T10:00:00",
+        "course_module_instance_id": 1397,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1397,
+          "id_internal": "PAR-B2-2526-S2-MS-DAT0421",
+          "course_module_instance_name": "Machine Learning II - Supervised models",
+          "course_module_instance_code": "DAT0421",
+          "course_module_id": 247,
+          "ects": 2.0,
+          "duration_hours": 30,
+          "academic_year": 2526,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 11.61,
+          "max": 100.0,
+          "average": 68.22,
+          "std_dev": 21.09,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "c4d11dab-492f-4ee7-9a4d-e11a37c1899e",
+        "name": "Machine Learning 2 - MCQ",
+        "exam_date": "2026-02-09T10:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 247,
+        "course_module": {
+          "course_module_id": 247,
+          "course_module_code": "DAT0421",
+          "course_module_name": "Machine Learning II - Supervised models",
+          "ects": 2.0,
+          "duration_hours": 30
+        },
+        "grade_statistics": {
+          "min": 3.23,
+          "max": 100.0,
+          "average": 67.53,
+          "std_dev": 24.4,
+          "count": 112,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "08523c1b-8292-438f-a8e7-17be6823a20b",
+      "exam_paper_id": "6f25b8fe-c8d3-4376-9131-5bf4b77f4797",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 64.72,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "f636a673-8d37-493b-b466-ed07c708d595",
+      "created_at": "2026-01-16T03:33:44.914529",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "08523c1b-8292-438f-a8e7-17be6823a20b",
+        "name": "HUM0342 final",
+        "exam_date": "2026-01-16T07:00:00",
+        "course_module_instance_id": 1391,
+        "coefficient": 70.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1391,
+          "id_internal": "PAR-B2-2526-S1-MS-HUM0342",
+          "course_module_instance_name": "GDPR fundamentals",
+          "course_module_instance_code": "HUM0342",
+          "course_module_id": 241,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 39.44,
+          "max": 100.0,
+          "average": 80.04,
+          "std_dev": 11.02,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "6f25b8fe-c8d3-4376-9131-5bf4b77f4797",
+        "name": "HUM0342 final",
+        "exam_date": "2026-01-16T07:00:00",
+        "coefficient": 70.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 241,
+        "course_module": {
+          "course_module_id": 241,
+          "course_module_code": "HUM0342",
+          "course_module_name": "GDPR fundamentals",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 79.4,
+          "std_dev": 12.78,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "bd34e447-1e63-43ab-a20c-c9e4b48515bb",
+      "exam_paper_id": "8856cb8c-177d-4b12-9ae2-3fa380202e5a",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 62.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": "",
+      "id": "0c3626bd-f7e5-4cc6-8beb-fbb9e247b63d",
+      "created_at": "2026-01-16T03:32:40.495530",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "bd34e447-1e63-43ab-a20c-c9e4b48515bb",
+        "name": "HUM0343 mentorship sessions",
+        "exam_date": "2026-01-16T13:00:00",
+        "course_module_instance_id": 1392,
+        "coefficient": 60.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1392,
+          "id_internal": "PAR-B2-2526-S1-MS-HUM0343",
+          "course_module_instance_name": "Soft skills",
+          "course_module_instance_code": "HUM0343",
+          "course_module_id": 242,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 88.0,
+          "average": 61.59,
+          "std_dev": 21.77,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "8856cb8c-177d-4b12-9ae2-3fa380202e5a",
+        "name": "HUM0343 mentorship sessions",
+        "exam_date": "2026-01-16T13:00:00",
+        "coefficient": 60.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 242,
+        "course_module": {
+          "course_module_id": 242,
+          "course_module_code": "HUM0343",
+          "course_module_name": "Soft skills",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 73.87,
+          "std_dev": 18.46,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "02902d76-4efb-4367-8d73-fc8eaf6c732a",
+      "exam_paper_id": "9c5d39ee-886d-40ef-b3e8-48110403aca0",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 72.92,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": "Revoir Gram-Schmidt et matrices de projection orthogonale. Très bien sur les autres thèmes. Félicitations pour votre travail sérieux. Proposition de mentorat maths expert",
+      "id": "d5cc22cb-1283-42af-aca8-21727ee7c6d1",
+      "created_at": "2026-01-15T03:43:18.415428",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "02902d76-4efb-4367-8d73-fc8eaf6c732a",
+        "name": "MCQ",
+        "exam_date": "2026-02-09T17:00:00",
+        "course_module_instance_id": 1395,
+        "coefficient": 15.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1395,
+          "id_internal": "PAR-B2-2526-S2-MS-MAT0411",
+          "course_module_instance_name": "Linear algebra IV",
+          "course_module_instance_code": "MAT0411",
+          "course_module_id": 244,
+          "ects": 4.0,
+          "duration_hours": 54,
+          "academic_year": 2526,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 25.0,
+          "max": 81.25,
+          "average": 49.93,
+          "std_dev": 14.19,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "9c5d39ee-886d-40ef-b3e8-48110403aca0",
+        "name": "MCQ",
+        "exam_date": "2026-02-09T17:00:00",
+        "coefficient": 15.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 244,
+        "course_module": {
+          "course_module_id": 244,
+          "course_module_code": "MAT0411",
+          "course_module_name": "Linear algebra IV",
+          "ects": 4.0,
+          "duration_hours": 54
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 54.54,
+          "std_dev": 20.05,
+          "count": 113,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "040bd9bd-6b55-4626-a5de-193f5fbaae25",
+      "exam_paper_id": "dfda7c8d-56e9-4f27-9350-ea07ef0b5baf",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 71.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "d83fc2aa-d5e4-4fe5-8e04-1adfa98e6128",
+      "created_at": "2026-01-15T03:42:55.512918",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "040bd9bd-6b55-4626-a5de-193f5fbaae25",
+        "name": "BUS0334 final",
+        "exam_date": "2026-01-15T09:00:00",
+        "course_module_instance_id": 1387,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1387,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0334",
+          "course_module_instance_name": "Economic growth",
+          "course_module_instance_code": "BUS0334",
+          "course_module_id": 237,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 43.0,
+          "max": 71.0,
+          "average": 58.72,
+          "std_dev": 7.64,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "dfda7c8d-56e9-4f27-9350-ea07ef0b5baf",
+        "name": "BUS0334 final",
+        "exam_date": "2026-01-15T09:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 237,
+        "course_module": {
+          "course_module_id": 237,
+          "course_module_code": "BUS0334",
+          "course_module_name": "Economic growth",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 96.0,
+          "average": 61.42,
+          "std_dev": 14.81,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "b0087c80-f44d-4c18-a89c-ee9504ecfe20",
+      "exam_paper_id": "c2ffd546-ca71-4d0b-94e5-49fe0fb03de2",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 95.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "fe90e351-acd2-4871-aee7-c1effbfcc266",
+      "created_at": "2026-01-15T03:41:53.523627",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "b0087c80-f44d-4c18-a89c-ee9504ecfe20",
+        "name": "HUM0341 final",
+        "exam_date": "2026-01-15T11:00:00",
+        "course_module_instance_id": 1390,
+        "coefficient": 70.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1390,
+          "id_internal": "PAR-B2-2526-S1-MS-HUM0341",
+          "course_module_instance_name": "Geopolitics III",
+          "course_module_instance_code": "HUM0341",
+          "course_module_id": 240,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 40.0,
+          "max": 95.0,
+          "average": 75.52,
+          "std_dev": 13.05,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "c2ffd546-ca71-4d0b-94e5-49fe0fb03de2",
+        "name": "HUM0341 final",
+        "exam_date": "2026-01-15T11:00:00",
+        "coefficient": 70.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 240,
+        "course_module": {
+          "course_module_id": 240,
+          "course_module_code": "HUM0341",
+          "course_module_name": "Geopolitics III",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 95.0,
+          "average": 72.43,
+          "std_dev": 16.63,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "0ccd9fab-aeed-46b9-ad70-febd2c65fa81",
+      "exam_paper_id": "e1d00f4f-bb5d-4b3e-95e5-5333db7c75e2",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 54.5,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "dae8b973-7ad8-42b8-8fb2-4d9a9619da87",
+      "created_at": "2026-01-15T03:38:34.229153",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "0ccd9fab-aeed-46b9-ad70-febd2c65fa81",
+        "name": "BUS0333 final",
+        "exam_date": "2026-01-14T13:00:00",
+        "course_module_instance_id": 1386,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1386,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0333",
+          "course_module_instance_name": "Intro to financial market",
+          "course_module_instance_code": "BUS0333",
+          "course_module_id": 236,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 29.0,
+          "max": 85.75,
+          "average": 61.3,
+          "std_dev": 15.87,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "e1d00f4f-bb5d-4b3e-95e5-5333db7c75e2",
+        "name": "BUS0333 final",
+        "exam_date": "2026-01-14T13:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 236,
+        "course_module": {
+          "course_module_id": 236,
+          "course_module_code": "BUS0333",
+          "course_module_name": "Intro to financial market",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 96.5,
+          "average": 63.77,
+          "std_dev": 17.64,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "18468e2b-7b57-4eb0-bb12-d802efbd8c6c",
+      "exam_paper_id": "6480885a-307f-47c5-9d8a-740576da60df",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 58.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "4cce34ba-9073-4cba-a3f7-1ea15fd66752",
+      "created_at": "2026-01-14T03:32:37.624888",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "18468e2b-7b57-4eb0-bb12-d802efbd8c6c",
+        "name": "MAT0312 final",
+        "exam_date": "2026-01-14T08:00:00",
+        "course_module_instance_id": 1380,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1380,
+          "id_internal": "PAR-B2-2526-S1-MS-MAT0312",
+          "course_module_instance_name": "Probability III",
+          "course_module_instance_code": "MAT0312",
+          "course_module_id": 229,
+          "ects": 4.0,
+          "duration_hours": 42,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 28.0,
+          "max": 93.0,
+          "average": 60.48,
+          "std_dev": 20.52,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "6480885a-307f-47c5-9d8a-740576da60df",
+        "name": "MAT0312 final",
+        "exam_date": "2026-01-14T08:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 229,
+        "course_module": {
+          "course_module_id": 229,
+          "course_module_code": "MAT0312",
+          "course_module_name": "Probability III",
+          "ects": 4.0,
+          "duration_hours": 42
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 60.41,
+          "std_dev": 23.96,
+          "count": 113,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "9ffde807-abcd-4076-8019-718fc226fc7b",
+      "exam_paper_id": "0c1ee227-fe17-4aaf-92a7-34170b8adfa8",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 68.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "bef6bbaa-d33b-407f-9c5f-44e769fdbf76",
+      "created_at": "2026-01-13T03:37:50.777918",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "9ffde807-abcd-4076-8019-718fc226fc7b",
+        "name": "BUS0332 final",
+        "exam_date": "2026-01-13T07:00:00",
+        "course_module_instance_id": 1385,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1385,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0332",
+          "course_module_instance_name": "Intro to consulting",
+          "course_module_instance_code": "BUS0332",
+          "course_module_id": 235,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 38.0,
+          "max": 78.0,
+          "average": 63.21,
+          "std_dev": 10.71,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "0c1ee227-fe17-4aaf-92a7-34170b8adfa8",
+        "name": "BUS0332 final",
+        "exam_date": "2026-01-13T07:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 235,
+        "course_module": {
+          "course_module_id": 235,
+          "course_module_code": "BUS0332",
+          "course_module_name": "Intro to consulting",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 92.0,
+          "average": 67.05,
+          "std_dev": 14.06,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "0700e2f8-5df9-4d09-972d-6909f0870903",
+      "exam_paper_id": "51882134-c47f-42e8-8019-a8fca3077b37",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 95.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "bc59812e-434d-4750-9919-f3d47e79adb1",
+      "created_at": "2026-01-13T03:36:45.851477",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "0700e2f8-5df9-4d09-972d-6909f0870903",
+        "name": "BUS0336 final",
+        "exam_date": "2026-01-13T11:00:00",
+        "course_module_instance_id": 1389,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1389,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0336",
+          "course_module_instance_name": "Introduction to Supply Chain (OPTION)",
+          "course_module_instance_code": "BUS0336",
+          "course_module_id": 239,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 62.0,
+          "max": 100.0,
+          "average": 80.38,
+          "std_dev": 11.93,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "51882134-c47f-42e8-8019-a8fca3077b37",
+        "name": "BUS0336 final",
+        "exam_date": "2026-01-13T11:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 239,
+        "course_module": {
+          "course_module_id": 239,
+          "course_module_code": "BUS0336",
+          "course_module_name": "Introduction to Supply Chain (OPTION)",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 39.5,
+          "max": 100.0,
+          "average": 77.61,
+          "std_dev": 14.45,
+          "count": 38,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "8ca62ee0-2899-4716-94d1-35bbb6ba0046",
+      "exam_paper_id": "c7c92261-0641-4a67-8622-c4e44ff1771c",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 100.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "dc28b9c6-73eb-4024-896a-0a5b4dec7585",
+      "created_at": "2026-01-12T03:44:10.175055",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "8ca62ee0-2899-4716-94d1-35bbb6ba0046",
+        "name": "DAT0323 final",
+        "exam_date": "2026-01-12T04:00:00",
+        "course_module_instance_id": 1383,
+        "coefficient": 40.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1383,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0323",
+          "course_module_instance_name": "Machine Learning I - Linear Models applied to econometrics",
+          "course_module_instance_code": "DAT0323",
+          "course_module_id": 233,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 57.5,
+          "max": 100.0,
+          "average": 85.48,
+          "std_dev": 11.24,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "c7c92261-0641-4a67-8622-c4e44ff1771c",
+        "name": "DAT0323 final",
+        "exam_date": "2026-01-12T04:00:00",
+        "coefficient": 40.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 233,
+        "course_module": {
+          "course_module_id": 233,
+          "course_module_code": "DAT0323",
+          "course_module_name": "Machine Learning I - Linear Models applied to econometrics",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 25.0,
+          "max": 100.0,
+          "average": 71.38,
+          "std_dev": 14.77,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "10654752-a265-40ed-88fa-48b198da06e9",
+      "exam_paper_id": "2dceafc6-eef6-430c-9722-75bc4be75bd5",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 61.75,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "9f559379-49d9-4c84-9c60-eb9bdbd649ac",
+      "created_at": "2026-01-12T03:42:54.917396",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "10654752-a265-40ed-88fa-48b198da06e9",
+        "name": "BUS0331 Final",
+        "exam_date": "2026-01-12T13:00:00",
+        "course_module_instance_id": 1384,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1384,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0331",
+          "course_module_instance_name": "Full funnel & digital marketing",
+          "course_module_instance_code": "BUS0331",
+          "course_module_id": 234,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 45.75,
+          "max": 78.25,
+          "average": 63.56,
+          "std_dev": 9.39,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "2dceafc6-eef6-430c-9722-75bc4be75bd5",
+        "name": "BUS0331 Final",
+        "exam_date": "2026-01-12T13:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 234,
+        "course_module": {
+          "course_module_id": 234,
+          "course_module_code": "BUS0331",
+          "course_module_name": "Full funnel & digital marketing",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 33.0,
+          "max": 88.25,
+          "average": 63.64,
+          "std_dev": 11.94,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "0b7ff71d-308a-4b21-8b9a-99c852b148df",
+      "exam_paper_id": "06fbc813-1c21-4bc2-a375-f6582e5b49da",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 38.33,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "96f1608d-223b-42f0-a8b0-0b39cdb3bc98",
+      "created_at": "2026-01-12T03:33:56.264733",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "0b7ff71d-308a-4b21-8b9a-99c852b148df",
+        "name": "DAT0322 final exam",
+        "exam_date": "2026-01-12T06:00:00",
+        "course_module_instance_id": 1382,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1382,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0322",
+          "course_module_instance_name": "SQL & Business Intelligence",
+          "course_module_instance_code": "DAT0322",
+          "course_module_id": 232,
+          "ects": 3.0,
+          "duration_hours": 36,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 15.0,
+          "max": 53.33,
+          "average": 33.62,
+          "std_dev": 8.91,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "06fbc813-1c21-4bc2-a375-f6582e5b49da",
+        "name": "DAT0322 final exam",
+        "exam_date": "2026-01-12T06:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 232,
+        "course_module": {
+          "course_module_id": 232,
+          "course_module_code": "DAT0322",
+          "course_module_name": "SQL & Business Intelligence",
+          "ects": 3.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 8.0,
+          "max": 87.0,
+          "average": 32.3,
+          "std_dev": 13.54,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "605b8b59-80d6-4e1b-8845-26635fd72c10",
+      "exam_paper_id": "90d4158d-7948-48f6-a59f-57bb9dcd8b0d",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 81.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "1f6a9ce0-e530-47e8-b33c-8f3962043d56",
+      "created_at": "2025-12-20T03:55:47.408951",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "605b8b59-80d6-4e1b-8845-26635fd72c10",
+        "name": "BUS0331 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "course_module_instance_id": 1384,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1384,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0331",
+          "course_module_instance_name": "Full funnel & digital marketing",
+          "course_module_instance_code": "BUS0331",
+          "course_module_id": 234,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 55.0,
+          "max": 85.0,
+          "average": 72.84,
+          "std_dev": 5.94,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "90d4158d-7948-48f6-a59f-57bb9dcd8b0d",
+        "name": "BUS0331 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 234,
+        "course_module": {
+          "course_module_id": 234,
+          "course_module_code": "BUS0331",
+          "course_module_name": "Full funnel & digital marketing",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 55.0,
+          "max": 95.0,
+          "average": 74.74,
+          "std_dev": 7.26,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "a1634774-022d-4acf-bcc5-fb1d71273811",
+      "exam_paper_id": "b3b19ce6-2409-45dc-8874-c797fbc7744c",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 100.0,
+      "grade_status": "PASS",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "e0095053-d1e5-49c4-a08c-c414dccc0d2f",
+      "created_at": "2025-12-20T03:53:27.531228",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "a1634774-022d-4acf-bcc5-fb1d71273811",
+        "name": "HUM0344 final",
+        "exam_date": "2025-12-19T13:00:00",
+        "course_module_instance_id": 1393,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1393,
+          "id_internal": "PAR-B2-2526-S1-MS-HUM0344",
+          "course_module_instance_name": "Languages",
+          "course_module_instance_code": "HUM0344",
+          "course_module_id": 243,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": null,
+          "max": null,
+          "average": null,
+          "std_dev": null,
+          "count": 0,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "b3b19ce6-2409-45dc-8874-c797fbc7744c",
+        "name": "HUM0344 final",
+        "exam_date": "2025-12-19T13:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 243,
+        "course_module": {
+          "course_module_id": 243,
+          "course_module_code": "HUM0344",
+          "course_module_name": "Languages",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": null,
+          "max": null,
+          "average": null,
+          "std_dev": null,
+          "count": 0,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "9e8f7c88-9e1f-4664-b317-0976e580b7b1",
+      "exam_paper_id": "9f956b59-7291-444a-b3eb-282aba63c68b",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 100.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "d9e587af-9a18-436b-a32e-2d5c9d5ede35",
+      "created_at": "2025-12-20T03:51:19.460438",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "9e8f7c88-9e1f-4664-b317-0976e580b7b1",
+        "name": "BUS0336 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "course_module_instance_id": 1389,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1389,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0336",
+          "course_module_instance_name": "Introduction to Supply Chain (OPTION)",
+          "course_module_instance_code": "BUS0336",
+          "course_module_id": 239,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 50.0,
+          "max": 100.0,
+          "average": 85.34,
+          "std_dev": 11.57,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "9f956b59-7291-444a-b3eb-282aba63c68b",
+        "name": "BUS0336 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 239,
+        "course_module": {
+          "course_module_id": 239,
+          "course_module_code": "BUS0336",
+          "course_module_name": "Introduction to Supply Chain (OPTION)",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 50.0,
+          "max": 100.0,
+          "average": 82.63,
+          "std_dev": 12.98,
+          "count": 38,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "f479b974-f41e-45f7-a088-a0e31895de20",
+      "exam_paper_id": "248a89de-9f76-4aa5-be89-b3eb600ef6a9",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 70.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "7d6d0155-75f3-4721-9339-55989af15c5e",
+      "created_at": "2025-12-20T03:50:28.581807",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "f479b974-f41e-45f7-a088-a0e31895de20",
+        "name": "BUS0334 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "course_module_instance_id": 1387,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1387,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0334",
+          "course_module_instance_name": "Economic growth",
+          "course_module_instance_code": "BUS0334",
+          "course_module_id": 237,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 55.0,
+          "max": 80.0,
+          "average": 66.38,
+          "std_dev": 6.39,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "248a89de-9f76-4aa5-be89-b3eb600ef6a9",
+        "name": "BUS0334 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 237,
+        "course_module": {
+          "course_module_id": 237,
+          "course_module_code": "BUS0334",
+          "course_module_name": "Economic growth",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 45.0,
+          "max": 100.0,
+          "average": 72.95,
+          "std_dev": 13.18,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "021c1cbe-686e-477a-8bb7-b80e8bc26cd0",
+      "exam_paper_id": "d384b2a6-58a5-46d9-a171-8ff84eadf26b",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 71.9,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "2d2b23be-d28a-4123-9510-8b615deca1fa",
+      "created_at": "2025-12-20T03:49:57.304539",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "021c1cbe-686e-477a-8bb7-b80e8bc26cd0",
+        "name": "BUS0333 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "course_module_instance_id": 1386,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1386,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0333",
+          "course_module_instance_name": "Intro to financial market",
+          "course_module_instance_code": "BUS0333",
+          "course_module_id": 236,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 57.5,
+          "max": 84.4,
+          "average": 73.7,
+          "std_dev": 6.58,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "d384b2a6-58a5-46d9-a171-8ff84eadf26b",
+        "name": "BUS0333 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 236,
+        "course_module": {
+          "course_module_id": 236,
+          "course_module_code": "BUS0333",
+          "course_module_name": "Intro to financial market",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 76.45,
+          "std_dev": 14.24,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "28ac8974-2ef0-49c2-b454-bcaefcb1b9b1",
+      "exam_paper_id": "ec9cc91d-8c36-4a66-8fde-d870aac27dcf",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 69.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "78a5770f-4ddf-4dbd-80d7-5356577850f9",
+      "created_at": "2025-12-20T03:48:59.919358",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "28ac8974-2ef0-49c2-b454-bcaefcb1b9b1",
+        "name": "BUS0332 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "course_module_instance_id": 1385,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1385,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0332",
+          "course_module_instance_name": "Intro to consulting",
+          "course_module_instance_code": "BUS0332",
+          "course_module_id": 235,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 45.0,
+          "max": 84.0,
+          "average": 74.48,
+          "std_dev": 8.83,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "ec9cc91d-8c36-4a66-8fde-d870aac27dcf",
+        "name": "BUS0332 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 235,
+        "course_module": {
+          "course_module_id": 235,
+          "course_module_code": "BUS0332",
+          "course_module_name": "Intro to consulting",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 19.0,
+          "max": 100.0,
+          "average": 81.48,
+          "std_dev": 12.53,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "b2429e52-4dd8-40d0-9c57-676ba0ca0dd8",
+      "exam_paper_id": "9069a8ad-0932-4ce0-87d9-642d5cf2bdcc",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 85.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "2dbe16a1-c0c1-4c06-af9e-5d9f3dec05f4",
+      "created_at": "2025-12-20T03:47:19.308608",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "b2429e52-4dd8-40d0-9c57-676ba0ca0dd8",
+        "name": "HUM0341 continuous assessment",
+        "exam_date": "2025-12-19T06:00:00",
+        "course_module_instance_id": 1390,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1390,
+          "id_internal": "PAR-B2-2526-S1-MS-HUM0341",
+          "course_module_instance_name": "Geopolitics III",
+          "course_module_instance_code": "HUM0341",
+          "course_module_id": 240,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 20.0,
+          "max": 90.0,
+          "average": 69.83,
+          "std_dev": 15.84,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "9069a8ad-0932-4ce0-87d9-642d5cf2bdcc",
+        "name": "HUM0341 continuous assessment",
+        "exam_date": "2025-12-19T06:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 240,
+        "course_module": {
+          "course_module_id": 240,
+          "course_module_code": "HUM0341",
+          "course_module_name": "Geopolitics III",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 95.0,
+          "average": 77.15,
+          "std_dev": 14.05,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "e16c3b26-f769-4f73-af04-b75680a6fc40",
+      "exam_paper_id": "2cd98321-1041-4e77-b989-e7f9759125e6",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 85.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "c212d034-1bff-4297-b342-0f9abf1091ac",
+      "created_at": "2025-12-20T03:35:34.700198",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "e16c3b26-f769-4f73-af04-b75680a6fc40",
+        "name": "DAT0322 final project",
+        "exam_date": "2025-12-19T08:00:00",
+        "course_module_instance_id": 1382,
+        "coefficient": 35.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1382,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0322",
+          "course_module_instance_name": "SQL & Business Intelligence",
+          "course_module_instance_code": "DAT0322",
+          "course_module_id": 232,
+          "ects": 3.0,
+          "duration_hours": 36,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 55.0,
+          "max": 90.0,
+          "average": 70.78,
+          "std_dev": 11.77,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "2cd98321-1041-4e77-b989-e7f9759125e6",
+        "name": "DAT0322 final project",
+        "exam_date": "2025-12-19T08:00:00",
+        "coefficient": 35.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 232,
+        "course_module": {
+          "course_module_id": 232,
+          "course_module_code": "DAT0322",
+          "course_module_name": "SQL & Business Intelligence",
+          "ects": 3.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 50.0,
+          "max": 90.0,
+          "average": 70.09,
+          "std_dev": 11.78,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "0636005f-d06d-4c6e-9113-769a787b5d1b",
+      "exam_paper_id": "d341b6b0-e4c9-426b-9cd7-ce58eddcb4a3",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 65.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "e17d081b-9135-4697-a960-e238b2860720",
+      "created_at": "2025-12-19T17:13:51.811992",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "0636005f-d06d-4c6e-9113-769a787b5d1b",
+        "name": "HUM0342 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "course_module_instance_id": 1391,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1391,
+          "id_internal": "PAR-B2-2526-S1-MS-HUM0342",
+          "course_module_instance_name": "GDPR fundamentals",
+          "course_module_instance_code": "HUM0342",
+          "course_module_id": 241,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 71.55,
+          "std_dev": 24.25,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "d341b6b0-e4c9-426b-9cd7-ce58eddcb4a3",
+        "name": "HUM0342 continuous assessment",
+        "exam_date": "2025-12-19T08:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 241,
+        "course_module": {
+          "course_module_id": 241,
+          "course_module_code": "HUM0342",
+          "course_module_name": "GDPR fundamentals",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 68.35,
+          "std_dev": 22.85,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "4c1ff555-9a57-4a52-ad94-3c9f852fb0dc",
+      "exam_paper_id": "7e502124-2af2-4b3c-bd10-f3bc416ffb41",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 71.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "d73de310-ec24-4019-ab73-bb011a0a8dbd",
+      "created_at": "2025-12-15T03:38:25.458316",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "4c1ff555-9a57-4a52-ad94-3c9f852fb0dc",
+        "name": "DAT0323 intermediate",
+        "exam_date": "2025-12-15T13:00:00",
+        "course_module_instance_id": 1383,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1383,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0323",
+          "course_module_instance_name": "Machine Learning I - Linear Models applied to econometrics",
+          "course_module_instance_code": "DAT0323",
+          "course_module_id": 233,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 42.91,
+          "max": 85.17,
+          "average": 68.89,
+          "std_dev": 8.25,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "7e502124-2af2-4b3c-bd10-f3bc416ffb41",
+        "name": "DAT0323 intermediate",
+        "exam_date": "2025-12-15T13:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 233,
+        "course_module": {
+          "course_module_id": 233,
+          "course_module_code": "DAT0323",
+          "course_module_name": "Machine Learning I - Linear Models applied to econometrics",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 96.88,
+          "average": 69.48,
+          "std_dev": 18.19,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "f2452bbc-6be0-4ab3-841a-f782254c82b2",
+      "exam_paper_id": "17f58c2e-52d6-4f0e-85bb-a1e6404429d2",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 35.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "004c3aca-3174-4fef-bd09-0858aacfe742",
+      "created_at": "2025-12-15T03:35:21.336473",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "f2452bbc-6be0-4ab3-841a-f782254c82b2",
+        "name": "MAT0312 intermediate",
+        "exam_date": "2025-12-15T13:00:00",
+        "course_module_instance_id": 1380,
+        "coefficient": 35.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1380,
+          "id_internal": "PAR-B2-2526-S1-MS-MAT0312",
+          "course_module_instance_name": "Probability III",
+          "course_module_instance_code": "MAT0312",
+          "course_module_id": 229,
+          "ects": 4.0,
+          "duration_hours": 42,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 18.0,
+          "max": 68.0,
+          "average": 42.5,
+          "std_dev": 13.38,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "17f58c2e-52d6-4f0e-85bb-a1e6404429d2",
+        "name": "MAT0312 intermediate",
+        "exam_date": "2025-12-15T13:00:00",
+        "coefficient": 35.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 229,
+        "course_module": {
+          "course_module_id": 229,
+          "course_module_code": "MAT0312",
+          "course_module_name": "Probability III",
+          "ects": 4.0,
+          "duration_hours": 42
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 50.3,
+          "std_dev": 21.21,
+          "count": 112,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "b34e1ce8-f0ce-40b5-8afc-d3a64f8895a5",
+      "exam_paper_id": "25d7676e-4dee-474f-a797-7b217d783be9",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 76.5,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "0c751faf-0ad2-432b-b325-6cb2b9b9e873",
+      "created_at": "2025-12-12T03:35:28.681899",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "b34e1ce8-f0ce-40b5-8afc-d3a64f8895a5",
+        "name": "BDD #4",
+        "exam_date": "2025-12-12T13:00:00",
+        "course_module_instance_id": 1388,
+        "coefficient": 25.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1388,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0335",
+          "course_module_instance_name": "Business Deep Dive",
+          "course_module_instance_code": "BUS0335",
+          "course_module_id": 238,
+          "ects": 4.0,
+          "duration_hours": 32,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 39.0,
+          "max": 77.5,
+          "average": 67.19,
+          "std_dev": 11.39,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "25d7676e-4dee-474f-a797-7b217d783be9",
+        "name": "BDD #4",
+        "exam_date": "2025-12-12T13:00:00",
+        "coefficient": 25.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 238,
+        "course_module": {
+          "course_module_id": 238,
+          "course_module_code": "BUS0335",
+          "course_module_name": "Business Deep Dive",
+          "ects": 4.0,
+          "duration_hours": 32
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 95.0,
+          "average": 71.91,
+          "std_dev": 15.62,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "106102e0-34f6-4f22-ad58-c1bcfe226e7f",
+      "exam_paper_id": "58f84943-910e-4b94-a916-a8cb31ee241e",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 100.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "f41ed6d5-61c8-4592-83d1-2cd25fb4c605",
+      "created_at": "2025-12-08T03:39:43.724071",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "106102e0-34f6-4f22-ad58-c1bcfe226e7f",
+        "name": "DAT0323 GitHub assignment",
+        "exam_date": "2025-12-08T13:00:00",
+        "course_module_instance_id": 1383,
+        "coefficient": 10.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1383,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0323",
+          "course_module_instance_name": "Machine Learning I - Linear Models applied to econometrics",
+          "course_module_instance_code": "DAT0323",
+          "course_module_id": 233,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 67.0,
+          "max": 100.0,
+          "average": 93.17,
+          "std_dev": 13.6,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "58f84943-910e-4b94-a916-a8cb31ee241e",
+        "name": "DAT0323 GitHub assignment",
+        "exam_date": "2025-12-08T13:00:00",
+        "coefficient": 10.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 233,
+        "course_module": {
+          "course_module_id": 233,
+          "course_module_code": "DAT0323",
+          "course_module_name": "Machine Learning I - Linear Models applied to econometrics",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 85.77,
+          "std_dev": 27.73,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "e7b79e42-df26-42cf-a903-33d878e9c5ce",
+      "exam_paper_id": "0f63bc88-acc1-4bce-b4b8-d1cb3963da00",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 51.67,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "0bf57ced-0340-466f-b94c-2c3bca964052",
+      "created_at": "2025-12-08T03:38:38.451662",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "e7b79e42-df26-42cf-a903-33d878e9c5ce",
+        "name": "DAT0323 MCQ",
+        "exam_date": "2025-12-08T13:00:00",
+        "course_module_instance_id": 1383,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1383,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0323",
+          "course_module_instance_name": "Machine Learning I - Linear Models applied to econometrics",
+          "course_module_instance_code": "DAT0323",
+          "course_module_id": 233,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 28.33,
+          "max": 84.17,
+          "average": 56.49,
+          "std_dev": 15.2,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "0f63bc88-acc1-4bce-b4b8-d1cb3963da00",
+        "name": "DAT0323 MCQ",
+        "exam_date": "2025-12-08T13:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 233,
+        "course_module": {
+          "course_module_id": 233,
+          "course_module_code": "DAT0323",
+          "course_module_name": "Machine Learning I - Linear Models applied to econometrics",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 97.0,
+          "average": 56.23,
+          "std_dev": 18.3,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "75eee4c1-d3e1-4876-8ce3-a6fbcd9f9a0f",
+      "exam_paper_id": "5e07caf5-7ac2-4f9f-8759-ef566f27fc9a",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 40.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "5aef2b3c-ae33-49ee-8fb6-0b7e4f82b491",
+      "created_at": "2025-12-08T03:36:43.699228",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "75eee4c1-d3e1-4876-8ce3-a6fbcd9f9a0f",
+        "name": "MAT0312 MCQ",
+        "exam_date": "2025-12-08T13:00:00",
+        "course_module_instance_id": 1380,
+        "coefficient": 15.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1380,
+          "id_internal": "PAR-B2-2526-S1-MS-MAT0312",
+          "course_module_instance_name": "Probability III",
+          "course_module_instance_code": "MAT0312",
+          "course_module_id": 229,
+          "ects": 4.0,
+          "duration_hours": 42,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 18.0,
+          "max": 85.0,
+          "average": 49.03,
+          "std_dev": 15.2,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "5e07caf5-7ac2-4f9f-8759-ef566f27fc9a",
+        "name": "MAT0312 MCQ",
+        "exam_date": "2025-12-08T13:00:00",
+        "coefficient": 15.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 229,
+        "course_module": {
+          "course_module_id": 229,
+          "course_module_code": "MAT0312",
+          "course_module_name": "Probability III",
+          "ects": 4.0,
+          "duration_hours": 42
+        },
+        "grade_statistics": {
+          "min": 6.25,
+          "max": 92.0,
+          "average": 47.6,
+          "std_dev": 18.12,
+          "count": 113,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "59330e07-173b-49ee-801d-4f9ab2f00b8c",
+      "exam_paper_id": "eb4f3155-e015-4a9e-8c9f-c8ad04914f75",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 63.13,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "5523a92f-ef68-44d2-98e7-8874f203e8dd",
+      "created_at": "2025-12-01T03:37:23.614517",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "59330e07-173b-49ee-801d-4f9ab2f00b8c",
+        "name": "BUS0333 MCQ",
+        "exam_date": "2025-12-01T11:00:00",
+        "course_module_instance_id": 1386,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1386,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0333",
+          "course_module_instance_name": "Intro to financial market",
+          "course_module_instance_code": "BUS0333",
+          "course_module_id": 236,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 63.13,
+          "max": 91.25,
+          "average": 78.36,
+          "std_dev": 8.92,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "eb4f3155-e015-4a9e-8c9f-c8ad04914f75",
+        "name": "BUS0333 MCQ",
+        "exam_date": "2025-12-01T11:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 236,
+        "course_module": {
+          "course_module_id": 236,
+          "course_module_code": "BUS0333",
+          "course_module_name": "Intro to financial market",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 77.07,
+          "std_dev": 15.89,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "f7246b97-957f-480f-81ff-592a4d0b3484",
+      "exam_paper_id": "2a277480-1be3-411e-aede-4f065da80ff1",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 25.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "ea1cc2a8-5a84-461f-90c0-abddc726aff9",
+      "created_at": "2025-12-01T03:36:18.704411",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "f7246b97-957f-480f-81ff-592a4d0b3484",
+        "name": "MAT0311 final",
+        "exam_date": "2025-12-01T13:00:00",
+        "course_module_instance_id": 1379,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1379,
+          "id_internal": "PAR-B2-2526-S1-MS-MAT0311",
+          "course_module_instance_name": "Linear algebra III",
+          "course_module_instance_code": "MAT0311",
+          "course_module_id": 228,
+          "ects": 2.0,
+          "duration_hours": 36,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 5.0,
+          "max": 78.0,
+          "average": 39.71,
+          "std_dev": 15.25,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "2a277480-1be3-411e-aede-4f065da80ff1",
+        "name": "MAT0311 final",
+        "exam_date": "2025-12-01T13:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 228,
+        "course_module": {
+          "course_module_id": 228,
+          "course_module_code": "MAT0311",
+          "course_module_name": "Linear algebra III",
+          "ects": 2.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 93.0,
+          "average": 47.07,
+          "std_dev": 20.7,
+          "count": 114,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "68c800fb-a237-429f-b8b1-216933485998",
+      "exam_paper_id": "07936179-7bea-4a12-84bc-1329b3fd698f",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 76.5,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "9793129d-1eba-484e-9f34-fd77dcc04a1a",
+      "created_at": "2025-11-21T03:34:44.837687",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "68c800fb-a237-429f-b8b1-216933485998",
+        "name": "BDD #3",
+        "exam_date": "2025-11-21T13:00:00",
+        "course_module_instance_id": 1388,
+        "coefficient": 25.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1388,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0335",
+          "course_module_instance_name": "Business Deep Dive",
+          "course_module_instance_code": "BUS0335",
+          "course_module_id": 238,
+          "ects": 4.0,
+          "duration_hours": 32,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 54.5,
+          "max": 76.5,
+          "average": 67.79,
+          "std_dev": 7.57,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "07936179-7bea-4a12-84bc-1329b3fd698f",
+        "name": "BDD #3",
+        "exam_date": "2025-11-21T13:00:00",
+        "coefficient": 25.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 238,
+        "course_module": {
+          "course_module_id": 238,
+          "course_module_code": "BUS0335",
+          "course_module_name": "Business Deep Dive",
+          "ects": 4.0,
+          "duration_hours": 32
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 93.0,
+          "average": 74.05,
+          "std_dev": 12.19,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "9316adbc-910f-4520-bc5e-925c00248dcb",
+      "exam_paper_id": "b5553f52-5cf3-4b8d-940b-9a13bb1a0f20",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 95.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "89839a90-dc88-477c-b3d7-d66cd472f6d0",
+      "created_at": "2025-11-17T09:50:32.188844",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "9316adbc-910f-4520-bc5e-925c00248dcb",
+        "name": "BUS0334 MCQ",
+        "exam_date": "2025-11-17T09:00:00",
+        "course_module_instance_id": 1387,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1387,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0334",
+          "course_module_instance_name": "Economic growth",
+          "course_module_instance_code": "BUS0334",
+          "course_module_id": 237,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 83.0,
+          "max": 100.0,
+          "average": 94.52,
+          "std_dev": 4.22,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "b5553f52-5cf3-4b8d-940b-9a13bb1a0f20",
+        "name": "BUS0334 MCQ",
+        "exam_date": "2025-11-17T09:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 237,
+        "course_module": {
+          "course_module_id": 237,
+          "course_module_code": "BUS0334",
+          "course_module_name": "Economic growth",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 91.14,
+          "std_dev": 14.55,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "11a1fe73-538b-4415-9c8b-276d9043912e",
+      "exam_paper_id": "9b5e697d-9f6c-43f1-b37e-97bb007ee819",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 84.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "932a3062-cc84-4445-84ad-2c290eaa92ce",
+      "created_at": "2025-11-17T03:36:21.468015",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "11a1fe73-538b-4415-9c8b-276d9043912e",
+        "name": " BUS0332 MCQ",
+        "exam_date": "2025-11-17T13:00:00",
+        "course_module_instance_id": 1385,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1385,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0332",
+          "course_module_instance_name": "Intro to consulting",
+          "course_module_instance_code": "BUS0332",
+          "course_module_id": 235,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 73.0,
+          "max": 97.0,
+          "average": 85.24,
+          "std_dev": 5.94,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "9b5e697d-9f6c-43f1-b37e-97bb007ee819",
+        "name": " BUS0332 MCQ",
+        "exam_date": "2025-11-17T13:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 235,
+        "course_module": {
+          "course_module_id": 235,
+          "course_module_code": "BUS0332",
+          "course_module_name": "Intro to consulting",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 84.03,
+          "std_dev": 15.0,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "ec807f18-dfb3-470c-a9fe-9650f70f9a8e",
+      "exam_paper_id": "1747c9a1-944e-4ffa-8fc5-916ec7f9b202",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 50.42,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "74385b47-2a09-47b3-a13b-dc3ec86bbc00",
+      "created_at": "2025-11-11T03:32:51.300545",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "ec807f18-dfb3-470c-a9fe-9650f70f9a8e",
+        "name": "BUS0336 MCQ",
+        "exam_date": "2025-11-10T11:00:00",
+        "course_module_instance_id": 1389,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1389,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0336",
+          "course_module_instance_name": "Introduction to Supply Chain (OPTION)",
+          "course_module_instance_code": "BUS0336",
+          "course_module_id": 239,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 24.17,
+          "max": 80.0,
+          "average": 51.21,
+          "std_dev": 13.82,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "1747c9a1-944e-4ffa-8fc5-916ec7f9b202",
+        "name": "BUS0336 MCQ",
+        "exam_date": "2025-11-10T11:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 239,
+        "course_module": {
+          "course_module_id": 239,
+          "course_module_code": "BUS0336",
+          "course_module_name": "Introduction to Supply Chain (OPTION)",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 24.0,
+          "max": 93.0,
+          "average": 53.53,
+          "std_dev": 15.75,
+          "count": 38,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "159ab6e7-d09e-46c6-ac7d-ce7f4a989978",
+      "exam_paper_id": "0a592355-616e-4c75-829d-b864e28a0c9b",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 55.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "932ba946-b18a-459c-8886-357b6bad72ff",
+      "created_at": "2025-11-11T03:31:52.161293",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "159ab6e7-d09e-46c6-ac7d-ce7f4a989978",
+        "name": "DAT0322 intermediate",
+        "exam_date": "2025-11-10T11:00:00",
+        "course_module_instance_id": 1382,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1382,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0322",
+          "course_module_instance_name": "SQL & Business Intelligence",
+          "course_module_instance_code": "DAT0322",
+          "course_module_id": 232,
+          "ects": 3.0,
+          "duration_hours": 36,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 16.67,
+          "max": 78.33,
+          "average": 49.4,
+          "std_dev": 14.5,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "0a592355-616e-4c75-829d-b864e28a0c9b",
+        "name": "DAT0322 intermediate",
+        "exam_date": "2025-11-10T11:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 232,
+        "course_module": {
+          "course_module_id": 232,
+          "course_module_code": "DAT0322",
+          "course_module_name": "SQL & Business Intelligence",
+          "ects": 3.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 93.33,
+          "average": 40.22,
+          "std_dev": 18.87,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "1c102c85-6797-4822-8d85-706184a14d4e",
+      "exam_paper_id": "87aeb83d-e06a-435f-a138-a24a58a2c93a",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 89.5,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "269002ae-d61d-445e-a3ae-567322bcc0d5",
+      "created_at": "2025-10-24T16:20:49.050353",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "1c102c85-6797-4822-8d85-706184a14d4e",
+        "name": "BDD #2",
+        "exam_date": "2025-10-24T12:00:00",
+        "course_module_instance_id": 1388,
+        "coefficient": 25.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1388,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0335",
+          "course_module_instance_name": "Business Deep Dive",
+          "course_module_instance_code": "BUS0335",
+          "course_module_id": 238,
+          "ects": 4.0,
+          "duration_hours": 32,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 69.0,
+          "max": 89.5,
+          "average": 82.88,
+          "std_dev": 7.18,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "87aeb83d-e06a-435f-a138-a24a58a2c93a",
+        "name": "BDD #2",
+        "exam_date": "2025-10-24T12:00:00",
+        "coefficient": 25.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 238,
+        "course_module": {
+          "course_module_id": 238,
+          "course_module_code": "BUS0335",
+          "course_module_name": "Business Deep Dive",
+          "ects": 4.0,
+          "duration_hours": 32
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 97.48,
+          "average": 81.53,
+          "std_dev": 12.71,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "aadbb3b6-991a-4748-805a-ac4a4f6d382e",
+      "exam_paper_id": "bb238e8e-f8a1-4b05-a9de-e333193f7f64",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 94.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "43b008d4-1241-486c-b29c-9b14a9846393",
+      "created_at": "2025-10-24T16:19:03.123617",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "aadbb3b6-991a-4748-805a-ac4a4f6d382e",
+        "name": "BDD #1",
+        "exam_date": "2025-10-03T12:00:00",
+        "course_module_instance_id": 1388,
+        "coefficient": 25.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1388,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0335",
+          "course_module_instance_name": "Business Deep Dive",
+          "course_module_instance_code": "BUS0335",
+          "course_module_id": 238,
+          "ects": 4.0,
+          "duration_hours": 32,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 68.0,
+          "max": 94.0,
+          "average": 81.86,
+          "std_dev": 8.37,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "bb238e8e-f8a1-4b05-a9de-e333193f7f64",
+        "name": "BDD #1",
+        "exam_date": "2025-10-03T12:00:00",
+        "coefficient": 25.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 238,
+        "course_module": {
+          "course_module_id": 238,
+          "course_module_code": "BUS0335",
+          "course_module_name": "Business Deep Dive",
+          "ects": 4.0,
+          "duration_hours": 32
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 94.0,
+          "average": 77.53,
+          "std_dev": 15.05,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "20ff1dcc-733d-4987-93f1-10c07367cc6d",
+      "exam_paper_id": "4ddd63af-c5c6-41cd-bddb-22815753606e",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 75.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "4bc7adc5-2376-4b14-bba0-4c791a105636",
+      "created_at": "2025-10-24T15:12:42.821421",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "20ff1dcc-733d-4987-93f1-10c07367cc6d",
+        "name": "DAT0321 final",
+        "exam_date": "2025-10-13T08:00:00",
+        "course_module_instance_id": 1381,
+        "coefficient": 50.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1381,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0321",
+          "course_module_instance_name": "Introduction to machine learning",
+          "course_module_instance_code": "DAT0321",
+          "course_module_id": 231,
+          "ects": 1.0,
+          "duration_hours": 18,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 30.36,
+          "max": 90.18,
+          "average": 61.21,
+          "std_dev": 16.66,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "4ddd63af-c5c6-41cd-bddb-22815753606e",
+        "name": "DAT0321 final",
+        "exam_date": "2025-10-13T08:00:00",
+        "coefficient": 50.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 231,
+        "course_module": {
+          "course_module_id": 231,
+          "course_module_code": "DAT0321",
+          "course_module_name": "Introduction to machine learning",
+          "ects": 1.0,
+          "duration_hours": 18
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 98.21,
+          "average": 67.94,
+          "std_dev": 18.79,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "e1f2a7d9-3696-43c2-befa-433387c2fa6e",
+      "exam_paper_id": "c5d695d6-ad61-4543-9b69-3610af442d51",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 58.33,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "9e4a79d7-7d50-46a7-aba0-3d64d6797130",
+      "created_at": "2025-10-24T14:44:00.015568",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "e1f2a7d9-3696-43c2-befa-433387c2fa6e",
+        "name": "DAT0322 MCQ",
+        "exam_date": "2025-10-20T08:00:00",
+        "course_module_instance_id": 1382,
+        "coefficient": 15.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1382,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0322",
+          "course_module_instance_name": "SQL & Business Intelligence",
+          "course_module_instance_code": "DAT0322",
+          "course_module_id": 232,
+          "ects": 3.0,
+          "duration_hours": 36,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 15.0,
+          "max": 70.83,
+          "average": 45.4,
+          "std_dev": 12.04,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "c5d695d6-ad61-4543-9b69-3610af442d51",
+        "name": "DAT0322 MCQ",
+        "exam_date": "2025-10-20T08:00:00",
+        "coefficient": 15.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 232,
+        "course_module": {
+          "course_module_id": 232,
+          "course_module_code": "DAT0322",
+          "course_module_name": "SQL & Business Intelligence",
+          "ects": 3.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 93.0,
+          "average": 52.6,
+          "std_dev": 18.71,
+          "count": 114,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "9a724776-cb8a-4ca3-90cb-c5427e763338",
+      "exam_paper_id": "4c73c4d2-27ad-46a6-9a65-c21ae9a414f0",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 87.5,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "3de94f4c-bc1c-4c00-8aaa-40bf60b88341",
+      "created_at": "2025-10-24T14:43:18.671764",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "9a724776-cb8a-4ca3-90cb-c5427e763338",
+        "name": "BUS0331 Intermediary",
+        "exam_date": "2025-10-20T04:00:00",
+        "course_module_instance_id": 1384,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1384,
+          "id_internal": "PAR-B2-2526-S1-MS-BUS0331",
+          "course_module_instance_name": "Full funnel & digital marketing",
+          "course_module_instance_code": "BUS0331",
+          "course_module_id": 234,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 47.5,
+          "max": 95.83,
+          "average": 80.69,
+          "std_dev": 11.48,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "4c73c4d2-27ad-46a6-9a65-c21ae9a414f0",
+        "name": "BUS0331 Intermediary",
+        "exam_date": "2025-10-20T04:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 234,
+        "course_module": {
+          "course_module_id": 234,
+          "course_module_code": "BUS0331",
+          "course_module_name": "Full funnel & digital marketing",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 81.9,
+          "std_dev": 14.25,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "4749f0aa-c522-4a03-81aa-85b307b3a5d3",
+      "exam_paper_id": "9ad8436a-8ec2-4d0b-8cce-5461b0e051b1",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 60.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "1dac7797-4796-4e94-951e-9e044d5bba45",
+      "created_at": "2025-10-24T14:37:50.849356",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "4749f0aa-c522-4a03-81aa-85b307b3a5d3",
+        "name": "MAT0311 intermediate",
+        "exam_date": "2025-10-20T12:00:00",
+        "course_module_instance_id": 1379,
+        "coefficient": 35.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1379,
+          "id_internal": "PAR-B2-2526-S1-MS-MAT0311",
+          "course_module_instance_name": "Linear algebra III",
+          "course_module_instance_code": "MAT0311",
+          "course_module_id": 228,
+          "ects": 2.0,
+          "duration_hours": 36,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 43.0,
+          "max": 100.0,
+          "average": 76.95,
+          "std_dev": 16.85,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "9ad8436a-8ec2-4d0b-8cce-5461b0e051b1",
+        "name": "MAT0311 intermediate",
+        "exam_date": "2025-10-20T12:00:00",
+        "coefficient": 35.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 228,
+        "course_module": {
+          "course_module_id": 228,
+          "course_module_code": "MAT0311",
+          "course_module_name": "Linear algebra III",
+          "ects": 2.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 59.13,
+          "std_dev": 24.35,
+          "count": 113,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "c0944942-9b64-48bc-8564-400c1ed3dd2e",
+      "exam_paper_id": "c2cf3984-56f3-4256-82ca-2a4189097506",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 43.75,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "41a1b70b-cd74-4c72-8c21-4bff784e6d62",
+      "created_at": "2025-10-01T09:38:07.600912",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "c0944942-9b64-48bc-8564-400c1ed3dd2e",
+        "name": "2025-09-29 ECUE32-1_Introduction_to_machine_learning",
+        "exam_date": "2025-09-29T12:00:00",
+        "course_module_instance_id": 1381,
+        "coefficient": 30.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1381,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0321",
+          "course_module_instance_name": "Introduction to machine learning",
+          "course_module_instance_code": "DAT0321",
+          "course_module_id": 231,
+          "ects": 1.0,
+          "duration_hours": 18,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 22.92,
+          "max": 85.71,
+          "average": 55.16,
+          "std_dev": 16.47,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "c2cf3984-56f3-4256-82ca-2a4189097506",
+        "name": "2025-09-29 ECUE32-1_Introduction_to_machine_learning",
+        "exam_date": "2025-09-29T12:00:00",
+        "coefficient": 30.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 231,
+        "course_module": {
+          "course_module_id": 231,
+          "course_module_code": "DAT0321",
+          "course_module_name": "Introduction to machine learning",
+          "ects": 1.0,
+          "duration_hours": 18
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 88.39,
+          "average": 57.6,
+          "std_dev": 18.78,
+          "count": 113,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "f5f9988f-d95d-410d-a434-100115021408",
+      "exam_paper_id": "aa03cedf-34bf-4308-b6c7-4435a0a36ec1",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 41.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "a2951684-8ba3-4c25-856d-950c710abc57",
+      "created_at": "2025-09-25T18:05:46.806409",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "f5f9988f-d95d-410d-a434-100115021408",
+        "name": "Linear Algebra III QCM",
+        "exam_date": "2025-09-22T12:30:00",
+        "course_module_instance_id": 1379,
+        "coefficient": 15.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1379,
+          "id_internal": "PAR-B2-2526-S1-MS-MAT0311",
+          "course_module_instance_name": "Linear algebra III",
+          "course_module_instance_code": "MAT0311",
+          "course_module_id": 228,
+          "ects": 2.0,
+          "duration_hours": 36,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 6.5,
+          "max": 75.0,
+          "average": 38.97,
+          "std_dev": 15.31,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "aa03cedf-34bf-4308-b6c7-4435a0a36ec1",
+        "name": "Linear Algebra III QCM",
+        "exam_date": "2025-09-22T12:30:00",
+        "coefficient": 15.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 228,
+        "course_module": {
+          "course_module_id": 228,
+          "course_module_code": "MAT0311",
+          "course_module_name": "Linear algebra III",
+          "ects": 2.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 45.99,
+          "std_dev": 17.91,
+          "count": 113,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "9daa9ee0-e07b-4e09-abbe-b67cf7a4000e",
+      "exam_paper_id": "1b3e9ed0-49d6-468a-874c-0d01e3ce2234",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 57.5,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": null,
+      "comment_for_student": null,
+      "id": "c0dd0736-5f85-4d99-bd60-a7c50b822307",
+      "created_at": "2025-09-25T16:04:18.226503",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "9daa9ee0-e07b-4e09-abbe-b67cf7a4000e",
+        "name": "Introduction to machine learning - I",
+        "exam_date": "2025-09-22T07:00:00",
+        "course_module_instance_id": 1381,
+        "coefficient": 20.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 1381,
+          "id_internal": "PAR-B2-2526-S1-MS-DAT0321",
+          "course_module_instance_name": "Introduction to machine learning",
+          "course_module_instance_code": "DAT0321",
+          "course_module_id": 231,
+          "ects": 1.0,
+          "duration_hours": 18,
+          "academic_year": 2526,
+          "semester": "S1"
+        },
+        "grade_statistics": {
+          "min": 38.75,
+          "max": 92.5,
+          "average": 69.18,
+          "std_dev": 13.91,
+          "count": 29,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "1b3e9ed0-49d6-468a-874c-0d01e3ce2234",
+        "name": "Introduction to machine learning - I",
+        "exam_date": "2025-09-22T07:00:00",
+        "coefficient": 20.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 231,
+        "course_module": {
+          "course_module_id": 231,
+          "course_module_code": "DAT0321",
+          "course_module_name": "Introduction to machine learning",
+          "ects": 1.0,
+          "duration_hours": 18
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 100.0,
+          "average": 75.2,
+          "std_dev": 17.14,
+          "count": 112,
+          "exam_count": 5
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "0eb81398-6f0c-4135-a6f2-feb9aae25883",
+      "exam_paper_id": "aa62fa94-57e0-4f01-af5e-e38ab1ae7194",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 72.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "",
+      "id": "71060f75-8b82-4e4e-ac13-b787956655ce",
+      "created_at": "2025-06-18T16:41:07.940999",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "0eb81398-6f0c-4135-a6f2-feb9aae25883",
+        "name": "Exam Paper of S2 24-25 - Object Oriented Programming & Scraping",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 509,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 509,
+          "id_internal": "PAR-2425-B1-MS1-DAT123",
+          "course_module_instance_name": "Object Oriented Programming & Scraping",
+          "course_module_instance_code": "PAR-2425-B1-MS1-DAT123",
+          "course_module_id": 338,
+          "ects": 1.5,
+          "duration_hours": 18,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 89.0,
+          "average": 48.58,
+          "std_dev": 28.86,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "aa62fa94-57e0-4f01-af5e-e38ab1ae7194",
+        "name": "Exam Paper of S2 24-25 - Object Oriented Programming & Scraping",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 338,
+        "course_module": {
+          "course_module_id": 338,
+          "course_module_code": "2024_DAT123",
+          "course_module_name": "Object Oriented Programming & Scraping",
+          "ects": 1.5,
+          "duration_hours": 18
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 97.0,
+          "average": 58.21,
+          "std_dev": 24.57,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "d759a502-0f05-4edf-bf47-874df8b84b29",
+      "exam_paper_id": "943e21c9-3a19-438f-a5a6-170179aaf4a2",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 60.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "",
+      "id": "7eb258e5-4de4-4c20-b8b1-ee225fa7c7f3",
+      "created_at": "2025-06-18T16:26:31.904162",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "d759a502-0f05-4edf-bf47-874df8b84b29",
+        "name": "Exam Paper of S2 24-25 - Business ethics",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 513,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 513,
+          "id_internal": "PAR-2425-B1-MS1-HUM123",
+          "course_module_instance_name": "Business ethics",
+          "course_module_instance_code": "PAR-2425-B1-MS1-HUM123",
+          "course_module_id": 357,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 85.0,
+          "average": 62.5,
+          "std_dev": 14.81,
+          "count": 28,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "943e21c9-3a19-438f-a5a6-170179aaf4a2",
+        "name": "Exam Paper of S2 24-25 - Business ethics",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 357,
+        "course_module": {
+          "course_module_id": 357,
+          "course_module_code": "2024_HUM123",
+          "course_module_name": "Business ethics",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 95.0,
+          "average": 67.07,
+          "std_dev": 15.71,
+          "count": 113,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "5a2234b3-a8e5-45d6-97a3-6829c1264487",
+      "exam_paper_id": "f1f709ae-9e90-4512-be0d-425ca7ee9697",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 62.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "18,00*(30)+10,00*(70)",
+      "id": "331c6cdf-420a-4baf-b6cb-76efd0729929",
+      "created_at": "2025-06-18T16:26:24.751970",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "5a2234b3-a8e5-45d6-97a3-6829c1264487",
+        "name": "Exam Paper of S2 24-25 - Geopolitics",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 463,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 463,
+          "id_internal": "PAR-2425-B1-MS1-HUM121",
+          "course_module_instance_name": "Geopolitics",
+          "course_module_instance_code": "PAR-2425-B1-MS1-HUM121",
+          "course_module_id": 355,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 90.0,
+          "average": 65.37,
+          "std_dev": 20.45,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "f1f709ae-9e90-4512-be0d-425ca7ee9697",
+        "name": "Exam Paper of S2 24-25 - Geopolitics",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 355,
+        "course_module": {
+          "course_module_id": 355,
+          "course_module_code": "2024_HUM121",
+          "course_module_name": "Geopolitics",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 95.0,
+          "average": 67.93,
+          "std_dev": 22.0,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "0e4d3613-802b-4ce9-a929-fae95bea0b21",
+      "exam_paper_id": "bd716fa1-aecb-495d-83c9-a9d2bff984c4",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 72.65,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "15,60*(30,00%)+16,00*(40,00%)+11,50*(30,00%)",
+      "id": "c8a79d00-ff73-468f-9c55-b9a2b25830a3",
+      "created_at": "2025-06-18T16:26:17.517294",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "0e4d3613-802b-4ce9-a929-fae95bea0b21",
+        "name": "Exam Paper of S2 24-25 - Client acquisition",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 465,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 465,
+          "id_internal": "PAR-2425-B1-MS1-MAR121",
+          "course_module_instance_name": "Client acquisition",
+          "course_module_instance_code": "PAR-2425-B1-MS1-MAR121",
+          "course_module_id": 347,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 23.4,
+          "max": 83.95,
+          "average": 69.3,
+          "std_dev": 13.01,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "bd716fa1-aecb-495d-83c9-a9d2bff984c4",
+        "name": "Exam Paper of S2 24-25 - Client acquisition",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 347,
+        "course_module": {
+          "course_module_id": 347,
+          "course_module_code": "2024_MAR121",
+          "course_module_name": "Client acquisition",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 87.35,
+          "average": 65.64,
+          "std_dev": 18.87,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "e1ae1745-0e8f-4e61-84b7-c7170e2238b4",
+      "exam_paper_id": "655a84dc-e6a9-4e98-8c3e-ef36af37d249",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 80.25,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "16,24*(20%)+16,00*(80%)",
+      "id": "1658beb0-c5e9-4ba6-86dc-cac47a470254",
+      "created_at": "2025-06-18T16:26:10.379994",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "e1ae1745-0e8f-4e61-84b7-c7170e2238b4",
+        "name": "Exam Paper of S2 24-25 - Financial diagnosis",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 462,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 462,
+          "id_internal": "PAR-2425-B1-MS1-FIN121",
+          "course_module_instance_name": "Financial diagnosis",
+          "course_module_instance_code": "PAR-2425-B1-MS1-FIN121",
+          "course_module_id": 342,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 3.35,
+          "max": 95.1,
+          "average": 58.15,
+          "std_dev": 25.99,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "655a84dc-e6a9-4e98-8c3e-ef36af37d249",
+        "name": "Exam Paper of S2 24-25 - Financial diagnosis",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 342,
+        "course_module": {
+          "course_module_id": 342,
+          "course_module_code": "2024_FIN121",
+          "course_module_name": "Financial diagnosis",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 95.1,
+          "average": 59.83,
+          "std_dev": 21.0,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "b546465f-65a4-405a-94ad-b00cbc38fc47",
+      "exam_paper_id": "0a787eb1-7a6c-49b4-93ee-209e9da280a1",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 59.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "",
+      "id": "cfe196ff-0215-493f-8716-fd35d626578f",
+      "created_at": "2025-06-18T16:26:03.530583",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "b546465f-65a4-405a-94ad-b00cbc38fc47",
+        "name": "Exam Paper of S2 24-25 - Life of data project",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 510,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 510,
+          "id_internal": "PAR-2425-B1-MS1-DAT124",
+          "course_module_instance_name": "Life of data project",
+          "course_module_instance_code": "PAR-2425-B1-MS1-DAT124",
+          "course_module_id": 337,
+          "ects": 1.5,
+          "duration_hours": 18,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 89.5,
+          "average": 50.55,
+          "std_dev": 26.23,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "0a787eb1-7a6c-49b4-93ee-209e9da280a1",
+        "name": "Exam Paper of S2 24-25 - Life of data project",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 337,
+        "course_module": {
+          "course_module_id": 337,
+          "course_module_code": "2024_DAT124",
+          "course_module_name": "Life of data project",
+          "ects": 1.5,
+          "duration_hours": 18
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 96.5,
+          "average": 51.83,
+          "std_dev": 23.15,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "1c4ea9a0-14ec-4fdb-98ad-4d2a5196b53f",
+      "exam_paper_id": "c8cea909-da41-48fe-976b-2ba5f006a3bb",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 38.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "10,00*(0,4)+6,00*(0,6)",
+      "id": "25e98fd5-7f8f-4d82-badb-c55e056af433",
+      "created_at": "2025-06-18T16:25:56.628733",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "1c4ea9a0-14ec-4fdb-98ad-4d2a5196b53f",
+        "name": "Exam Paper of S2 24-25 - Data structure II: Graph Theory",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 508,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 508,
+          "id_internal": "PAR-2425-B1-MS1-DAT122",
+          "course_module_instance_name": "Data structure II: Graph Theory",
+          "course_module_instance_code": "PAR-2425-B1-MS1-DAT122",
+          "course_module_id": 335,
+          "ects": 3.0,
+          "duration_hours": 30,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 20.0,
+          "max": 82.0,
+          "average": 49.36,
+          "std_dev": 16.52,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "c8cea909-da41-48fe-976b-2ba5f006a3bb",
+        "name": "Exam Paper of S2 24-25 - Data structure II: Graph Theory",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 335,
+        "course_module": {
+          "course_module_id": 335,
+          "course_module_code": "2024_DAT122",
+          "course_module_name": "Data structure II: Graph Theory",
+          "ects": 3.0,
+          "duration_hours": 30
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 86.25,
+          "average": 50.72,
+          "std_dev": 20.74,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "0afd31e0-e3ae-4bd8-928a-b19f840b5efd",
+      "exam_paper_id": "f855573f-66db-4490-8b1c-a18d0979522b",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 47.5,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "16,00*(0,2)+7,92*(0,8)",
+      "id": "56f28d77-d1e2-421b-852c-78b02392e3a5",
+      "created_at": "2025-06-18T16:25:49.024384",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "0afd31e0-e3ae-4bd8-928a-b19f840b5efd",
+        "name": "Exam Paper of S2 24-25 - Data Visualization & Storytelling",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 507,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 507,
+          "id_internal": "PAR-2425-B1-MS1-DAT121",
+          "course_module_instance_name": "Data Visualization & Storytelling",
+          "course_module_instance_code": "PAR-2425-B1-MS1-DAT121",
+          "course_module_id": 319,
+          "ects": 3.0,
+          "duration_hours": 36,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 79.5,
+          "average": 53.48,
+          "std_dev": 16.86,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "f855573f-66db-4490-8b1c-a18d0979522b",
+        "name": "Exam Paper of S2 24-25 - Data Visualization & Storytelling",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 319,
+        "course_module": {
+          "course_module_id": 319,
+          "course_module_code": "2024_DAT121",
+          "course_module_name": "Data Visualization & Storytelling",
+          "ects": 3.0,
+          "duration_hours": 36
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 88.5,
+          "average": 58.63,
+          "std_dev": 20.73,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "21eba0d6-7fd8-4639-b983-58a8a88900c5",
+      "exam_paper_id": "ec6cb60f-663b-4232-9dc3-a797f3e6c01a",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 77.75,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "16,00*(90%)+11,50*(10%)",
+      "id": "b5028e3d-ceaf-4f4c-9b87-12cdb309d9c0",
+      "created_at": "2025-06-18T16:25:42.215187",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "21eba0d6-7fd8-4639-b983-58a8a88900c5",
+        "name": "Exam Paper of S2 24-25 - Corporate strategy",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 472,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 472,
+          "id_internal": "PAR-2425-B1-MS1-STR121",
+          "course_module_instance_name": "Corporate strategy",
+          "course_module_instance_code": "PAR-2425-B1-MS1-STR121",
+          "course_module_id": 394,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 5.75,
+          "max": 87.5,
+          "average": 60.59,
+          "std_dev": 21.57,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "ec6cb60f-663b-4232-9dc3-a797f3e6c01a",
+        "name": "Exam Paper of S2 24-25 - Corporate strategy",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 394,
+        "course_module": {
+          "course_module_id": 394,
+          "course_module_code": "2024_STR121",
+          "course_module_name": "Corporate strategy",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 87.5,
+          "average": 63.2,
+          "std_dev": 19.41,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "7a501215-6e8a-4916-9b23-a99c572d5728",
+      "exam_paper_id": "a5a281f2-d924-4e2e-b9ab-970e5658a70f",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 93.75,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "",
+      "id": "e43f646e-423e-4e8c-ad54-bb518d4d701b",
+      "created_at": "2025-06-18T16:25:35.056789",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "7a501215-6e8a-4916-9b23-a99c572d5728",
+        "name": "Exam Paper of S2 24-25 - No code for business",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 471,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 471,
+          "id_internal": "PAR-2425-B1-MS1-OPS121",
+          "course_module_instance_name": "No code for business",
+          "course_module_instance_code": "PAR-2425-B1-MS1-OPS121",
+          "course_module_id": 344,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 97.75,
+          "average": 72.48,
+          "std_dev": 22.94,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "a5a281f2-d924-4e2e-b9ab-970e5658a70f",
+        "name": "Exam Paper of S2 24-25 - No code for business",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 344,
+        "course_module": {
+          "course_module_id": 344,
+          "course_module_code": "2024_OPS121",
+          "course_module_name": "No code for business",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 97.75,
+          "average": 73.47,
+          "std_dev": 20.75,
+          "count": 37,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "64b45028-d7bb-4c0e-81e1-112986f1e324",
+      "exam_paper_id": "aeb35db9-6035-4ce3-9075-ec2450c03b43",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 85.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "20,00*(50)+14,00*(50)",
+      "id": "9ac64153-a54f-408a-b77f-6fb2befb7c8c",
+      "created_at": "2025-06-18T16:25:29.683402",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "64b45028-d7bb-4c0e-81e1-112986f1e324",
+        "name": "Exam Paper of S2 24-25 - Intro to cybersecurity",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 512,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 512,
+          "id_internal": "PAR-2425-B1-MS1-HUM122",
+          "course_module_instance_name": "Intro to cybersecurity",
+          "course_module_instance_code": "PAR-2425-B1-MS1-HUM122",
+          "course_module_id": 359,
+          "ects": 1.0,
+          "duration_hours": 12,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 32.5,
+          "max": 87.5,
+          "average": 81.33,
+          "std_dev": 9.75,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "aeb35db9-6035-4ce3-9075-ec2450c03b43",
+        "name": "Exam Paper of S2 24-25 - Intro to cybersecurity",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 359,
+        "course_module": {
+          "course_module_id": 359,
+          "course_module_code": "2024_HUM122",
+          "course_module_name": "Intro to cybersecurity",
+          "ects": 1.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 90.0,
+          "average": 71.71,
+          "std_dev": 19.45,
+          "count": 120,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "e22e6812-82b1-4f03-a07f-96ce8c03893a",
+      "exam_paper_id": "c5577bbb-8c93-4636-aaa4-9bee2cee6953",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 53.25,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "10,80*(0,5)+10,50*(0,5)",
+      "id": "a20e46da-ad49-4d52-b961-a9cd0508ae29",
+      "created_at": "2025-06-18T16:25:22.922204",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "e22e6812-82b1-4f03-a07f-96ce8c03893a",
+        "name": "Exam Paper of S2 24-25 - Algebra 2: Orthogonality & Projections",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 469,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 469,
+          "id_internal": "PAR-2425-B1-MS1-MAT124A",
+          "course_module_instance_name": "Algebra 2: Orthogonality & Projections",
+          "course_module_instance_code": "PAR-2425-B1-MS1-MAT124A",
+          "course_module_id": 351,
+          "ects": 2.0,
+          "duration_hours": 12,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 80.25,
+          "average": 41.21,
+          "std_dev": 22.23,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "c5577bbb-8c93-4636-aaa4-9bee2cee6953",
+        "name": "Exam Paper of S2 24-25 - Algebra 2: Orthogonality & Projections",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 351,
+        "course_module": {
+          "course_module_id": 351,
+          "course_module_code": "2024_MAT124A",
+          "course_module_name": "Algebra 2: Orthogonality & Projections",
+          "ects": 2.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 80.25,
+          "average": 40.74,
+          "std_dev": 20.58,
+          "count": 37,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "93afb8ee-f597-4196-b7b5-1401d5b58399",
+      "exam_paper_id": "eb115406-46f6-434e-a9da-5a5108af0eb9",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 72.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "12,00*(0,4)+16,00*(0,6)",
+      "id": "9a060381-f5e6-445b-b124-4c0cee7bd13a",
+      "created_at": "2025-06-18T16:25:18.074241",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "93afb8ee-f597-4196-b7b5-1401d5b58399",
+        "name": "Exam Paper of S2 24-25 - Randomness 2 : Hypothesis testing",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 468,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 468,
+          "id_internal": "PAR-2425-B1-MS1-MAT123A",
+          "course_module_instance_name": "Randomness 2 : Hypothesis testing",
+          "course_module_instance_code": "PAR-2425-B1-MS1-MAT123A",
+          "course_module_id": 350,
+          "ects": 2.0,
+          "duration_hours": 12,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 89.5,
+          "average": 58.89,
+          "std_dev": 22.96,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "eb115406-46f6-434e-a9da-5a5108af0eb9",
+        "name": "Exam Paper of S2 24-25 - Randomness 2 : Hypothesis testing",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 350,
+        "course_module": {
+          "course_module_id": 350,
+          "course_module_code": "2024_MAT123A",
+          "course_module_name": "Randomness 2 : Hypothesis testing",
+          "ects": 2.0,
+          "duration_hours": 12
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 89.5,
+          "average": 58.08,
+          "std_dev": 22.19,
+          "count": 37,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "67f7b3b9-6e93-45bb-8318-42f9c2236f7e",
+      "exam_paper_id": "fd072311-fd8d-43ea-9c7e-4adaca863dcc",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 31.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "4,00*(0,8)+15,00*(0,2)",
+      "id": "4156774a-5465-400a-9bb6-3d51fb98c2f5",
+      "created_at": "2025-06-18T16:25:13.375163",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "67f7b3b9-6e93-45bb-8318-42f9c2236f7e",
+        "name": "Exam Paper of S2 24-25 - Analysis: convex functions",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 467,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 467,
+          "id_internal": "PAR-2425-B1-MS1-MAT122A",
+          "course_module_instance_name": "Analysis: convex functions",
+          "course_module_instance_code": "PAR-2425-B1-MS1-MAT122A",
+          "course_module_id": 349,
+          "ects": 0.5,
+          "duration_hours": 8,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 82.5,
+          "average": 41.2,
+          "std_dev": 22.17,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "fd072311-fd8d-43ea-9c7e-4adaca863dcc",
+        "name": "Exam Paper of S2 24-25 - Analysis: convex functions",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 349,
+        "course_module": {
+          "course_module_id": 349,
+          "course_module_code": "2024_MAT122A",
+          "course_module_name": "Analysis: convex functions",
+          "ects": 0.5,
+          "duration_hours": 8
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 82.5,
+          "average": 42.93,
+          "std_dev": 22.22,
+          "count": 37,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "dcbe082f-1b63-4541-8ba5-e479600d4420",
+      "exam_paper_id": "df347e32-dfc8-40f4-a363-aee5cf13372a",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 55.7,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "18,50*(0,1)+8,70*(0,35)+12,30*(0,2)+10,80*(0,35)+10,50*(12,3)+16,00*(15,56)",
+      "id": "357e73e3-0c2f-49fe-9d32-435d93250ae1",
+      "created_at": "2025-06-18T16:25:07.653187",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "dcbe082f-1b63-4541-8ba5-e479600d4420",
+        "name": "Exam Paper of S2 24-25 - Algebra 1 : Vector & Matrices",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 466,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 466,
+          "id_internal": "PAR-2425-B1-MS1-MAT121A",
+          "course_module_instance_name": "Algebra 1 : Vector & Matrices",
+          "course_module_instance_code": "PAR-2425-B1-MS1-MAT121A",
+          "course_module_id": 320,
+          "ects": 1.5,
+          "duration_hours": 16,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 88.9,
+          "average": 45.93,
+          "std_dev": 17.29,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "df347e32-dfc8-40f4-a363-aee5cf13372a",
+        "name": "Exam Paper of S2 24-25 - Algebra 1 : Vector & Matrices",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 320,
+        "course_module": {
+          "course_module_id": 320,
+          "course_module_code": "2024_MAT121A",
+          "course_module_name": "Algebra 1 : Vector & Matrices",
+          "ects": 1.5,
+          "duration_hours": 16
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 88.9,
+          "average": 49.05,
+          "std_dev": 17.26,
+          "count": 37,
+          "exam_count": 2
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "5b57b7df-ab1f-49fd-b81f-a3f05e52120c",
+      "exam_paper_id": "329ae414-e0db-4627-8423-515921ea81e3",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 74.23025,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "11,43*(0,25)+16,00*(0,25)+15,30*(0,25)+16,67*(0,25)",
+      "id": "40e09edf-3ae0-4509-9fbb-40a9ecf8979a",
+      "created_at": "2025-06-18T16:24:56.303624",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "5b57b7df-ab1f-49fd-b81f-a3f05e52120c",
+        "name": "Exam Paper of S2 24-25 - Business Deep Dives",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 461,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 461,
+          "id_internal": "PAR-2425-B1-MS1-BDD-1",
+          "course_module_instance_name": "Business Deep Dives",
+          "course_module_instance_code": "PAR-2425-B1-MS1-BDD-1",
+          "course_module_id": 366,
+          "ects": 0.0,
+          "duration_hours": 0,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 32.65,
+          "max": 74.23,
+          "average": 51.67,
+          "std_dev": 12.05,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "329ae414-e0db-4627-8423-515921ea81e3",
+        "name": "Exam Paper of S2 24-25 - Business Deep Dives",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 366,
+        "course_module": {
+          "course_module_id": 366,
+          "course_module_code": "2024_BDD",
+          "course_module_name": "Business Deep Dives",
+          "ects": 0.0,
+          "duration_hours": 0
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 91.25,
+          "average": 56.4,
+          "std_dev": 16.93,
+          "count": 179,
+          "exam_count": 8
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "669b3be6-0ab1-4ab6-8f48-f5abe719e0d8",
+      "exam_paper_id": "54b1fd2b-e59f-456a-b2a0-2605a208fd4e",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 85.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "16,00*(50)+18,00*(50)",
+      "id": "90908bd9-2521-474d-b095-a73e2f2cb861",
+      "created_at": "2025-06-18T16:24:44.178828",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "669b3be6-0ab1-4ab6-8f48-f5abe719e0d8",
+        "name": "Exam Paper of S2 24-25 - Business models 101",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 514,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 514,
+          "id_internal": "PAR-2425-B1-MS1-OPS122",
+          "course_module_instance_name": "Business models 101",
+          "course_module_instance_code": "PAR-2425-B1-MS1-OPS122",
+          "course_module_id": 346,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 50.0,
+          "max": 85.0,
+          "average": 72.58,
+          "std_dev": 10.05,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "54b1fd2b-e59f-456a-b2a0-2605a208fd4e",
+        "name": "Exam Paper of S2 24-25 - Business models 101",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 346,
+        "course_module": {
+          "course_module_id": 346,
+          "course_module_code": "2024_OPS122",
+          "course_module_name": "Business models 101",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 50.0,
+          "max": 85.0,
+          "average": 72.58,
+          "std_dev": 10.05,
+          "count": 30,
+          "exam_count": 1
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    },
+    {
+      "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+      "exam_id": "bda7a993-301e-4e28-91b4-cec8b9efee30",
+      "exam_paper_id": "0133ed18-ffca-4e12-a63d-6619fc5c3bc6",
+      "enrollment_id": null,
+      "session": 1,
+      "grade": 53.0,
+      "grade_status": "NUMERIC",
+      "submitted_exam_paper_url": null,
+      "counts_in_average": true,
+      "coefficient": 100,
+      "comment_for_student": "9,50*(50)+7,50*(20)+17,00*(5)+12,00*(15)+20,00*(5)+14,00*(5)",
+      "id": "c2671d0a-1c0e-48f6-acd3-fccc4a668df3",
+      "created_at": "2025-06-18T16:24:39.508163",
+      "updated_at": "2026-02-25T10:57:57.986175",
+      "exam": {
+        "exam_id": "bda7a993-301e-4e28-91b4-cec8b9efee30",
+        "name": "Exam Paper of S2 24-25 - Capital, investments and competition",
+        "exam_date": "2025-05-30T08:00:00",
+        "course_module_instance_id": 511,
+        "coefficient": 100.0,
+        "status": "GRADED",
+        "course_module_instance": {
+          "id": 511,
+          "id_internal": "PAR-2425-B1-MS1-ECO121",
+          "course_module_instance_name": "Capital, investments and competition",
+          "course_module_instance_code": "PAR-2425-B1-MS1-ECO121",
+          "course_module_id": 340,
+          "ects": 2.0,
+          "duration_hours": 24,
+          "academic_year": 2425,
+          "semester": "S2"
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 77.62,
+          "average": 53.71,
+          "std_dev": 15.9,
+          "count": 30,
+          "exam_count": null
+        }
+      },
+      "exam_paper": {
+        "paper_id": "0133ed18-ffca-4e12-a63d-6619fc5c3bc6",
+        "name": "Exam Paper of S2 24-25 - Capital, investments and competition",
+        "exam_date": "2025-05-30T08:00:00",
+        "coefficient": 100.0,
+        "exam_status": "GRADES_PUBLISHED",
+        "session": 1,
+        "course_module_id": 340,
+        "course_module": {
+          "course_module_id": 340,
+          "course_module_code": "2024_ECO121",
+          "course_module_name": "Capital, investments and competition",
+          "ects": 2.0,
+          "duration_hours": 24
+        },
+        "grade_statistics": {
+          "min": 0.0,
+          "max": 87.75,
+          "average": 57.61,
+          "std_dev": 17.33,
+          "count": 119,
+          "exam_count": 6
+        }
+      },
+      "student": {
+        "student_id": "50fbd73f-51ae-4799-a770-dfbf3cd4af0f",
+        "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+        "student_number": "2024060",
+        "is_visiting_student": false,
+        "user": {
+          "user_id": "6a5796d8-b123-424c-a53b-7605b8922fbe",
+          "first_name": "Malcolm",
+          "last_name": "Morgan",
+          "school_email": "mmorgan@albertschool.com"
+        }
+      }
+    }
+  ]
+}

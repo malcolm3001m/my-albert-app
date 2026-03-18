@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "path": "/course-modules/999990",
+    "url": "https://api-inside.albertschool.com/course-modules/999990",
+    "method": "GET",
+    "status_code": 200,
+    "ok": true,
+    "content_type": "application/json"
+  },
+  "data": {
+    "course_module_id": 999990,
+    "course_module_code": "OPT101-1",
+    "course_module_name": "Optional Meeting",
+    "duration_hours": 0,
+    "ects": 0.0,
+    "course_id": null,
+    "teacher_id": 921,
+    "syllabi_url": null,
+    "target_hourly_rate_incl_tax": null,
+    "template_blackboard_id": null,
+    "track_attendance": false,
+    "current_published_version_id": 130,
+    "auto_created_version_id": null,
+    "created_at": "2025-08-26T09:08:15.547204",
+    "updated_at": "2025-11-07T11:57:47.950012",
+    "course": null,
+    "teacher": {
+      "teacher_id": 921,
+      "user_id": "dbb2cc32-47d2-4770-b86e-bce765151c0a",
+      "first_name": "Stephane",
+      "last_name": "Velasquez",
+      "email": "svelasquez@eugeniaschool.com",
+      "school_email": "svelasquez@eugeniaschool.com"
+    },
+    "syllabus": null
+  }
+}
