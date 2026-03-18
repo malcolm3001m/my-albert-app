@@ -16,6 +16,7 @@ router = APIRouter(prefix="/auth/google", tags=["auth"])
 logger = logging.getLogger("auth_google")
 
 GOOGLE_OAUTH_STATE_COOKIE = "google_oauth_state"
+GOOGLE_OAUTH_PKCE_COOKIE = "pkce_verifier"
 GOOGLE_OAUTH_SCOPES = [
     "openid",
     "https://www.googleapis.com/auth/userinfo.email",
@@ -104,6 +105,7 @@ async def google_login() -> RedirectResponse:
         include_granted_scopes="true",
         prompt="consent",
     )
+    code_verifier = flow.code_verifier
 
     logger.info("Redirecting user to Google consent screen")
     logger.info("Google OAuth redirect_uri=%s", flow.redirect_uri)
@@ -112,6 +114,14 @@ async def google_login() -> RedirectResponse:
     response.set_cookie(
         key=GOOGLE_OAUTH_STATE_COOKIE,
         value=state,
+        httponly=True,
+        secure=True,
+        samesite="lax",
+        max_age=600,
+    )
+    response.set_cookie(
+        key=GOOGLE_OAUTH_PKCE_COOKIE,
+        value=code_verifier,
         httponly=True,
         secure=True,
         samesite="lax",
@@ -132,6 +142,7 @@ async def google_callback(request: Request) -> JSONResponse:
     state = request.query_params.get("state")
     code = request.query_params.get("code")
     expected_state = request.cookies.get(GOOGLE_OAUTH_STATE_COOKIE)
+    pkce_verifier = request.cookies.get(GOOGLE_OAUTH_PKCE_COOKIE)
 
     if not state or not code:
         raise HTTPException(status_code=400, detail="Missing Google OAuth state or code.")
@@ -140,7 +151,15 @@ async def google_callback(request: Request) -> JSONResponse:
         logger.error("Google OAuth state mismatch: expected=%s actual=%s", expected_state, state)
         raise HTTPException(status_code=400, detail="Invalid Google OAuth state.")
 
+    if not pkce_verifier:
+        logger.error("Google OAuth PKCE verifier cookie is missing")
+        raise HTTPException(
+            status_code=400,
+            detail="Missing PKCE code verifier. Start the Google login flow again.",
+        )
+
     flow = _build_google_flow(state=state)
+    flow.code_verifier = pkce_verifier
     authorization_response = f"{GOOGLE_REDIRECT_URI}?{request.url.query}"
 
     logger.info("Handling Google OAuth callback")
@@ -184,6 +203,12 @@ async def google_callback(request: Request) -> JSONResponse:
     )
     response.delete_cookie(
         key=GOOGLE_OAUTH_STATE_COOKIE,
+        httponly=True,
+        secure=True,
+        samesite="lax",
+    )
+    response.delete_cookie(
+        key=GOOGLE_OAUTH_PKCE_COOKIE,
         httponly=True,
         secure=True,
         samesite="lax",
