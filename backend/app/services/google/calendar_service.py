@@ -5,8 +5,11 @@ import logging
 from datetime import datetime, timedelta, timezone
 from typing import Optional, Sequence
 
+from googleapiclient.discovery import build
+
 from app.core.config import Settings
 from app.models.calendar import CalendarEvent, CalendarEventsResponse
+from app.services.google.credentials import get_google_credentials
 from app.utils.errors import MissingConfigurationError
 
 
@@ -125,35 +128,10 @@ class GoogleCalendarService:
         return list(result.get("items", []))
 
     def _build_service(self):
-        from google.auth.transport.requests import Request
-        from google.oauth2.credentials import Credentials
-        from google_auth_oauthlib.flow import InstalledAppFlow
-        from googleapiclient.discovery import build
-
-        token_path = self.settings.google_token_path
-        creds = None
-
-        if token_path.exists():
-            creds = Credentials.from_authorized_user_file(str(token_path), self.SCOPES)
-
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-            token_path.parent.mkdir(parents=True, exist_ok=True)
-            token_path.write_text(creds.to_json(), encoding="utf-8")
-        elif not creds or not creds.valid:
-            client_secret_path = self.settings.google_client_secret_path
-            if client_secret_path is None or not client_secret_path.exists():
-                raise MissingConfigurationError(
-                    "Google Calendar credentials are missing. Set GOOGLE_CLIENT_SECRET_FILE."
-                )
-
-            flow = InstalledAppFlow.from_client_secrets_file(
-                str(client_secret_path),
-                self.SCOPES,
-            )
-            creds = flow.run_local_server(port=self.settings.google_local_auth_port)
-            token_path.parent.mkdir(parents=True, exist_ok=True)
-            token_path.write_text(creds.to_json(), encoding="utf-8")
+        try:
+            creds = get_google_credentials(self.SCOPES)
+        except Exception as exc:
+            raise MissingConfigurationError(str(exc)) from exc
 
         return build("calendar", "v3", credentials=creds, cache_discovery=False)
 
