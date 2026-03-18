@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from datetime import datetime, timezone
 
 from fastapi import APIRouter, HTTPException
 from googleapiclient.discovery import build
@@ -52,17 +51,22 @@ def _fetch_calendars_sync() -> list[dict]:
 def _fetch_events_sync() -> list[dict]:
     service = _build_calendar_service()
     try:
-        response = (
-            service.events()
-            .list(
-                calendarId="primary",
-                maxResults=20,
-                singleEvents=True,
-                orderBy="startTime",
-                timeMin=datetime.now(timezone.utc).isoformat(),
+        events = []
+        page_token = None
+        while True:
+            response = (
+                service.events()
+                .list(
+                    calendarId="primary",
+                    singleEvents=True,
+                    pageToken=page_token,
+                )
+                .execute()
             )
-            .execute()
-        )
+            events.extend(response.get("items", []))
+            page_token = response.get("nextPageToken")
+            if not page_token:
+                break
     except HttpError as exc:
         logger.exception("Google Calendar API events call failed")
         raise HTTPException(
@@ -70,11 +74,11 @@ def _fetch_events_sync() -> list[dict]:
             detail=f"Google Calendar API failure: {exc}",
         ) from exc
 
-    events = []
-    for item in response.get("items", []):
+    serialized_events = []
+    for item in events:
         start_info = item.get("start") or {}
         end_info = item.get("end") or {}
-        events.append(
+        serialized_events.append(
             {
                 "id": item.get("id"),
                 "summary": item.get("summary"),
@@ -82,7 +86,7 @@ def _fetch_events_sync() -> list[dict]:
                 "end": end_info.get("dateTime") or end_info.get("date"),
             }
         )
-    return events
+    return serialized_events
 
 
 @router.get("/calendars")

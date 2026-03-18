@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from datetime import datetime, timedelta, timezone
 from typing import Optional, Sequence
 
 from googleapiclient.discovery import build
@@ -49,11 +48,7 @@ class GoogleCalendarService:
                 items=[],
             )
 
-        effective_days = days or self.settings.google_calendar_lookahead_days
         effective_limit = max_results or self.settings.google_max_results
-        now = datetime.now(timezone.utc)
-        time_min = now.isoformat()
-        time_max = (now + timedelta(days=effective_days)).isoformat()
 
         resolved_calendar_ids = self._resolve_calendar_ids(calendar_ids)
         events: list[CalendarEvent] = []
@@ -64,9 +59,6 @@ class GoogleCalendarService:
                 raw_items = await asyncio.to_thread(
                     self._fetch_events_sync,
                     calendar_id,
-                    time_min,
-                    time_max,
-                    effective_limit,
                 )
                 events.extend(self._normalize_event(calendar_id, item) for item in raw_items)
             except Exception as exc:
@@ -105,27 +97,27 @@ class GoogleCalendarService:
                 seen.append(calendar_id)
         return seen
 
-    def _fetch_events_sync(
-        self,
-        calendar_id: str,
-        time_min: str,
-        time_max: str,
-        max_results: int,
-    ) -> list[dict]:
+    def _fetch_events_sync(self, calendar_id: str) -> list[dict]:
         service = self._build_service()
-        result = (
-            service.events()
-            .list(
-                calendarId=calendar_id,
-                timeMin=time_min,
-                timeMax=time_max,
-                singleEvents=True,
-                orderBy="startTime",
-                maxResults=max_results,
+        events: list[dict] = []
+        page_token = None
+
+        while True:
+            result = (
+                service.events()
+                .list(
+                    calendarId=calendar_id,
+                    singleEvents=True,
+                    pageToken=page_token,
+                )
+                .execute()
             )
-            .execute()
-        )
-        return list(result.get("items", []))
+            events.extend(result.get("items", []))
+            page_token = result.get("nextPageToken")
+            if not page_token:
+                break
+
+        return events
 
     def _build_service(self):
         try:

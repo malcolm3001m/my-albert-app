@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timezone
 
 from fastapi import APIRouter, HTTPException
 from googleapiclient.discovery import build
@@ -53,6 +52,28 @@ def _simplify_event(event: dict) -> dict:
     }
 
 
+def _fetch_all_events(service, calendar_id: str) -> list[dict]:
+    events: list[dict] = []
+    page_token = None
+
+    while True:
+        response = (
+            service.events()
+            .list(
+                calendarId=calendar_id,
+                singleEvents=True,
+                pageToken=page_token,
+            )
+            .execute()
+        )
+        events.extend(response.get("items", []))
+        page_token = response.get("nextPageToken")
+        if not page_token:
+            break
+
+    return events
+
+
 @router.get("/events")
 async def get_calendar_events() -> list[dict]:
     service = _build_calendar_service()
@@ -64,22 +85,11 @@ async def get_calendar_events() -> list[dict]:
         raise HTTPException(status_code=502, detail=f"Google API error: {exc}") from exc
     calendar_id = _find_calendar_id(calendar_list)
 
-    time_min = datetime.now(timezone.utc).isoformat()
     try:
-        events_response = (
-            service.events()
-            .list(
-                calendarId=calendar_id,
-                maxResults=30,
-                singleEvents=True,
-                orderBy="startTime",
-                timeMin=time_min,
-            )
-            .execute()
-        )
+        events = _fetch_all_events(service, calendar_id)
     except HttpError as exc:
         logger.exception("Google Calendar API events call failed")
         raise HTTPException(status_code=502, detail=f"Google API error: {exc}") from exc
 
     logger.info("Fetched Google Calendar events for calendarId=%s", calendar_id)
-    return [_simplify_event(event) for event in events_response.get("items", [])]
+    return [_simplify_event(event) for event in events]
