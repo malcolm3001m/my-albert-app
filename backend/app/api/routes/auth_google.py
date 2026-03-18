@@ -123,17 +123,20 @@ async def google_callback(request: Request) -> JSONResponse:
         raise HTTPException(status_code=400, detail=f"Google token exchange failed: {exc}") from exc
 
     credentials = flow.credentials
-    if credentials.refresh_token:
-        os.environ["GOOGLE_REFRESH_TOKEN"] = credentials.refresh_token
-        logger.info("Google OAuth refresh token captured in GOOGLE_REFRESH_TOKEN for current process")
-    elif not os.environ.get("GOOGLE_REFRESH_TOKEN"):
-        logger.error("Google OAuth callback did not return a refresh token")
-        raise HTTPException(
-            status_code=500,
-            detail="Google OAuth completed but no refresh token was returned.",
-        )
+    refresh_token = credentials.refresh_token
 
-    logger.info("Google OAuth refresh_token_present=%s", bool(credentials.refresh_token))
+    if refresh_token:
+        print(f"Google OAuth refresh token: {refresh_token}")
+        logger.info("Google OAuth refresh token: %s", refresh_token)
+        os.environ["GOOGLE_REFRESH_TOKEN"] = refresh_token
+        logger.info("Google OAuth refresh token captured in GOOGLE_REFRESH_TOKEN for current process")
+    else:
+        print("Google OAuth refresh token missing in callback response")
+        logger.info("Google OAuth refresh token missing in callback response")
+        if not os.environ.get("GOOGLE_REFRESH_TOKEN"):
+            logger.warning("No existing GOOGLE_REFRESH_TOKEN found in environment")
+
+    logger.info("Google OAuth refresh_token_present=%s", bool(refresh_token))
 
     try:
         calendar_service = build("calendar", "v3", credentials=credentials, cache_discovery=False)
