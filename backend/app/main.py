@@ -8,6 +8,7 @@ from fastapi.responses import JSONResponse
 
 from app.api.routes import (
     attendance,
+    auth_google,
     calendar,
     cohorts,
     courses,
@@ -80,6 +81,9 @@ async def root() -> dict[str, str]:
         "docs": "/docs",
         "health": "/health",
     }
+
+
+app.include_router(auth_google.router)
 
 
 for router in (
