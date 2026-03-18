@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app.api.routes.auth_google import router as google_auth_router
+from routers.google_calendar import router as google_calendar_router
 from app.api.routes import (
     attendance,
     calendar,
@@ -89,6 +90,11 @@ def debug_routes():
 
 
 app.include_router(google_auth_router)
+app.include_router(
+    google_calendar_router,
+    prefix="/api/google",
+    tags=["Google Calendar"],
+)
 
 
 for router in (
