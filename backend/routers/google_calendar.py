@@ -59,6 +59,17 @@ def _fetch_events_sync() -> list[dict]:
                 .list(
                     calendarId="primary",
                     singleEvents=True,
+                    fields=(
+                        "nextPageToken,"
+                        "items("
+                        "id,"
+                        "summary,"
+                        "start,"
+                        "end,"
+                        "location,"
+                        "attendees(email,displayName,resource,responseStatus,self,organizer)"
+                        ")"
+                    ),
                     pageToken=page_token,
                 )
                 .execute()
@@ -84,6 +95,18 @@ def _fetch_events_sync() -> list[dict]:
                 "summary": item.get("summary"),
                 "start": start_info.get("dateTime") or start_info.get("date"),
                 "end": end_info.get("dateTime") or end_info.get("date"),
+                "location": item.get("location"),
+                "attendees": [
+                    {
+                        "email": attendee.get("email"),
+                        "displayName": attendee.get("displayName"),
+                        "resource": attendee.get("resource"),
+                        "responseStatus": attendee.get("responseStatus"),
+                        "self": attendee.get("self"),
+                        "organizer": attendee.get("organizer"),
+                    }
+                    for attendee in item.get("attendees", [])
+                ],
             }
         )
     return serialized_events
