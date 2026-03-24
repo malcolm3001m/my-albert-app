@@ -148,6 +148,38 @@ class AlbertClient:
             cache_ttl=self.settings.albert_detail_cache_ttl_seconds,
         )
 
+    async def get_academic_documents_by_course_module(
+        self,
+        course_module_id: int,
+        *,
+        page: int = 1,
+        limit: int = 50,
+        include_archived: bool = False,
+    ) -> Any:
+        return await self.get_json(
+            "/course/academic-documents/by-course-module/"
+            f"{course_module_id}?page={page}&limit={limit}"
+            f"&include_archived={str(include_archived).lower()}",
+            cache_ttl=self.settings.albert_detail_cache_ttl_seconds,
+        )
+
+    async def get_academic_documents_by_course_module_instance(
+        self,
+        instance_id: int,
+        *,
+        page: int = 1,
+        limit: int = 50,
+        include_archived: bool = False,
+        include_sessions: bool = True,
+    ) -> Any:
+        return await self.get_json(
+            "/course/academic-documents/by-course-module-instance/"
+            f"{instance_id}?page={page}&limit={limit}"
+            f"&include_archived={str(include_archived).lower()}"
+            f"&include_sessions={str(include_sessions).lower()}",
+            cache_ttl=self.settings.albert_detail_cache_ttl_seconds,
+        )
+
     def _load_fixture(self, path: str) -> Any:
         fixtures_dir = self.settings.fixtures_path
         if fixtures_dir is None:

@@ -6,6 +6,7 @@ from app.core.config import Settings
 from app.services.albert.attendance_service import AttendanceService
 from app.services.albert.client import AlbertClient
 from app.services.albert.courses_service import CoursesService
+from app.services.albert.documents_service import DocumentsService
 from app.services.albert.exams_service import ExamsService
 from app.services.albert.grades_service import GradesService
 from app.services.albert.profile_service import ProfileService
@@ -44,6 +45,13 @@ def get_courses_service(
     profile_service: ProfileService = Depends(get_profile_service),
 ) -> CoursesService:
     return CoursesService(client, profile_service)
+
+
+def get_documents_service(
+    client: AlbertClient = Depends(get_albert_client),
+    courses_service: CoursesService = Depends(get_courses_service),
+) -> DocumentsService:
+    return DocumentsService(client, courses_service)
 
 
 def get_exams_service(

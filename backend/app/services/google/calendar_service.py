@@ -25,11 +25,15 @@ class GoogleCalendarService:
         calendar_ids: Optional[Sequence[str]] = None,
         days: Optional[int] = None,
         max_results: Optional[int] = None,
+        time_min: Optional[str] = None,
+        time_max: Optional[str] = None,
     ) -> CalendarEventsResponse:
         return await self.get_events(
             calendar_ids=calendar_ids,
             days=days,
             max_results=max_results,
+            time_min=time_min,
+            time_max=time_max,
         )
 
     async def get_events(
@@ -38,6 +42,8 @@ class GoogleCalendarService:
         calendar_ids: Optional[Sequence[str]] = None,
         days: Optional[int] = None,
         max_results: Optional[int] = None,
+        time_min: Optional[str] = None,
+        time_max: Optional[str] = None,
     ) -> CalendarEventsResponse:
         if not self.settings.google_calendar_enabled:
             return CalendarEventsResponse(
@@ -59,6 +65,8 @@ class GoogleCalendarService:
                 raw_items = await asyncio.to_thread(
                     self._fetch_events_sync,
                     calendar_id,
+                    time_min,
+                    time_max,
                 )
                 events.extend(self._normalize_event(calendar_id, item) for item in raw_items)
             except Exception as exc:
@@ -97,19 +105,30 @@ class GoogleCalendarService:
                 seen.append(calendar_id)
         return seen
 
-    def _fetch_events_sync(self, calendar_id: str) -> list[dict]:
+    def _fetch_events_sync(
+        self,
+        calendar_id: str,
+        time_min: Optional[str] = None,
+        time_max: Optional[str] = None,
+    ) -> list[dict]:
         service = self._build_service()
         events: list[dict] = []
         page_token = None
 
         while True:
+            request_kwargs = {
+                "calendarId": calendar_id,
+                "singleEvents": True,
+                "orderBy": "startTime",
+                "pageToken": page_token,
+            }
+            if time_min:
+                request_kwargs["timeMin"] = time_min
+            if time_max:
+                request_kwargs["timeMax"] = time_max
             result = (
                 service.events()
-                .list(
-                    calendarId=calendar_id,
-                    singleEvents=True,
-                    pageToken=page_token,
-                )
+                .list(**request_kwargs)
                 .execute()
             )
             events.extend(result.get("items", []))

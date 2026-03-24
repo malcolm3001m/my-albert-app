@@ -48,30 +48,40 @@ def _fetch_calendars_sync() -> list[dict]:
     return calendars
 
 
-def _fetch_events_sync() -> list[dict]:
+def _fetch_events_sync(
+    *,
+    time_min: str | None = None,
+    time_max: str | None = None,
+) -> list[dict]:
     service = _build_calendar_service()
     try:
         events = []
         page_token = None
         while True:
+            request_kwargs = {
+                "calendarId": "primary",
+                "singleEvents": True,
+                "orderBy": "startTime",
+                "fields": (
+                    "nextPageToken,"
+                    "items("
+                    "id,"
+                    "summary,"
+                    "start,"
+                    "end,"
+                    "location,"
+                    "attendees(email,displayName,resource,responseStatus,self,organizer)"
+                    ")"
+                ),
+                "pageToken": page_token,
+            }
+            if time_min:
+                request_kwargs["timeMin"] = time_min
+            if time_max:
+                request_kwargs["timeMax"] = time_max
             response = (
                 service.events()
-                .list(
-                    calendarId="primary",
-                    singleEvents=True,
-                    fields=(
-                        "nextPageToken,"
-                        "items("
-                        "id,"
-                        "summary,"
-                        "start,"
-                        "end,"
-                        "location,"
-                        "attendees(email,displayName,resource,responseStatus,self,organizer)"
-                        ")"
-                    ),
-                    pageToken=page_token,
-                )
+                .list(**request_kwargs)
                 .execute()
             )
             events.extend(response.get("items", []))
@@ -93,8 +103,10 @@ def _fetch_events_sync() -> list[dict]:
             {
                 "id": item.get("id"),
                 "summary": item.get("summary"),
-                "start": start_info.get("dateTime") or start_info.get("date"),
-                "end": end_info.get("dateTime") or end_info.get("date"),
+                "start": start_info,
+                "end": end_info,
+                "start_iso": start_info.get("dateTime") or start_info.get("date"),
+                "end_iso": end_info.get("dateTime") or end_info.get("date"),
                 "location": item.get("location"),
                 "attendees": [
                     {
@@ -118,5 +130,12 @@ async def get_google_calendars() -> list[dict]:
 
 
 @router.get("/events")
-async def get_google_events() -> list[dict]:
-    return await asyncio.to_thread(_fetch_events_sync)
+async def get_google_events(
+    timeMin: str | None = None,
+    timeMax: str | None = None,
+) -> list[dict]:
+    return await asyncio.to_thread(
+        _fetch_events_sync,
+        time_min=timeMin,
+        time_max=timeMax,
+    )
