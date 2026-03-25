@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import asyncio
 import logging
+from datetime import datetime, timezone
+from email.utils import parseaddr
 
 from fastapi import APIRouter, HTTPException
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from app.services.google.credentials import get_google_credentials
+from app.services.google.credentials import DEFAULT_GOOGLE_SCOPES, get_google_credentials
 
 
 router = APIRouter()
@@ -15,14 +17,26 @@ logger = logging.getLogger("google_calendar_router")
 
 
 def _build_calendar_service():
+    return _build_google_service("calendar", "v3")
+
+
+def _build_gmail_service():
+    return _build_google_service("gmail", "v1")
+
+
+def _build_drive_service():
+    return _build_google_service("drive", "v3")
+
+
+def _build_google_service(api_name: str, version: str):
     try:
-        credentials = get_google_credentials()
-        return build("calendar", "v3", credentials=credentials, cache_discovery=False)
+        credentials = get_google_credentials(DEFAULT_GOOGLE_SCOPES)
+        return build(api_name, version, credentials=credentials, cache_discovery=False)
     except Exception as exc:
-        logger.exception("Failed to build Google Calendar service")
+        logger.exception("Failed to build Google service %s:%s", api_name, version)
         raise HTTPException(
             status_code=500,
-            detail="Failed to initialize Google Calendar service.",
+            detail=f"Failed to initialize Google {api_name} service.",
         ) from exc
 
 
@@ -46,6 +60,112 @@ def _fetch_calendars_sync() -> list[dict]:
             }
         )
     return calendars
+
+
+def _fetch_gmail_summary_sync() -> dict:
+    service = _build_gmail_service()
+
+    try:
+        unread_response = (
+            service.users()
+            .messages()
+            .list(userId="me", labelIds=["INBOX", "UNREAD"])
+            .execute()
+        )
+        unread_count = unread_response.get("resultSizeEstimate", 0)
+
+        inbox_response = (
+            service.users()
+            .messages()
+            .list(userId="me", labelIds=["INBOX"], maxResults=5)
+            .execute()
+        )
+        messages = inbox_response.get("messages", [])
+    except HttpError as exc:
+        logger.exception("Google Gmail API list call failed")
+        raise HTTPException(
+            status_code=502,
+            detail=f"Google Gmail API failure: {exc}",
+        ) from exc
+
+    threads = []
+    for message_ref in messages:
+        message_id = message_ref.get("id")
+        if not message_id:
+            continue
+        try:
+            message = (
+                service.users()
+                .messages()
+                .get(
+                    userId="me",
+                    id=message_id,
+                    format="metadata",
+                    metadataHeaders=["Subject", "From"],
+                )
+                .execute()
+            )
+        except HttpError as exc:
+            logger.warning("Google Gmail API get call failed for %s: %s", message_id, exc)
+            continue
+
+        payload = message.get("payload") or {}
+        headers = payload.get("headers") or []
+        subject = _header_value(headers, "Subject")
+        sender = _sender_name(_header_value(headers, "From"))
+        internal_date = _internal_date_to_iso(message.get("internalDate"))
+        label_ids = set(message.get("labelIds", []))
+
+        threads.append(
+            {
+                "id": message.get("threadId") or message_id,
+                "subject": subject,
+                "sender": sender,
+                "snippet": message.get("snippet"),
+                "date": internal_date,
+                "unread": "UNREAD" in label_ids,
+            }
+        )
+
+    return {
+        "unread_count": unread_count,
+        "threads": threads,
+    }
+
+
+def _fetch_drive_recent_sync() -> list[dict]:
+    service = _build_drive_service()
+    try:
+        response = (
+            service.files()
+            .list(
+                q="mimeType contains 'google-apps' and trashed = false",
+                orderBy="modifiedTime desc",
+                pageSize=5,
+                fields="files(id,name,mimeType,modifiedTime,webViewLink,iconLink)",
+            )
+            .execute()
+        )
+    except HttpError as exc:
+        logger.exception("Google Drive API list call failed")
+        raise HTTPException(
+            status_code=502,
+            detail=f"Google Drive API failure: {exc}",
+        ) from exc
+
+    items = []
+    for file_item in response.get("files", []):
+        items.append(
+            {
+                "id": file_item.get("id"),
+                "title": file_item.get("name"),
+                "url": file_item.get("webViewLink"),
+                "mime_type": file_item.get("mimeType"),
+                "modified_time": file_item.get("modifiedTime"),
+                "icon_url": file_item.get("iconLink"),
+            }
+        )
+    return items
 
 
 def _fetch_events_sync(
@@ -124,6 +244,33 @@ def _fetch_events_sync(
     return serialized_events
 
 
+def _header_value(headers: list[dict], name: str) -> str | None:
+    lowered = name.lower()
+    for header in headers:
+        if str(header.get("name", "")).lower() == lowered:
+            value = header.get("value")
+            if isinstance(value, str):
+                return value
+    return None
+
+
+def _sender_name(from_header: str | None) -> str | None:
+    if not from_header:
+        return None
+    name, address = parseaddr(from_header)
+    return name or address or from_header
+
+
+def _internal_date_to_iso(internal_date: str | None) -> str | None:
+    if not internal_date:
+        return None
+    try:
+        timestamp = int(internal_date) / 1000
+    except (TypeError, ValueError):
+        return None
+    return datetime.fromtimestamp(timestamp, tz=timezone.utc).isoformat().replace("+00:00", "Z")
+
+
 @router.get("/calendars")
 async def get_google_calendars() -> list[dict]:
     return await asyncio.to_thread(_fetch_calendars_sync)
@@ -139,3 +286,13 @@ async def get_google_events(
         time_min=timeMin,
         time_max=timeMax,
     )
+
+
+@router.get("/gmail")
+async def get_google_gmail() -> dict:
+    return await asyncio.to_thread(_fetch_gmail_summary_sync)
+
+
+@router.get("/drive/recent")
+async def get_google_drive_recent() -> list[dict]:
+    return await asyncio.to_thread(_fetch_drive_recent_sync)

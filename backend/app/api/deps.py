@@ -15,6 +15,7 @@ from app.services.albert.transcripts_service import TranscriptsService
 from app.services.dashboard_service import DashboardService
 from app.services.google.calendar_service import GoogleCalendarService
 from app.services.planner_service import PlannerService
+from app.services.supabase_storage_service import SupabaseStorageService
 
 
 def get_settings(request: Request) -> Settings:
@@ -27,6 +28,12 @@ def get_albert_client(request: Request) -> AlbertClient:
 
 def get_calendar_service(request: Request) -> GoogleCalendarService:
     return request.app.state.calendar_service
+
+
+def get_supabase_storage_service(
+    settings: Settings = Depends(get_settings),
+) -> SupabaseStorageService:
+    return SupabaseStorageService(settings)
 
 
 def get_profile_service(client: AlbertClient = Depends(get_albert_client)) -> ProfileService:

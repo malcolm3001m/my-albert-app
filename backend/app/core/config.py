@@ -65,6 +65,9 @@ class Settings(BaseModel):
     google_calendar_lookahead_days: int = 30
     google_max_results: int = 50
     google_local_auth_port: int = 8080
+    supabase_url: Optional[str] = None
+    supabase_api_key: Optional[str] = None
+    supabase_signed_url_ttl_seconds: int = 604800
 
     planner_lookahead_days: int = 30
 
@@ -122,5 +125,14 @@ def get_settings() -> Settings:
         ),
         google_max_results=int(os.getenv("GOOGLE_MAX_RESULTS", "50")),
         google_local_auth_port=int(os.getenv("GOOGLE_LOCAL_AUTH_PORT", "8080")),
+        supabase_url=os.getenv("SUPABASE_URL"),
+        supabase_api_key=(
+            os.getenv("SUPABASE_API_KEY")
+            or os.getenv("SUPABASE_ANON_KEY")
+            or os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+        ),
+        supabase_signed_url_ttl_seconds=int(
+            os.getenv("SUPABASE_SIGNED_URL_TTL_SECONDS", "604800")
+        ),
         planner_lookahead_days=int(os.getenv("PLANNER_LOOKAHEAD_DAYS", "30")),
     )

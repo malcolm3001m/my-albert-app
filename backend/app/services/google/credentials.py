@@ -13,7 +13,11 @@ from app.utils.errors import MissingConfigurationError
 
 
 logger = logging.getLogger("google_credentials")
-DEFAULT_GOOGLE_SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
+DEFAULT_GOOGLE_SCOPES = [
+    "https://www.googleapis.com/auth/calendar.readonly",
+    "https://www.googleapis.com/auth/gmail.readonly",
+    "https://www.googleapis.com/auth/drive.metadata.readonly",
+]
 
 
 def load_google_client_config() -> dict:

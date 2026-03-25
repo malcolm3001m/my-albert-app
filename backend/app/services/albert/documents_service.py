@@ -10,7 +10,7 @@ from urllib.parse import unquote, urlparse
 from app.models.document import DocumentCategory, DocumentFileType, DocumentItem
 from app.services.albert.client import AlbertClient
 from app.services.albert.courses_service import CoursesService
-from app.utils.errors import MissingConfigurationError
+from app.utils.errors import MissingConfigurationError, ResourceNotFoundError
 
 
 EXAM_PREP_PATTERN = re.compile(r"\b(exam|mock|past)\b", re.IGNORECASE)
@@ -101,6 +101,12 @@ class DocumentsService:
         )
         return items
 
+    async def get_document(self, document_id: str) -> DocumentItem:
+        for document in await self.get_documents():
+            if document.id == document_id:
+                return document
+        raise ResourceNotFoundError(f"Document {document_id} was not found.")
+
     def _extract_document_items(self, payload: Any) -> list[dict[str, Any]]:
         if payload is None:
             return []
@@ -187,6 +193,7 @@ class DocumentsService:
         stable_id = document_id or (
             f"{category}:{course_module_instance_id or module_code or 'unknown'}:{title}"
         )
+        storage_base_url, storage_bucket, storage_path = self._extract_storage_reference(raw, download_url)
 
         return DocumentItem(
             id=str(stable_id),
@@ -203,6 +210,10 @@ class DocumentsService:
             is_favorite=False,
             last_opened=None,
             download_url=download_url,
+            source_download_url=download_url,
+            storage_base_url=storage_base_url,
+            storage_bucket=storage_bucket,
+            storage_path=storage_path,
         )
 
     def _store_document(
@@ -269,3 +280,69 @@ class DocumentsService:
             return None
         filename = PurePosixPath(path).name
         return unquote(filename) if filename else None
+
+    def _extract_storage_reference(
+        self,
+        raw: dict[str, Any],
+        download_url: Optional[str],
+    ) -> tuple[Optional[str], Optional[str], Optional[str]]:
+        bucket = self._pick_first_str(raw, "bucket", "bucket_name", "bucketName")
+        path = self._pick_first_str(
+            raw,
+            "storage_path",
+            "storagePath",
+            "object_path",
+            "objectPath",
+            "file_path",
+            "filePath",
+            "path",
+        )
+        if path:
+            bucket, path = self._split_bucket_and_path(path, bucket)
+            return self._base_url_from_url(download_url), bucket, path
+
+        if not download_url:
+            return None, None, None
+
+        parsed = urlparse(download_url)
+        base_url = self._base_url_from_url(download_url)
+        trimmed = parsed.path.lstrip("/")
+
+        for prefix in (
+            "storage/v1/object/sign/",
+            "storage/v1/object/public/",
+            "storage/v1/object/authenticated/",
+            "storage/v1/object/",
+        ):
+            if trimmed.startswith(prefix):
+                remainder = trimmed[len(prefix) :]
+                parts = remainder.split("/", 1)
+                if len(parts) == 2:
+                    return base_url, parts[0], unquote(parts[1])
+
+        return base_url, bucket, None
+
+    def _split_bucket_and_path(
+        self,
+        raw_path: str,
+        bucket_hint: Optional[str],
+    ) -> tuple[Optional[str], str]:
+        normalized = raw_path.strip().lstrip("/")
+        if bucket_hint:
+            prefix = f"{bucket_hint}/"
+            if normalized.startswith(prefix):
+                return bucket_hint, normalized[len(prefix) :]
+            return bucket_hint, normalized
+
+        parts = normalized.split("/", 1)
+        if len(parts) == 2:
+            return parts[0], parts[1]
+        return None, normalized
+
+    def _base_url_from_url(self, value: Optional[str]) -> Optional[str]:
+        if not value:
+            return None
+        parsed = urlparse(value)
+        if not parsed.scheme or not parsed.netloc:
+            return None
+        return f"{parsed.scheme}://{parsed.netloc}"
