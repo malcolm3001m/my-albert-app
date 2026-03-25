@@ -1,9 +1,10 @@
 from __future__ import annotations
 
 import asyncio
+import base64
 import logging
 from datetime import datetime, timezone
-from email.utils import parseaddr
+from email.utils import parseaddr, parsedate_to_datetime
 
 from fastapi import APIRouter, HTTPException
 from googleapiclient.discovery import build
@@ -130,6 +131,55 @@ def _fetch_gmail_summary_sync() -> dict:
     return {
         "unread_count": unread_count,
         "threads": threads,
+    }
+
+
+def _fetch_gmail_thread_sync(thread_id: str) -> dict:
+    service = _build_gmail_service()
+
+    try:
+        thread = (
+            service.users()
+            .threads()
+            .get(userId="me", id=thread_id, format="full")
+            .execute()
+        )
+    except HttpError as exc:
+        logger.exception("Google Gmail API thread get call failed for %s", thread_id)
+        raise HTTPException(
+            status_code=502,
+            detail=f"Google Gmail API failure: {exc}",
+        ) from exc
+
+    messages = thread.get("messages", [])
+    subject = None
+    if messages:
+        first_headers = (messages[0].get("payload") or {}).get("headers") or []
+        subject = _header_value(first_headers, "Subject")
+
+    normalized_messages = []
+    for message in messages:
+        payload = message.get("payload") or {}
+        headers = payload.get("headers") or []
+        body_text, body_html = _extract_message_bodies(payload)
+
+        normalized_messages.append(
+            {
+                "id": message.get("id"),
+                "sender": _header_value(headers, "From"),
+                "date": _message_date_to_iso(
+                    _header_value(headers, "Date"),
+                    message.get("internalDate"),
+                ),
+                "body_text": body_text,
+                "body_html": body_html,
+            }
+        )
+
+    return {
+        "id": thread.get("id") or thread_id,
+        "subject": subject,
+        "messages": normalized_messages,
     }
 
 
@@ -271,6 +321,53 @@ def _internal_date_to_iso(internal_date: str | None) -> str | None:
     return datetime.fromtimestamp(timestamp, tz=timezone.utc).isoformat().replace("+00:00", "Z")
 
 
+def _message_date_to_iso(date_header: str | None, internal_date: str | None) -> str | None:
+    if date_header:
+        try:
+            parsed = parsedate_to_datetime(date_header)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            return parsed.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+        except (TypeError, ValueError, IndexError):
+            pass
+    return _internal_date_to_iso(internal_date)
+
+
+def _extract_message_bodies(payload: dict) -> tuple[str | None, str | None]:
+    text_parts: list[str] = []
+    html_parts: list[str] = []
+    _walk_mime_parts(payload, text_parts, html_parts)
+    body_text = "\n".join(part for part in text_parts if part).strip() or None
+    body_html = "\n".join(part for part in html_parts if part).strip() or None
+    return body_text, body_html
+
+
+def _walk_mime_parts(payload: dict, text_parts: list[str], html_parts: list[str]) -> None:
+    mime_type = payload.get("mimeType")
+    body = payload.get("body") or {}
+    data = body.get("data")
+    decoded = _decode_message_body(data)
+
+    if mime_type == "text/plain" and decoded:
+        text_parts.append(decoded)
+    elif mime_type == "text/html" and decoded:
+        html_parts.append(decoded)
+
+    for part in payload.get("parts", []) or []:
+        if isinstance(part, dict):
+            _walk_mime_parts(part, text_parts, html_parts)
+
+
+def _decode_message_body(data: str | None) -> str | None:
+    if not data:
+        return None
+    try:
+        padded = data + "=" * (-len(data) % 4)
+        return base64.urlsafe_b64decode(padded.encode("utf-8")).decode("utf-8", errors="replace")
+    except (ValueError, TypeError):
+        return None
+
+
 @router.get("/calendars")
 async def get_google_calendars() -> list[dict]:
     return await asyncio.to_thread(_fetch_calendars_sync)
@@ -291,6 +388,11 @@ async def get_google_events(
 @router.get("/gmail")
 async def get_google_gmail() -> dict:
     return await asyncio.to_thread(_fetch_gmail_summary_sync)
+
+
+@router.get("/gmail/{thread_id}")
+async def get_google_gmail_thread(thread_id: str) -> dict:
+    return await asyncio.to_thread(_fetch_gmail_thread_sync, thread_id)
 
 
 @router.get("/drive/recent")
