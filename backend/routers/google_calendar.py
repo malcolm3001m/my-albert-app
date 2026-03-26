@@ -5,34 +5,48 @@ import base64
 import logging
 from datetime import datetime, timezone
 from email.utils import parseaddr, parsedate_to_datetime
+from urllib.parse import urlencode
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from app.services.google.credentials import DEFAULT_GOOGLE_SCOPES, get_google_credentials
+from app.api.deps import get_supabase_user_tokens_service
+from app.services.google.credentials import (
+    DEFAULT_GOOGLE_SCOPES,
+    build_google_credentials,
+    get_google_oauth_client_settings,
+)
+from app.services.supabase_user_tokens_service import SupabaseUserTokensService
 
 
 router = APIRouter()
 logger = logging.getLogger("google_calendar_router")
+GOOGLE_OAUTH_SCOPES = [
+    "openid",
+    "email",
+    "https://www.googleapis.com/auth/gmail.readonly",
+    "https://www.googleapis.com/auth/calendar.readonly",
+    "https://www.googleapis.com/auth/drive.readonly",
+]
+GOOGLE_OAUTH_REDIRECT_URI = "https://my-albert-app.onrender.com/api/google/auth/callback"
 
 
-def _build_calendar_service():
-    return _build_google_service("calendar", "v3")
+def _build_calendar_service(refresh_token: str):
+    return _build_google_service("calendar", "v3", refresh_token)
 
 
-def _build_gmail_service():
-    return _build_google_service("gmail", "v1")
+def _build_gmail_service(refresh_token: str):
+    return _build_google_service("gmail", "v1", refresh_token)
 
 
-def _build_drive_service():
-    return _build_google_service("drive", "v3")
+def _build_drive_service(refresh_token: str):
+    return _build_google_service("drive", "v3", refresh_token)
 
 
-def _build_google_service(api_name: str, version: str):
+def _build_google_service(api_name: str, version: str, refresh_token: str):
     try:
-        # TODO: Phase 2 - replace shared env-based Google credentials with per-user OAuth credentials.
-        credentials = get_google_credentials(DEFAULT_GOOGLE_SCOPES)
+        credentials = build_google_credentials(refresh_token, DEFAULT_GOOGLE_SCOPES)
         return build(api_name, version, credentials=credentials, cache_discovery=False)
     except Exception as exc:
         logger.exception("Failed to build Google service %s:%s", api_name, version)
@@ -42,8 +56,8 @@ def _build_google_service(api_name: str, version: str):
         ) from exc
 
 
-def _fetch_calendars_sync() -> list[dict]:
-    service = _build_calendar_service()
+def _fetch_calendars_sync(refresh_token: str) -> list[dict]:
+    service = _build_calendar_service(refresh_token)
     try:
         response = service.calendarList().list().execute()
     except HttpError as exc:
@@ -53,19 +67,17 @@ def _fetch_calendars_sync() -> list[dict]:
             detail=f"Google Calendar API failure: {exc}",
         ) from exc
 
-    calendars = []
-    for item in response.get("items", []):
-        calendars.append(
-            {
-                "id": item.get("id"),
-                "summary": item.get("summary"),
-            }
-        )
-    return calendars
+    return [
+        {
+            "id": item.get("id"),
+            "summary": item.get("summary"),
+        }
+        for item in response.get("items", [])
+    ]
 
 
-def _fetch_gmail_summary_sync() -> dict:
-    service = _build_gmail_service()
+def _fetch_gmail_summary_sync(refresh_token: str) -> dict:
+    service = _build_gmail_service(refresh_token)
 
     try:
         unread_response = (
@@ -113,19 +125,14 @@ def _fetch_gmail_summary_sync() -> dict:
 
         payload = message.get("payload") or {}
         headers = payload.get("headers") or []
-        subject = _header_value(headers, "Subject")
-        sender = _sender_name(_header_value(headers, "From"))
-        internal_date = _internal_date_to_iso(message.get("internalDate"))
-        label_ids = set(message.get("labelIds", []))
-
         threads.append(
             {
                 "id": message.get("threadId") or message_id,
-                "subject": subject,
-                "sender": sender,
+                "subject": _header_value(headers, "Subject"),
+                "sender": _sender_name(_header_value(headers, "From")),
                 "snippet": message.get("snippet"),
-                "date": internal_date,
-                "unread": "UNREAD" in label_ids,
+                "date": _internal_date_to_iso(message.get("internalDate")),
+                "unread": "UNREAD" in set(message.get("labelIds", [])),
             }
         )
 
@@ -135,8 +142,8 @@ def _fetch_gmail_summary_sync() -> dict:
     }
 
 
-def _fetch_gmail_thread_sync(thread_id: str) -> dict:
-    service = _build_gmail_service()
+def _fetch_gmail_thread_sync(thread_id: str, refresh_token: str) -> dict:
+    service = _build_gmail_service(refresh_token)
 
     try:
         thread = (
@@ -163,7 +170,6 @@ def _fetch_gmail_thread_sync(thread_id: str) -> dict:
         payload = message.get("payload") or {}
         headers = payload.get("headers") or []
         body_text, body_html = _extract_message_bodies(payload)
-
         normalized_messages.append(
             {
                 "id": message.get("id"),
@@ -184,8 +190,8 @@ def _fetch_gmail_thread_sync(thread_id: str) -> dict:
     }
 
 
-def _fetch_drive_recent_sync() -> list[dict]:
-    service = _build_drive_service()
+def _fetch_drive_recent_sync(refresh_token: str) -> list[dict]:
+    service = _build_drive_service(refresh_token)
     try:
         response = (
             service.files()
@@ -204,27 +210,26 @@ def _fetch_drive_recent_sync() -> list[dict]:
             detail=f"Google Drive API failure: {exc}",
         ) from exc
 
-    items = []
-    for file_item in response.get("files", []):
-        items.append(
-            {
-                "id": file_item.get("id"),
-                "title": file_item.get("name"),
-                "url": file_item.get("webViewLink"),
-                "mime_type": file_item.get("mimeType"),
-                "modified_time": file_item.get("modifiedTime"),
-                "icon_url": file_item.get("iconLink"),
-            }
-        )
-    return items
+    return [
+        {
+            "id": file_item.get("id"),
+            "title": file_item.get("name"),
+            "url": file_item.get("webViewLink"),
+            "mime_type": file_item.get("mimeType"),
+            "modified_time": file_item.get("modifiedTime"),
+            "icon_url": file_item.get("iconLink"),
+        }
+        for file_item in response.get("files", [])
+    ]
 
 
 def _fetch_events_sync(
+    refresh_token: str,
     *,
     time_min: str | None = None,
     time_max: str | None = None,
 ) -> list[dict]:
-    service = _build_calendar_service()
+    service = _build_calendar_service(refresh_token)
     try:
         events = []
         page_token = None
@@ -250,11 +255,7 @@ def _fetch_events_sync(
                 request_kwargs["timeMin"] = time_min
             if time_max:
                 request_kwargs["timeMax"] = time_max
-            response = (
-                service.events()
-                .list(**request_kwargs)
-                .execute()
-            )
+            response = service.events().list(**request_kwargs).execute()
             events.extend(response.get("items", []))
             page_token = response.get("nextPageToken")
             if not page_token:
@@ -369,33 +370,109 @@ def _decode_message_body(data: str | None) -> str | None:
         return None
 
 
+def _current_user_id(request: Request) -> str:
+    authenticated_user = getattr(request.state, "authenticated_user", None)
+    user_id = getattr(authenticated_user, "user_id", None)
+    if not isinstance(user_id, str) or not user_id:
+        raise HTTPException(status_code=401, detail="Invalid token")
+    return user_id
+
+
+async def _get_user_refresh_token(
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService,
+) -> str | None:
+    return await user_tokens_service.get_google_refresh_token(_current_user_id(request))
+
+
 @router.get("/calendars")
-async def get_google_calendars() -> list[dict]:
-    return await asyncio.to_thread(_fetch_calendars_sync)
+async def get_google_calendars(
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> list[dict]:
+    refresh_token = await _get_user_refresh_token(request, user_tokens_service)
+    if not refresh_token:
+        return []
+    return await asyncio.to_thread(_fetch_calendars_sync, refresh_token)
 
 
 @router.get("/events")
 async def get_google_events(
+    request: Request,
     timeMin: str | None = None,
     timeMax: str | None = None,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
 ) -> list[dict]:
+    refresh_token = await _get_user_refresh_token(request, user_tokens_service)
+    if not refresh_token:
+        return []
     return await asyncio.to_thread(
         _fetch_events_sync,
+        refresh_token,
         time_min=timeMin,
         time_max=timeMax,
     )
 
 
 @router.get("/gmail")
-async def get_google_gmail() -> dict:
-    return await asyncio.to_thread(_fetch_gmail_summary_sync)
+async def get_google_gmail(
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> dict:
+    refresh_token = await _get_user_refresh_token(request, user_tokens_service)
+    if not refresh_token:
+        return {"unread_count": 0, "threads": []}
+    return await asyncio.to_thread(_fetch_gmail_summary_sync, refresh_token)
 
 
 @router.get("/gmail/{thread_id}")
-async def get_google_gmail_thread(thread_id: str) -> dict:
-    return await asyncio.to_thread(_fetch_gmail_thread_sync, thread_id)
+async def get_google_gmail_thread(
+    thread_id: str,
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> dict:
+    refresh_token = await _get_user_refresh_token(request, user_tokens_service)
+    if not refresh_token:
+        return {"id": thread_id, "subject": None, "messages": []}
+    return await asyncio.to_thread(_fetch_gmail_thread_sync, thread_id, refresh_token)
 
 
 @router.get("/drive/recent")
-async def get_google_drive_recent() -> list[dict]:
-    return await asyncio.to_thread(_fetch_drive_recent_sync)
+async def get_google_drive_recent(
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> list[dict]:
+    refresh_token = await _get_user_refresh_token(request, user_tokens_service)
+    if not refresh_token:
+        return []
+    return await asyncio.to_thread(_fetch_drive_recent_sync, refresh_token)
+
+
+@router.get("/auth/url")
+async def get_google_auth_url(
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> dict[str, str]:
+    user_id = _current_user_id(request)
+    if not await user_tokens_service.user_row_exists(user_id):
+        raise HTTPException(status_code=400, detail="User token row not found.")
+    oauth_settings = get_google_oauth_client_settings()
+    params = {
+        "client_id": oauth_settings["client_id"],
+        "redirect_uri": GOOGLE_OAUTH_REDIRECT_URI,
+        "response_type": "code",
+        "scope": " ".join(GOOGLE_OAUTH_SCOPES),
+        "access_type": "offline",
+        "prompt": "consent",
+        "state": user_id,
+    }
+    return {"url": f"{oauth_settings['auth_uri']}?{urlencode(params)}"}
+
+
+@router.delete("/auth/disconnect")
+async def disconnect_google(
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> dict[str, bool]:
+    await user_tokens_service.clear_google_refresh_token(_current_user_id(request))
+    return {"success": True}

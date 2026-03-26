@@ -16,6 +16,7 @@ from app.services.dashboard_service import DashboardService
 from app.services.google.calendar_service import GoogleCalendarService
 from app.services.planner_service import PlannerService
 from app.services.supabase_storage_service import SupabaseStorageService
+from app.services.supabase_user_tokens_service import SupabaseUserTokensService
 
 
 def get_settings(request: Request) -> Settings:
@@ -32,14 +33,28 @@ def get_albert_client(request: Request) -> AlbertClient:
     return request.app.state.albert_client.with_bearer_token(token)
 
 
-def get_calendar_service(request: Request) -> GoogleCalendarService:
-    return request.app.state.calendar_service
-
-
 def get_supabase_storage_service(
     settings: Settings = Depends(get_settings),
 ) -> SupabaseStorageService:
     return SupabaseStorageService(settings)
+
+
+def get_supabase_user_tokens_service(
+    settings: Settings = Depends(get_settings),
+) -> SupabaseUserTokensService:
+    return SupabaseUserTokensService(settings)
+
+
+async def get_calendar_service(
+    request: Request,
+    settings: Settings = Depends(get_settings),
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> GoogleCalendarService:
+    authenticated_user = getattr(request.state, "authenticated_user", None)
+    refresh_token = None
+    if authenticated_user is not None:
+        refresh_token = await user_tokens_service.get_google_refresh_token(authenticated_user.user_id)
+    return GoogleCalendarService(settings, refresh_token=refresh_token)
 
 
 def get_profile_service(client: AlbertClient = Depends(get_albert_client)) -> ProfileService:

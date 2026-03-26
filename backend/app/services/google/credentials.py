@@ -16,7 +16,7 @@ logger = logging.getLogger("google_credentials")
 DEFAULT_GOOGLE_SCOPES = [
     "https://www.googleapis.com/auth/calendar.readonly",
     "https://www.googleapis.com/auth/gmail.readonly",
-    "https://www.googleapis.com/auth/drive.metadata.readonly",
+    "https://www.googleapis.com/auth/drive.readonly",
 ]
 
 
@@ -97,6 +97,56 @@ def get_google_credentials(
         logger.exception("Failed to refresh Google access token")
         raise MissingConfigurationError(
             "Failed to refresh Google access token using GOOGLE_REFRESH_TOKEN."
+        ) from exc
+
+    return credentials
+
+
+def get_google_oauth_client_settings() -> dict[str, str]:
+    client_config = load_google_client_config()
+    oauth_config = client_config.get("web") or client_config.get("installed")
+    if not isinstance(oauth_config, dict):
+        raise MissingConfigurationError(
+            "Google client configuration must contain a 'web' or 'installed' object."
+        )
+
+    client_id = oauth_config.get("client_id")
+    client_secret = oauth_config.get("client_secret")
+    auth_uri = oauth_config.get("auth_uri") or "https://accounts.google.com/o/oauth2/v2/auth"
+    token_uri = oauth_config.get("token_uri") or "https://oauth2.googleapis.com/token"
+    if not client_id or not client_secret:
+        raise MissingConfigurationError(
+            "Google client configuration is missing client_id or client_secret."
+        )
+
+    return {
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "auth_uri": auth_uri,
+        "token_uri": token_uri,
+    }
+
+
+def build_google_credentials(
+    refresh_token: str,
+    scopes: Sequence[str] | None = None,
+) -> Credentials:
+    oauth_settings = get_google_oauth_client_settings()
+    credentials = Credentials(
+        token=None,
+        refresh_token=refresh_token,
+        token_uri=oauth_settings["token_uri"],
+        client_id=oauth_settings["client_id"],
+        client_secret=oauth_settings["client_secret"],
+        scopes=list(scopes or DEFAULT_GOOGLE_SCOPES),
+    )
+
+    try:
+        credentials.refresh(Request())
+    except Exception as exc:
+        logger.exception("Failed to refresh Google access token for user refresh token")
+        raise MissingConfigurationError(
+            "Failed to refresh Google access token using the stored user refresh token."
         ) from exc
 
     return credentials

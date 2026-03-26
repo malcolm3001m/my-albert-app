@@ -8,15 +8,16 @@ from googleapiclient.discovery import build
 
 from app.core.config import Settings
 from app.models.calendar import CalendarEvent, CalendarEventsResponse
-from app.services.google.credentials import get_google_credentials
+from app.services.google.credentials import build_google_credentials
 from app.utils.errors import MissingConfigurationError
 
 
 class GoogleCalendarService:
     SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
 
-    def __init__(self, settings: Settings) -> None:
+    def __init__(self, settings: Settings, *, refresh_token: str | None = None) -> None:
         self.settings = settings
+        self.refresh_token = refresh_token
         self.logger = logging.getLogger(self.__class__.__name__)
 
     async def get_upcoming_events(
@@ -45,6 +46,15 @@ class GoogleCalendarService:
         time_min: Optional[str] = None,
         time_max: Optional[str] = None,
     ) -> CalendarEventsResponse:
+        if not self.refresh_token:
+            return CalendarEventsResponse(
+                available=False,
+                reason="Google account not connected.",
+                warnings=[],
+                count=0,
+                items=[],
+            )
+
         if not self.settings.google_calendar_enabled:
             return CalendarEventsResponse(
                 available=False,
@@ -140,7 +150,9 @@ class GoogleCalendarService:
 
     def _build_service(self):
         try:
-            creds = get_google_credentials(self.SCOPES)
+            if not self.refresh_token:
+                raise MissingConfigurationError("Google account not connected.")
+            creds = build_google_credentials(self.refresh_token, self.SCOPES)
         except Exception as exc:
             raise MissingConfigurationError(str(exc)) from exc
 

@@ -2,24 +2,23 @@ from __future__ import annotations
 
 import logging
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from app.services.google.credentials import get_google_credentials
+from app.api.deps import get_supabase_user_tokens_service
+from app.services.google.credentials import build_google_credentials
+from app.services.supabase_user_tokens_service import SupabaseUserTokensService
 
 
 router = APIRouter(prefix="/calendar", tags=["calendar"])
 logger = logging.getLogger("calendar_api")
-
-GOOGLE_CALENDAR_LIST_URL = "https://www.googleapis.com/calendar/v3/users/me/calendarList"
-GOOGLE_EVENTS_URL_TEMPLATE = "https://www.googleapis.com/calendar/v3/calendars/{calendar_id}/events"
 TARGET_CALENDAR_SUMMARY = "Malcolm Morgan"
 
 
-def _build_calendar_service():
+def _build_calendar_service(refresh_token: str):
     try:
-        credentials = get_google_credentials()
+        credentials = build_google_credentials(refresh_token)
         return build("calendar", "v3", credentials=credentials, cache_discovery=False)
     except Exception as exc:
         logger.exception("Failed to initialize Google Calendar service")
@@ -75,8 +74,20 @@ def _fetch_all_events(service, calendar_id: str) -> list[dict]:
 
 
 @router.get("/events")
-async def get_calendar_events() -> list[dict]:
-    service = _build_calendar_service()
+async def get_calendar_events(
+    request: Request,
+    user_tokens_service: SupabaseUserTokensService = Depends(get_supabase_user_tokens_service),
+) -> list[dict]:
+    authenticated_user = getattr(request.state, "authenticated_user", None)
+    user_id = getattr(authenticated_user, "user_id", None)
+    if not isinstance(user_id, str) or not user_id:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
+    refresh_token = await user_tokens_service.get_google_refresh_token(user_id)
+    if not refresh_token:
+        return []
+
+    service = _build_calendar_service(refresh_token)
 
     try:
         calendar_list = service.calendarList().list().execute()

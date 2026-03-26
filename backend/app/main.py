@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app.api.auth import require_authenticated_user
-from app.api.routes.auth_google import router as google_auth_router
+from app.api.routes.google_oauth_callback import router as google_oauth_callback_router
 from routers.google_calendar import router as google_calendar_router
 from app.api.routes import (
     attendance,
@@ -26,7 +26,6 @@ from app.api.routes import (
 from app.core.config import get_settings
 from app.core.logging import configure_logging
 from app.services.albert.client import AlbertClient
-from app.services.google.calendar_service import GoogleCalendarService
 from app.utils.errors import AppError, UpstreamServiceError
 
 
@@ -38,7 +37,6 @@ async def lifespan(app: FastAPI):
     configure_logging(settings.log_level)
     app.state.settings = settings
     app.state.albert_client = AlbertClient(settings)
-    app.state.calendar_service = GoogleCalendarService(settings)
     yield
     await app.state.albert_client.aclose()
 
@@ -100,7 +98,7 @@ def debug_routes():
     return [route.path for route in app.routes]
 
 
-app.include_router(google_auth_router)
+app.include_router(google_oauth_callback_router)
 app.include_router(
     google_calendar_router,
     prefix="/api/google",

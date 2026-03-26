@@ -22,7 +22,7 @@ class AuthenticatedUser:
 async def require_authenticated_user(request: Request) -> AuthenticatedUser:
     settings: Settings = request.app.state.settings
     supabase_url = (settings.supabase_url or DEFAULT_SUPABASE_URL).rstrip("/")
-    supabase_api_key = settings.supabase_api_key
+    supabase_api_key = settings.supabase_anon_key or settings.supabase_api_key
     if not supabase_api_key:
         raise MissingConfigurationError(
             "SUPABASE_API_KEY or SUPABASE_ANON_KEY is missing. Configure it to validate Supabase access tokens."

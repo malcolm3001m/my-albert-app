@@ -66,6 +66,8 @@ class Settings(BaseModel):
     google_max_results: int = 50
     google_local_auth_port: int = 8080
     supabase_url: str = "https://khfzyqbvqizctohdfhpr.supabase.co"
+    supabase_anon_key: Optional[str] = None
+    supabase_service_role_key: Optional[str] = None
     supabase_api_key: Optional[str] = None
     supabase_signed_url_ttl_seconds: int = 604800
 
@@ -126,6 +128,8 @@ def get_settings() -> Settings:
         google_max_results=int(os.getenv("GOOGLE_MAX_RESULTS", "50")),
         google_local_auth_port=int(os.getenv("GOOGLE_LOCAL_AUTH_PORT", "8080")),
         supabase_url=os.getenv("SUPABASE_URL", "https://khfzyqbvqizctohdfhpr.supabase.co"),
+        supabase_anon_key=os.getenv("SUPABASE_ANON_KEY"),
+        supabase_service_role_key=os.getenv("SUPABASE_SERVICE_ROLE_KEY"),
         supabase_api_key=(
             os.getenv("SUPABASE_API_KEY")
             or os.getenv("SUPABASE_ANON_KEY")
