@@ -68,6 +68,7 @@ class Settings(BaseModel):
     supabase_url: Optional[str] = None
     supabase_api_key: Optional[str] = None
     supabase_signed_url_ttl_seconds: int = 604800
+    supabase_jwt_secret: Optional[str] = None
 
     planner_lookahead_days: int = 30
 
@@ -134,5 +135,6 @@ def get_settings() -> Settings:
         supabase_signed_url_ttl_seconds=int(
             os.getenv("SUPABASE_SIGNED_URL_TTL_SECONDS", "604800")
         ),
+        supabase_jwt_secret=os.getenv("SUPABASE_JWT_SECRET"),
         planner_lookahead_days=int(os.getenv("PLANNER_LOOKAHEAD_DAYS", "30")),
     )

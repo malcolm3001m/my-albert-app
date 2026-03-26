@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from fastapi import Depends, Request
+from fastapi import Depends, HTTPException, Request, status
 
 from app.core.config import Settings
 from app.services.albert.attendance_service import AttendanceService
@@ -23,7 +23,13 @@ def get_settings(request: Request) -> Settings:
 
 
 def get_albert_client(request: Request) -> AlbertClient:
-    return request.app.state.albert_client
+    token = request.headers.get("X-Albert-Token")
+    if not token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Albert token required",
+        )
+    return request.app.state.albert_client.with_bearer_token(token)
 
 
 def get_calendar_service(request: Request) -> GoogleCalendarService:

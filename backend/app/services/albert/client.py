@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import hashlib
 from typing import Any, Optional
 
 import httpx
@@ -16,17 +17,33 @@ from app.utils.errors import (
 
 
 class AlbertClient:
-    def __init__(self, settings: Settings) -> None:
+    def __init__(
+        self,
+        settings: Settings,
+        *,
+        http: httpx.AsyncClient | None = None,
+        cache: TTLCache | None = None,
+        bearer_token: str | None = None,
+    ) -> None:
         self.settings = settings
         self.logger = logging.getLogger(self.__class__.__name__)
-        self.cache = TTLCache()
-        self.http = httpx.AsyncClient(timeout=settings.albert_http_timeout_seconds)
+        self.cache = cache or TTLCache()
+        self.http = http or httpx.AsyncClient(timeout=settings.albert_http_timeout_seconds)
+        self.bearer_token = bearer_token
+
+    def with_bearer_token(self, bearer_token: str) -> AlbertClient:
+        return AlbertClient(
+            self.settings,
+            http=self.http,
+            cache=self.cache,
+            bearer_token=bearer_token,
+        )
 
     async def aclose(self) -> None:
         await self.http.aclose()
 
     async def get_json(self, path: str, *, cache_ttl: Optional[int] = None) -> Any:
-        cache_key = f"GET:{path}"
+        cache_key = f"GET:{self._cache_token_fingerprint()}:{path}"
         if cache_ttl:
             cached = self.cache.get(cache_key)
             if cached is not None:
@@ -38,14 +55,14 @@ class AlbertClient:
                 self.cache.set(cache_key, payload, cache_ttl)
             return payload
 
-        if not self.settings.albert_base_url or not self.settings.albert_bearer_token:
+        if not self.settings.albert_base_url or not self.bearer_token:
             raise MissingConfigurationError(
-                "Albert API is not configured. Set ALBERT_BASE_URL and ALBERT_BEARER_TOKEN."
+                "Albert API is not configured for this request. Provide X-Albert-Token."
             )
 
         url = f"{self.settings.albert_base_url.rstrip('/')}{path}"
         headers = {
-            "Authorization": f"Bearer {self.settings.albert_bearer_token}",
+            "Authorization": f"Bearer {self.bearer_token}",
             "Accept": "application/json",
         }
 
@@ -222,3 +239,8 @@ class AlbertClient:
             return f"course_module__{clean_path.rsplit('/', maxsplit=1)[-1]}.json"
 
         raise ResourceNotFoundError(f"No fixture mapping exists for Albert path {path}.")
+
+    def _cache_token_fingerprint(self) -> str:
+        if not self.bearer_token:
+            return "fixtures" if self.settings.albert_use_fixtures else "anonymous"
+        return hashlib.sha256(self.bearer_token.encode("utf-8")).hexdigest()[:16]

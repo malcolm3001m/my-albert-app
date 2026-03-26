@@ -2,10 +2,11 @@ from __future__ import annotations
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Request
+from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from app.api.auth import require_authenticated_user
 from app.api.routes.auth_google import router as google_auth_router
 from routers.google_calendar import router as google_calendar_router
 from app.api.routes import (
@@ -53,7 +54,7 @@ app.add_middleware(
     allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["Authorization", "Content-Type", "X-Albert-Token"],
 )
 
 
@@ -69,6 +70,15 @@ async def handle_app_error(request: Request, exc: AppError) -> JSONResponse:
 
 @app.get("/health")
 async def health() -> dict[str, str]:
+    return {
+        "status": "ok",
+        "app": settings.app_name,
+        "environment": settings.app_env,
+    }
+
+
+@app.get("/api/health")
+async def api_health() -> dict[str, str]:
     return {
         "status": "ok",
         "app": settings.app_name,
@@ -95,6 +105,7 @@ app.include_router(
     google_calendar_router,
     prefix="/api/google",
     tags=["Google Calendar"],
+    dependencies=[Depends(require_authenticated_user)],
 )
 
 
@@ -112,4 +123,8 @@ for router in (
     dashboard.router,
     planner.router,
 ):
-    app.include_router(router, prefix=settings.api_prefix)
+    app.include_router(
+        router,
+        prefix=settings.api_prefix,
+        dependencies=[Depends(require_authenticated_user)],
+    )

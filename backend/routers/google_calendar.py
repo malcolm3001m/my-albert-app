@@ -31,6 +31,7 @@ def _build_drive_service():
 
 def _build_google_service(api_name: str, version: str):
     try:
+        # TODO: Phase 2 - replace shared env-based Google credentials with per-user OAuth credentials.
         credentials = get_google_credentials(DEFAULT_GOOGLE_SCOPES)
         return build(api_name, version, credentials=credentials, cache_discovery=False)
     except Exception as exc:
