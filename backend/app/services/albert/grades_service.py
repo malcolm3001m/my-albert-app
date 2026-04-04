@@ -31,7 +31,7 @@ class GradesService:
             return GradesResponse(available=False, reason=exc.detail, summary=None, items=None)
         except UpstreamServiceError as exc:
             reason = "Albert grade service currently unavailable."
-            if exc.upstream_status_code and exc.upstream_status_code < 500:
+            if exc.upstream_status_code == 400:
                 raise
             self.logger.warning("Albert grades failed: %s", exc.detail)
             return GradesResponse(available=False, reason=reason, summary=None, items=None)
